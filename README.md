@@ -6,7 +6,7 @@
 
 **한국어** | [English](README.en.md)
 
-**현재: 600개 해설·사례 기반 Beta** · [이전 버전 v1](https://github.com/ai-agent-orchestrator/explore-your-little-universe/tree/v1) · [Claude 개발 인계](docs/CLAUDE_TAROT_IMPLEMENTATION.md)
+**현재: 600개 해설·사례 기반 Beta** · [이전 버전 v1](https://github.com/ai-agent-orchestrator/explore-your-little-universe/tree/v1) · [Claude 개발 인계 — 구현 결과·후속 작업](docs/CLAUDE_TAROT_HANDOFF.md)
 
 ## [바로 놀아보기 · 설치 없이 열기](https://ai-agent-orchestrator.github.io/explore-your-little-universe/)
 
@@ -31,13 +31,23 @@ React 검색 버전은 `main`에 포함되어 있다. `frontend` 변경을 `main
 
 작은 별 친구 **루미(Lumi)**와 일상 고민을 탐색하는 실습이다. MBTI·별자리라는 정형 그래프와 해설·일상 사례 **600개**를 연결한다. 기존 사례 60개에 유형 해설 160개, 별자리 해설 120개, 추가 일상 사례 260개를 더했다. [데이터 구성·참고 출처·검증](docs/INTERPRETATION_CORPUS.md)에서 확인할 수 있다. 성격을 판정하기보다 관련된 이야기를 찾고 오늘 해볼 작은 행동을 발견한다.
 
+## 개발 브랜치: 타로 실험 모드 구현
+
+[R0~R6 리팩터링 계획](docs/TAROT_REFACTORING_PLAN.md)에 따라 공유 `lumi_core`, 타로 78장·156개 의미, PostgreSQL 확정 뽑기, Neo4j·Chroma 검색, LangGraph 검수·재개, FastAPI·인증 SSE, 선택적 React 타로 탭을 구현했다. **[설치·실행·검증 안내](docs/TAROT_RUNBOOK.md)**에서 시작한다.
+
+Claude에게는 **[현재 개발 인계서](docs/CLAUDE_TAROT_HANDOFF.md)**를 전달한다. 구현 위치, 보존할 계약, 단계별 Draft PR, 검증 결과와 실제 LLM 연결 등 남은 작업을 정리했다.
+
+기존 600개 코퍼스·스냅샷과 루미 그림·Pages 워크플로는 유지한다. 타로 청크는 180개이며 Chroma 총량은 780개다. 실제 3개 저장소·LiteRT·체크포인트·HTTP와 화면을 검증했고, **LLM 생성·검수는 FakeLLM만 검증**했다. 실제 OpenAI 호환 LLM은 로컬 설정 후 연결한다. 설정 없는 정적 빌드에는 타로 탭과 타로 코드가 포함되지 않는다.
+
+아래 1차 설계는 배경 문서이며, 구체적인 현재 구현 범위와 실행 방법은 RUNBOOK을 기준으로 한다.
+
 ## 현재 Beta와 다음 시험 설계
 
 기존 MBTI·별자리·8개 공통 성향 구조를 유지하면서 검색 대상을 **60개에서 600개로 10배 확장**했다. 유형·별자리별 해설, 출처 링크, 해설을 읽는 화면, 질문과 가까운 그래프 근거를 우선하는 정렬도 함께 추가했다. 이전 공개 버전은 `v1`, 현재 개발 결과는 `main`에 보관한다.
 
 ![Lumi Beta와 타로·3DB·LangGraph 통합 구조](docs/images/lumi-architecture.svg)
 
-위 그림의 **1번은 현재 구현**, **2번은 다음 단계 설계**다. 기존 **“Hi, I'm Lumi.”** 그림과 정적 검색 흐름은 유지한다.
+위 그림의 **1번은 기존 정적 Beta**, **2번은 선택적 로컬 타로 시험 구현**이다. 실제 LLM의 생성 품질 검증은 별도로 진행한다. 기존 **“Hi, I'm Lumi.”** 그림과 정적 검색 흐름은 유지한다.
 
 ## 1. 현재 Beta — 정적 React + 브라우저 LiteRT-LM 검색
 
@@ -84,7 +94,7 @@ npm run build
 
 ## 2. 다음 단계 — 타로 + 3DB + LangGraph (1차 시험 설계)
 
-**이 절의 서버 모드는 설계 단계다. 현재 공개 Beta에 타로 뽑기·PostgreSQL·Chroma·LangGraph·생성 LLM이 구현된 것은 아니다.** MBTI·별자리라는 기존 모델에 타로 **78장 × 정/역방향 = 156개 의미**를 결합하고, 관계·해설·세션의 책임을 나눈다.
+**아래는 확장의 출발점인 설계안이다. R0~R6 서버 구현은 위 RUNBOOK에 정리했으며, 공개 정적 Beta는 기존 방식으로 실행된다.** MBTI·별자리라는 기존 모델에 타로 **78장 × 정/역방향 = 156개 의미**를 결합하고, 관계·해설·세션의 책임을 나눈다.
 
 | 구성 요소 | 담당 데이터와 역할 |
 | --- | --- |

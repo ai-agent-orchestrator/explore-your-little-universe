@@ -1,5 +1,7 @@
 # Lumi Beta 이후: 타로 × 3DB × LangGraph 1차 시험 설계
 
+> 이 문서는 최초 설계·인계 시점의 기록입니다. 현재 R0~R6 구현과 실제 검증 범위는 [TAROT_RUNBOOK.md](TAROT_RUNBOOK.md)를 참고하세요.
+
 2026-11-22 · **설계 문서 — 타로·PostgreSQL·Chroma·LangGraph 런타임은 아직 미구현**
 
 현재 구현은 [600개 해설·사례 기반 정적 GraphRAG Beta](INTERPRETATION_CORPUS.md)다. 이 설계는 MBTI·별자리·공통 성향·출처 ID와 루미 캐릭터를 이어받아 별도 서버 모드로 확장한다. 기존 정적 페이지의 브라우저 검색은 계속 독립적으로 실행한다.

@@ -8,7 +8,7 @@
 
 [한국어](README.md) | **English**
 
-**Current: 600-card GraphRAG Beta** · [Previous version v1](https://github.com/ai-agent-orchestrator/explore-your-little-universe/tree/v1) · [Claude implementation handoff](docs/CLAUDE_TAROT_IMPLEMENTATION.md)
+**Current: 600-card GraphRAG Beta** · [Previous version v1](https://github.com/ai-agent-orchestrator/explore-your-little-universe/tree/v1) · [Current Claude handoff and remaining work](docs/CLAUDE_TAROT_HANDOFF.md)
 
 ## [Open the playground — no installation](https://ai-agent-orchestrator.github.io/explore-your-little-universe/)
 
@@ -25,13 +25,21 @@ Start your local Neo4j instance and import the public example graph once. The li
 
 Meet **Lumi**, a little star companion. Explore everyday dilemmas, discover connected perspectives, and try one small action. MBTI and astrology are playful fictional settings here, not validated predictions or clinical assessments.
 
+## Optional tarot implementation (development branch)
+
+The R0–R6 implementation adds a shared `lumi_core`, 78 cards / 156 meanings, transactional PostgreSQL draws, Neo4j/Chroma retrieval, durable LangGraph validation/resume, authenticated FastAPI/SSE, and a lazy React tarot mode. See the [runbook](docs/TAROT_RUNBOOK.md). The existing static corpus, snapshot, Lumi artwork and Pages workflow are preserved.
+
+The [current Claude handoff](docs/CLAUDE_TAROT_HANDOFF.md) records code locations, preserved contracts, stacked draft PRs, completed checks, and remaining work including real-LLM validation.
+
+Chroma contains 780 chunks: the preserved 600 plus 180 authored tarot texts. Real stores, native embeddings, checkpoints, HTTP and browser flows were tested; **generation and critique were tested with FakeLLM only**. Configure an OpenAI-compatible endpoint to use a real LLM. With no `VITE_TAROT_API_URL`, static builds contain no tarot code or tab.
+
 ## Current Beta and planned extension
 
 The existing MBTI/zodiac/shared-trait structure is preserved. The corpus grew from 60 to 600 cards, with source attribution, an interpretation reader, and question-aware graph ranking. The original **“Hi, I'm Lumi.”** illustration remains unchanged.
 
 ![Implemented Beta and proposed Tarot / three-database / LangGraph extension](docs/images/lumi-architecture.svg)
 
-The upper lane is implemented. The lower lane is a proposed separate server mode, not a feature already running in the public playground.
+The upper lane is the existing static Beta. The lower lane is the optional local server implementation, tested with real stores and a FakeLLM; it is not a server hosted by GitHub Pages.
 
 ## Static React + browser LiteRT-LM search
 
@@ -91,7 +99,7 @@ The proposed flow is confirmed draw → graph context → card/direction-filtere
 
 `16 × 12 × 78 × 2 × 3 = 89,856` counts single-card/position contexts, not authored documents or complete three-card spreads. Initial authoring targets 780 tarot chunks (1,380 total). Later reviewed-content targets are 14,640–35,700 total, roughly 24–60 times the current corpus, not measured quality improvements.
 
-[Detailed trial design](docs/TAROT_3DB_LANGGRAPH_PLAN.md) · [Implementation-ready Claude handoff](docs/CLAUDE_TAROT_IMPLEMENTATION.md). Tarot, PostgreSQL, Chroma, LangGraph and generated reports are **planned and not implemented** in this release.
+[Detailed trial design](docs/TAROT_3DB_LANGGRAPH_PLAN.md) · [Implementation-ready Claude handoff](docs/CLAUDE_TAROT_IMPLEMENTATION.md). This section records the original design; use the runbook above for the implemented optional local mode and its tested limits.
 
 ## Neo4j lab — MBTI + 12 zodiac signs
 

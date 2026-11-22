@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1160" viewBox="0 0 1280 1160" role="img" aria-labelledby="title desc">
-  <title id="title">Lumi Beta and proposed Tarot, three databases and LangGraph architecture</title>
-  <desc id="desc">The implemented Beta builds 600 interpretation cards with LiteRT-LM and Neo4j, exports a public snapshot, and searches on the device. A separate planned server mode adds tarot draws, PostgreSQL session records, Neo4j relationships, Chroma semantic retrieval, and a bounded LangGraph generation and validation workflow. The existing Lumi illustration is preserved separately.</desc>
+  <title id="title">Lumi Beta and optional local Tarot, three databases and LangGraph architecture</title>
+  <desc id="desc">The implemented Beta builds 600 interpretation cards with LiteRT-LM and Neo4j, exports a public snapshot, and searches on the device. A separate optional local server mode adds tarot draws, PostgreSQL session records, Neo4j relationships, Chroma semantic retrieval, and a bounded LangGraph generation and validation workflow. The existing Lumi illustration is preserved separately.</desc>
   <defs>
     <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#8d78a3" stroke-width="1.5"/></marker>
     <style>
@@ -43,8 +43,8 @@
 
   <rect x="24" y="370" width="1232" height="650" rx="22" fill="#fff" stroke="#b6a2cf" stroke-width="2" stroke-dasharray="9 6"/>
   <rect x="46" y="390" width="214" height="32" rx="16" fill="#eee4f7"/>
-  <text x="153" y="412" text-anchor="middle" class="label" style="fill:#765297">2 · PLANNED TEST</text>
-  <text x="280" y="413" class="body">타로·3DB·LangGraph · 별도 서버 모드 설계 / 아직 미구현</text>
+  <text x="153" y="412" text-anchor="middle" class="label" style="fill:#765297">2 · LOCAL TAROT</text>
+  <text x="280" y="413" class="body">타로·3DB·LangGraph · 로컬 서버 구현 / 실제 LLM 품질 검증 전</text>
 
   <rect x="55" y="454" width="320" height="92" rx="16" fill="#fff3dc"/>
   <text x="215" y="487" text-anchor="middle" class="label">React · 카드 3장 뒤집기</text>

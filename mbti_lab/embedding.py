@@ -10,6 +10,9 @@ class LiteRTEmbeddings(Embedder):
         self._engine = Engine(model_path)
     def __getattr__(self, key):
         return getattr(self._engine, key)
+    @property
+    def embedding_model_name(self):
+        return self._engine.embedding_model_name
     def embed_query(self, text):
         return self._engine.embed_query(text)
     def close(self):

@@ -91,6 +91,13 @@ TEXTS = '''
 
 TOPICS = ('general','relationships','work','money','reflection')
 FOCUS = {'major-16-tower','major-17-star','major-09-hermit'}
+# Small, explicit editorial counterpoints; contrasts are not bad outcomes.
+COUNTERPOINTS = {
+    ('major-16-tower','upright','J'),
+    ('major-09-hermit','reversed','I'),
+    ('major-12-hanged-man','upright','P'),
+    ('wands-05-five','upright','T'),
+}
 APPLICATIONS = {
  'major-16-tower': {
   'upright': ['관계의 약속이 갑자기 바뀌었다면 서로 확인한 사실부터 이야기해보자. 지금 필요한 거리와 다음 대화 시점을 합의할 수 있다.',
@@ -124,7 +131,7 @@ APPLICATIONS = {
  },
 }
 
-def _chunk(card, orientation, topic, text, traits, keyword):
+def tarot_chunk(card, orientation, topic, text, traits, keyword):
     row = {'id':f'tarot-{card.card_id}-{orientation}-{topic}',
            'title':f'{card.name_ko} · {"정방향" if orientation=="upright" else "역방향"} · {topic}',
            'text':text, 'category':'타로 성찰', 'traits':list(traits), 'tips':[],
@@ -135,6 +142,8 @@ def _chunk(card, orientation, topic, text, traits, keyword):
            'card_id':card.card_id,'orientation':orientation,'position':'','topic':topic,'locale':'ko',
            'dataset_version':DATASET_VERSION,'keyword':keyword}
     row['content_hash']=content_hash(row)
+    row['rule_effects']={trait:('contrasts' if (card.card_id,orientation,trait) in COUNTERPOINTS
+                               else 'amplifies' if orientation=='upright' else 'balances') for trait in traits}
     return row
 
 def tarot_chunks():
@@ -143,10 +152,10 @@ def tarot_chunks():
     for card,line in zip(CARDS,TEXTS):
         upright,reversed_text,traits,keyword=line.split('|')
         for orientation,text in [('upright',upright),('reversed',reversed_text)]:
-            rows.append(_chunk(card,orientation,'general',text,traits,keyword))
+            rows.append(tarot_chunk(card,orientation,'general',text,traits,keyword))
             if card.card_id in FOCUS:
                 for topic,application in zip(TOPICS[1:],APPLICATIONS[card.card_id][orientation]):
-                    rows.append(_chunk(card,orientation,topic,application,traits,keyword))
+                    rows.append(tarot_chunk(card,orientation,topic,application,traits,keyword))
     return rows
 
 def fixture_chunks():

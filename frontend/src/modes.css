@@ -1,0 +1,3 @@
+.lumi-mode-nav{display:flex;justify-content:center;gap:12px;padding:14px;background:#eee6f6;border-bottom:1px solid #ded0eb}
+.lumi-mode-nav a{padding:9px 18px;border-radius:20px;color:#72518f;text-decoration:none;font-size:.9rem}
+.lumi-mode-nav a[aria-current=page]{background:white;font-weight:700}
