@@ -35,7 +35,9 @@ class PostgresRepository:
     def open(self): self.pool.open(wait=True,timeout=5)
     def close(self): self.pool.close()
     def ping(self):
-        with self.pool.connection() as c: c.execute('SELECT 1')
+        with self.pool.connection() as c:
+            if c.execute("SELECT to_regclass('lumi.reading_sessions') AS table_name").fetchone()['table_name'] is None:
+                raise LumiError('Run python -m tarot_lab.migrate')
 
     def _event(self,c,session_id,event_type,payload):
         c.execute('SELECT session_id FROM lumi.reading_sessions WHERE session_id=%s FOR UPDATE',(session_id,))
