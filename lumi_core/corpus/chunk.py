@@ -19,6 +19,14 @@ class Chunk(TypedDict):
     source_url: str
     reviewed_on: str
     editorial_note: str
+    card_id: NotRequired[str]
+    orientation: NotRequired[str]
+    position: NotRequired[str]
+    topic: NotRequired[str]
+    locale: NotRequired[str]
+    dataset_version: NotRequired[str]
+    content_hash: NotRequired[str]
+    source_kind: NotRequired[str]
 
 def embedding_text(chunk: Chunk) -> str:
     return chunk['title'] + '\n' + chunk['text']
