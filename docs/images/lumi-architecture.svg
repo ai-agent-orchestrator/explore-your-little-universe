@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1160" viewBox="0 0 1280 1160" role="img" aria-labelledby="title desc">
+  <title id="title">Lumi Beta and proposed Tarot, three databases and LangGraph architecture</title>
+  <desc id="desc">The implemented Beta builds 600 interpretation cards with LiteRT-LM and Neo4j, exports a public snapshot, and searches on the device. A separate planned server mode adds tarot draws, PostgreSQL session records, Neo4j relationships, Chroma semantic retrieval, and a bounded LangGraph generation and validation workflow. The existing Lumi illustration is preserved separately.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#8d78a3" stroke-width="1.5"/></marker>
+    <style>
+      text{font-family:'Segoe UI','Malgun Gothic',Arial,sans-serif;fill:#453653}
+      .title{font-size:32px;font-weight:700}.heading{font-size:24px;font-weight:700}
+      .label{font-size:19px;font-weight:700}.body{font-size:17px}.small{font-size:15px;fill:#72637f}
+      .arrow{fill:none;stroke:#8d78a3;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1280" height="1160" rx="28" fill="#f5f1fa"/>
+  <text x="40" y="54" class="title">Lumi · Beta → Tarot + 3DB + LangGraph</text>
+  <text x="40" y="84" class="body">현재 구현과 다음 시험 설계를 연결하는 지도 · 2026-11-22</text>
+
+  <rect x="24" y="110" width="1232" height="230" rx="22" fill="#fff" stroke="#c1d9cc" stroke-width="2"/>
+  <rect x="46" y="128" width="184" height="32" rx="16" fill="#e2f2e9"/>
+  <text x="138" y="150" text-anchor="middle" class="label" style="fill:#38755c">1 · CURRENT BETA</text>
+  <text x="254" y="151" class="body">MBTI + 별자리 · 600개 해설·사례 · 구현 완료</text>
+  <g>
+    <rect x="50" y="184" width="250" height="100" rx="16" fill="#f2ecfa"/>
+    <text x="175" y="216" text-anchor="middle" class="label">해설·사례 600개</text>
+    <text x="175" y="244" text-anchor="middle" class="body">MBTI 16 · 별자리 12</text>
+    <text x="175" y="268" text-anchor="middle" class="small">공통 성향 · 출처 · 행동 제안</text>
+    <rect x="350" y="184" width="250" height="100" rx="16" fill="#e6f2ec"/>
+    <text x="475" y="216" text-anchor="middle" class="label">LiteRT-LM + Neo4j</text>
+    <text x="475" y="244" text-anchor="middle" class="body">오프라인 임베딩·관계 구축</text>
+    <text x="475" y="268" text-anchor="middle" class="small">벡터 600개 · 768차원</text>
+    <rect x="650" y="184" width="250" height="100" rx="16" fill="#f2ecfa"/>
+    <text x="775" y="216" text-anchor="middle" class="label">공개 스냅샷</text>
+    <text x="775" y="244" text-anchor="middle" class="body">graph.json</text>
+    <text x="775" y="268" text-anchor="middle" class="small">정적 배포 · 공개 예시 데이터</text>
+    <rect x="950" y="184" width="250" height="100" rx="16" fill="#fff3dc"/>
+    <text x="1075" y="216" text-anchor="middle" class="label">React + 기기 내 검색</text>
+    <text x="1075" y="244" text-anchor="middle" class="body">벡터 검색 → 그래프 확장</text>
+    <text x="1075" y="268" text-anchor="middle" class="small">출처 확인 · 작은 행동 발견</text>
+    <path d="M304 234H342" class="arrow"/>
+    <path d="M604 234H642" class="arrow"/>
+    <path d="M904 234H942" class="arrow"/>
+  </g>
+  <text x="50" y="316" class="small">현재 모드: 서버·DB 직접 접속 없이 실행 · 질문은 애플리케이션 서버에 전송·저장하지 않음</text>
+
+  <rect x="24" y="370" width="1232" height="650" rx="22" fill="#fff" stroke="#b6a2cf" stroke-width="2" stroke-dasharray="9 6"/>
+  <rect x="46" y="390" width="214" height="32" rx="16" fill="#eee4f7"/>
+  <text x="153" y="412" text-anchor="middle" class="label" style="fill:#765297">2 · PLANNED TEST</text>
+  <text x="280" y="413" class="body">타로·3DB·LangGraph · 별도 서버 모드 설계 / 아직 미구현</text>
+
+  <rect x="55" y="454" width="320" height="92" rx="16" fill="#fff3dc"/>
+  <text x="215" y="487" text-anchor="middle" class="label">React · 카드 3장 뒤집기</text>
+  <text x="215" y="515" text-anchor="middle" class="body">MBTI · 별자리 · 질문 입력</text>
+  <rect x="450" y="454" width="320" height="92" rx="16" fill="#f1ebf8"/>
+  <text x="610" y="487" text-anchor="middle" class="label">FastAPI · 세션 API + SSE</text>
+  <text x="610" y="515" text-anchor="middle" class="body">서버가 뽑기 확정 · 같은 요청 재사용</text>
+  <rect x="845" y="454" width="355" height="92" rx="16" fill="#eee4f7"/>
+  <text x="1022" y="487" text-anchor="middle" class="label">LangGraph · 상태 기반 실행</text>
+  <text x="1022" y="515" text-anchor="middle" class="body">session_id로 체크포인트·재개</text>
+  <path d="M379 500H442" class="arrow"/>
+    <path d="M774 500H837" class="arrow"/>
+
+  <text x="55" y="588" class="small">실행 흐름 · 확정한 카드와 근거를 유지하며 작성·검수</text>
+  <g>
+    <rect x="55" y="610" width="174" height="88" rx="14" fill="#e9f0fb"/>
+    <text x="142" y="642" text-anchor="middle" class="label">뽑기 확정·로드</text>
+    <text x="142" y="671" text-anchor="middle" class="small">PostgreSQL</text>
+    <rect x="255" y="610" width="174" height="88" rx="14" fill="#e6f2ec"/>
+    <text x="342" y="642" text-anchor="middle" class="label">관계·출처 조회</text>
+    <text x="342" y="671" text-anchor="middle" class="small">Neo4j · 2~3 hop</text>
+    <rect x="455" y="610" width="174" height="88" rx="14" fill="#fff3dc"/>
+    <text x="542" y="642" text-anchor="middle" class="label">의미 검색</text>
+    <text x="542" y="671" text-anchor="middle" class="small">Chroma · 방향별 필터</text>
+    <rect x="655" y="610" width="174" height="88" rx="14" fill="#f1ebf8"/>
+    <text x="742" y="642" text-anchor="middle" class="label">해설 초안</text>
+    <text x="742" y="671" text-anchor="middle" class="small">Generator · 인용 포함</text>
+    <rect x="855" y="610" width="174" height="88" rx="14" fill="#f8e9ef"/>
+    <text x="942" y="642" text-anchor="middle" class="label">구조·내용 검수</text>
+    <text x="942" y="671" text-anchor="middle" class="small">코드 검사 + Critic</text>
+    <rect x="1055" y="610" width="174" height="88" rx="14" fill="#e9f0fb"/>
+    <text x="1142" y="642" text-anchor="middle" class="label">저장·완료</text>
+    <text x="1142" y="671" text-anchor="middle" class="small">검수 통과 리포트 전송</text>
+    <path d="M231 654H247" class="arrow"/>
+    <path d="M431 654H447" class="arrow"/>
+    <path d="M631 654H647" class="arrow"/>
+    <path d="M831 654H847" class="arrow"/>
+    <path d="M1031 654H1047" class="arrow"/>
+    <path d="M942 701V735H742V703" class="arrow"/>
+    <text x="842" y="761" text-anchor="middle" class="small">실패 시 최대 2회 재작성 · 근거 부족 / 상한 초과는 보완 필요로 종료</text>
+  </g>
+
+  <rect x="55" y="798" width="350" height="136" rx="16" fill="#e9f0fb"/>
+  <text x="77" y="832" class="label">PostgreSQL · 확정 상태</text>
+  <text x="77" y="861" class="body">프로필 · 질문 · 세션 · 뽑기 이력</text>
+  <text x="77" y="888" class="body">리포트 · 이벤트 · 체크포인트</text>
+  <text x="77" y="913" class="small">중복 요청·재개에도 같은 3장 유지</text>
+  <rect x="465" y="798" width="350" height="136" rx="16" fill="#e6f2ec"/>
+  <text x="487" y="832" class="label">Neo4j · 관계의 이유</text>
+  <text x="487" y="861" class="body">유형 · 별자리 · 카드 · 원소 · 상징</text>
+  <text x="487" y="888" class="body">출처 있는 편집 규칙 · 근거 경로</text>
+  <text x="487" y="913" class="small">78개 카드 → 156개 정·역방향 의미</text>
+  <rect x="875" y="798" width="350" height="136" rx="16" fill="#fff3dc"/>
+  <text x="897" y="832" class="label">Chroma · 해설 문맥</text>
+  <text x="897" y="861" class="body">타로 · 별자리 · 상황별 원문 청크</text>
+  <text x="897" y="888" class="body">질문 + 경로 키워드로 의미 검색</text>
+  <text x="897" y="913" class="small">카드·방향·판본·출처 메타데이터</text>
+  <text x="55" y="975" class="body">공통 계약: session_id · card_id · orientation · chunk_id · dataset_version · embedding_profile</text>
+  <text x="55" y="1000" class="small">새 서버 모드는 질문·이력을 저장함 · 현재 정적 Beta와 실행·저장 범위를 분리</text>
+
+  <text x="40" y="1063" class="heading">조합 수와 해설 수는 따로 확인해요.</text>
+  <text x="40" y="1094" class="body">16 × 12 × 78 × 2 × 3 = 89,856개의 단일 카드·위치 조건 조합</text>
+  <text x="40" y="1123" class="small">현재 글은 600개 · 20~60배 콘텐츠는 후속 작성·검수 목표 · 조합 수가 정확도나 깊이를 보장하지 않음</text>
+</svg>

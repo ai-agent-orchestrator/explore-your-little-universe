@@ -10,8 +10,8 @@ Lumi, a little star companion, helps you explore everyday dilemmas and discover 
 
 This is a fully static React application. It requires no Spring server, Python web server, Ollama, paid API, or database credentials at runtime.
 
-1. Offline authoring: Python + LiteRT-LM embed 60 original free-text scenario cards. Neo4j stores the vectors and relationships in the dedicated `mbti-zodiac` database.
-2. Export: an allowlisted fictional graph is written to `frontend/public/data/graph.json`. The browser receives only public examples and model metadata.
+1. Offline authoring: Python + LiteRT-LM embed 600 source-informed interpretation and original scenario cards. Neo4j stores the vectors and relationships in the dedicated `mbti-zodiac` database.
+2. Export: an allowlisted editorial learning graph is written to `frontend/public/data/graph.json`. The browser receives only public examples and model metadata.
 3. Runtime: React loads that snapshot. LiteRT-LM embeds the visitor's question on the device. JavaScript computes cosine similarity and traverses the exported graph.
 4. Optional continuation: the visitor copies a grounded prompt and pastes it into Gemini. No Gemini API is integrated and no prompt is automatically sent.
 
@@ -19,7 +19,7 @@ The static app demonstrates vector + graph context expansion. It does **not** be
 
 ## Structured + unstructured data
 
-The structured side has 16 MBTI types, 12 zodiac signs, and eight shared traits. The unstructured side contains 60 original short scenario texts in ten themes: appointments, messages, work, rest, travel, choices, personal pace, family and relationships, creativity, and boundaries. There are 24 original action suggestions, each backed by specific scenario cards.
+The structured side has 16 MBTI types, 12 zodiac signs, and eight shared traits. The unstructured side contains 600 cards: 60 preserved scenarios, 160 type interpretations, 120 zodiac interpretations, and 260 new everyday examples in 26 additional themes. Profile summaries are short paraphrases of public descriptions; practical applications are authored examples. 16Personalities uses NERIS, distinct from official MBTI. [Corpus sources and validation](INTERPRETATION_CORPUS.md). There are 24 original action suggestions, each backed by specific scenario cards.
 
 ```text
 MbtiType ──HAS_TRAIT──▶ SharedTrait ◀──HAS_TRAIT── ZodiacSign
@@ -35,7 +35,7 @@ MbtiType ──HAS_TRAIT──▶ SharedTrait ◀──HAS_TRAIT── ZodiacSig
 SharedTrait ──SUGGESTS──▶ RagTip
 ```
 
-Graph expansion starts from exactly the same top-three vector results used in the left column. It follows `seed chunk ← trait → another chunk ← suggestion`, excludes the original chunks, and limits the output. The selected type and sign only reorder the graph paths; they never alter the vector evidence. A relationship is not proof that a suggestion answers the question.
+Graph expansion starts from exactly the same top-three vector results used in the left column. It follows `seed chunk ← trait → another chunk ← suggestion`, excludes the original chunks, and limits the output. Eligible graph paths are ranked by question cosine (75%) and maximum seed cosine (25%), with small boosts for shared/selected traits and direct profile links. The selected type and sign only reorder graph paths; they never alter the vector evidence. Each profile also has ten DESCRIBED_BY links to its interpretation cards. A relationship is not proof that a suggestion answers the question.
 
 ## Run React only
 
@@ -47,7 +47,7 @@ npm ci
 npm run dev
 ```
 
-An explicitly marked example appears immediately. The first actual search downloads a pinned model (~165MB), verifies its SHA-256, loads WebGPU/WASM inference, and checks a known probe against the exported native vector. If probe cosine agreement is below 0.995, all 60 cards are re-embedded in the browser before searching, avoiding mixed vector spaces. Model loading, device memory, and browser support affect startup time. Cached model reuse depends on browser storage quota. CPU authoring works natively; the browser currently uses WebGPU because this model's external weights failed to load in the tested WASM CPU path. There is no silent CPU fallback.
+An explicitly marked example appears immediately. The first actual search downloads a pinned model (~165MB), verifies its SHA-256, loads WebGPU/WASM inference, and checks a known probe against the exported native vector. If probe cosine agreement is below 0.995, all 600 cards are re-embedded in the browser before searching, avoiding mixed vector spaces. Model loading, device memory, and browser support affect startup time. Cached model reuse depends on browser storage quota. CPU authoring works natively; the browser currently uses WebGPU because this model's external weights failed to load in the tested WASM CPU path. There is no silent CPU fallback.
 
 The app uses `@litert-lm/core` 0.19.0; native authoring uses `litert-lm-api` 0.18.0. Both use the exact same pinned `embeddinggemma-2-text-270m.litertlm` file, 768 output dimensions, normalized embeddings, and plain-text preprocessing. Changing model, dimensions, or preprocessing requires rebuilding the corpus. Cosine values are not probabilities. Neo4j's vector score is transformed and can differ from the raw cosine displayed in the UI.
 
@@ -60,11 +60,13 @@ The static app does not need these Python steps. They are for editing or inspect
 .venv/Scripts/python -m mbti_lab.download_model
 # Use local .env.mbti settings. Database must be mbti-zodiac.
 .venv/Scripts/python -m mbti_lab.rag_seed
+.venv/Scripts/python tools/generate_browser_import.py
+.venv/Scripts/python tools/verify_corpus_retrieval.py
 ```
 
 `ohgi_graph.py` exposes `get_driver()` and `run(driver, cypher, **params)` for the seed/export workflow, explicitly refusing other DB names. No credentials are exported. Model weights are under ignored `models/`. `LiteRTEmbeddings` implements the official `neo4j-graphrag` Embedder interface; the seed script verifies the native Neo4j vector index using `VectorRetriever`. Browser runtime uses neither `GraphRAG` nor the Python retriever, because it has no server.
 
-`MERGE` reuses stable IDs on sequential runs and overwrites vector/content properties. Editing the corpus to remove old traits or tips does not delete historical graph relationships automatically; use a fresh dedicated learning DB for schema changes. Existing unrelated data is not removed. The public snapshot is allowlisted to the 60 fictional scenario IDs.
+`MERGE` reuses stable IDs on sequential runs and overwrites vector/content properties. Editing the corpus to remove old traits or tips does not delete historical graph relationships automatically; use a fresh dedicated learning DB for schema changes. Existing unrelated data is not removed. The public snapshot is allowlisted to the 600 explicitly authored card IDs.
 
 Inspect in Neo4j Browser (`:use mbti-zodiac`):
 

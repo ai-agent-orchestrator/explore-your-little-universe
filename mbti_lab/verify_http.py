@@ -26,6 +26,8 @@ def main():
                 data = json.load(response)
                 assert data['type'] == code and len(data['traits']) == 4
                 assert len(data['edges']) == 8 and data['mode'] == 'demo'
+                assert len(data['interpretations']) == 10
+                assert all(card['subject'] == code for card in data['interpretations'])
         print('PASS: page and all 16 result endpoints')
     finally:
         process.terminate()

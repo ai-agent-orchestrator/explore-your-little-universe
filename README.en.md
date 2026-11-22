@@ -2,17 +2,19 @@
 
 **Light. Free. Fun.**
 
-# Explore Your Little Universe
+# Explore Your Little Universe · Beta
 
 ### A fresh perspective on today's little dilemmas.
 
 [한국어](README.md) | **English**
 
+**Current: 600-card GraphRAG Beta** · [Previous version v1](https://github.com/ai-agent-orchestrator/explore-your-little-universe/tree/v1) · [Claude implementation handoff](docs/CLAUDE_TAROT_IMPLEMENTATION.md)
+
 ## [Open the playground — no installation](https://ai-agent-orchestrator.github.io/explore-your-little-universe/)
 
 Meet Lumi, try a daily dilemma, and inspect the knowledge graph and source evidence. Use a current Chrome/Edge browser with WebGPU; the first actual search downloads an embedding model.
 
-**[Open the full graph query in your own Neo4j Browser](http://localhost:7474/browser/?cmd=edit&arg=MATCH%20p%20%3D%20%28a%29-%5Br%5D-%3E%28b%29%0AWHERE%20type%28r%29%20IN%20%5B%27HAS_TRAIT%27%2C%27FROM_CHUNK%27%2C%27FROM_DOCUMENT%27%2C%27SUGGESTS%27%5D%0A%20%20AND%20any%28label%20IN%20labels%28a%29%20WHERE%20label%20IN%20%5B%27MbtiType%27%2C%27ZodiacSign%27%2C%27SharedTrait%27%2C%27RagChunk%27%2C%27RagTip%27%5D%29%0A%20%20AND%20any%28label%20IN%20labels%28b%29%20WHERE%20label%20IN%20%5B%27SharedTrait%27%2C%27RagChunk%27%2C%27RagTip%27%2C%27RagDocument%27%5D%29%0ARETURN%20p%0ALIMIT%20500%3B)** · **[First-time setup and graph import](docs/OPEN_IN_NEO4J.md)**
+**[Open the full graph query in your own Neo4j Browser](http://localhost:7474/browser/?cmd=edit&arg=MATCH%20p%20%3D%20%28a%29-%5Br%5D-%3E%28b%29%0AWHERE%20type%28r%29%20IN%20%5B%27HAS_TRAIT%27%2C%27FROM_CHUNK%27%2C%27FROM_DOCUMENT%27%2C%27SUGGESTS%27%2C%27DESCRIBED_BY%27%5D%0A%20%20AND%20any%28label%20IN%20labels%28a%29%20WHERE%20label%20IN%20%5B%27MbtiType%27%2C%27ZodiacSign%27%2C%27SharedTrait%27%2C%27RagChunk%27%2C%27RagTip%27%5D%29%0A%20%20AND%20any%28label%20IN%20labels%28b%29%20WHERE%20label%20IN%20%5B%27SharedTrait%27%2C%27RagChunk%27%2C%27RagTip%27%2C%27RagDocument%27%5D%29%0ARETURN%20p%0ALIMIT%20500%3B)** · **[First-time setup and graph import](docs/OPEN_IN_NEO4J.md)**
 
 Start your local Neo4j instance and import the public example graph once. The link opens your own localhost and contains no password or another person's database connection.
 
@@ -22,6 +24,14 @@ Start your local Neo4j instance and import the public example graph once. The li
 
 
 Meet **Lumi**, a little star companion. Explore everyday dilemmas, discover connected perspectives, and try one small action. MBTI and astrology are playful fictional settings here, not validated predictions or clinical assessments.
+
+## Current Beta and planned extension
+
+The existing MBTI/zodiac/shared-trait structure is preserved. The corpus grew from 60 to 600 cards, with source attribution, an interpretation reader, and question-aware graph ranking. The original **“Hi, I'm Lumi.”** illustration remains unchanged.
+
+![Implemented Beta and proposed Tarot / three-database / LangGraph extension](docs/images/lumi-architecture.svg)
+
+The upper lane is implemented. The lower lane is a proposed separate server mode, not a feature already running in the public playground.
 
 ## Static React + browser LiteRT-LM search
 
@@ -50,7 +60,7 @@ Open the printed address, normally http://127.0.0.1:5173. An explicitly marked e
 
 ### Explore
 
-- **60 original scenario cards:** appointments, messages, work, rest, travel, choices, personal pace, family and relationships, creativity, and boundaries.
+- **600 interpretation and scenario cards:** 60 preserved originals, 160 type interpretations, 120 zodiac interpretations, and 260 new everyday scenarios. Public profile summaries are paraphrased; practical applications are independently authored. See [sources, data composition and validation](docs/INTERPRETATION_CORPUS.md).
 - **24 small action suggestions**, each linked to supporting source cards.
 - **16 MBTI Lumi outfits** and **12 zodiac Lumi palettes and symbols**.
 - **Vector only:** the three most similar scenario texts.
@@ -71,7 +81,17 @@ npm run build
 
 Publish `frontend/dist` on a static host. Relative paths support GitHub Pages project URLs. No `.env` file should be included. Hosting and bandwidth free tiers depend on the provider.
 
-[Full setup, architecture and weekend checks](https://github.com/ai-agent-orchestrator/explore-your-little-universe/blob/feat/serverless-react-litert-rag/docs/STATIC_REACT_RAG.md) · [Scenario corpus](https://github.com/ai-agent-orchestrator/explore-your-little-universe/blob/feat/serverless-react-litert-rag/mbti_lab/scenarios.py) · [Neo4j seed/export code](https://github.com/ai-agent-orchestrator/explore-your-little-universe/blob/feat/serverless-react-litert-rag/mbti_lab/rag_seed.py)
+[Full setup, architecture and weekend checks](https://github.com/ai-agent-orchestrator/explore-your-little-universe/blob/main/docs/STATIC_REACT_RAG.md) · [Scenario corpus](https://github.com/ai-agent-orchestrator/explore-your-little-universe/blob/main/mbti_lab/scenarios.py) · [Neo4j seed/export code](https://github.com/ai-agent-orchestrator/explore-your-little-universe/blob/main/mbti_lab/rag_seed.py)
+
+## Planned Tarot + three-database + LangGraph test
+
+Add 78 tarot cards and 156 upright/reversed meanings while preserving the static Beta. PostgreSQL owns confirmed sessions, draws, reports and checkpoints; Neo4j owns source-backed relationships; Chroma retrieves interpretation chunks; LangGraph coordinates retrieval, generation, validation and resume. React flips the three cards confirmed by the server, with FastAPI/SSE carrying session and progress events.
+
+The proposed flow is confirmed draw → graph context → card/direction-filtered retrieval → cited draft → code and LLM validation → saved report. Rewriting is capped at two attempts; missing evidence ends in a needs-evidence state. Resuming never redraws the cards. The new server mode stores questions/history and requires its own backend; the existing static mode continues to search on the device.
+
+`16 × 12 × 78 × 2 × 3 = 89,856` counts single-card/position contexts, not authored documents or complete three-card spreads. Initial authoring targets 780 tarot chunks (1,380 total). Later reviewed-content targets are 14,640–35,700 total, roughly 24–60 times the current corpus, not measured quality improvements.
+
+[Detailed trial design](docs/TAROT_3DB_LANGGRAPH_PLAN.md) · [Implementation-ready Claude handoff](docs/CLAUDE_TAROT_IMPLEMENTATION.md). Tarot, PostgreSQL, Chroma, LangGraph and generated reports are **planned and not implemented** in this release.
 
 ## Neo4j lab — MBTI + 12 zodiac signs
 

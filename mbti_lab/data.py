@@ -26,4 +26,8 @@ def result(code):
                       {'id': 'tip-' + trait['id'], 'label': trait['tip'], 'kind': 'tip'}])
         edges.extend([{'source': code, 'target': trait['id'], 'label': 'HAS_TRAIT'},
                       {'source': trait['id'], 'target': 'tip-' + trait['id'], 'label': 'SUGGESTS'}])
-    return {'type': code, 'traits': traits, 'nodes': nodes, 'edges': edges}
+    from .interpretations import interpretation_cards
+    interpretations = [card for card in interpretation_cards()
+                       if card['subject_kind'] == 'mbti' and card['subject'] == code]
+    return {'type': code, 'traits': traits, 'nodes': nodes, 'edges': edges,
+            'interpretations': interpretations}

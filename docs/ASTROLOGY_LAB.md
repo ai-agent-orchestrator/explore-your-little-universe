@@ -45,4 +45,16 @@ MATCH r = (z)-[:FROM_SOURCE]->(:AstrologySource)
 RETURN p, q, r;
 ```
 
-현재 별자리 기능은 Neo4j Browser 실습용이다. 웹앱의 선택 화면은 MBTI만 제공한다. APOC와 노드 병합은 이 단계에서 필요 없다.
+## 별자리 해설과 벡터 검색 확장
+
+별자리 12개에 각각 10개 주제의 해설 120개를 추가했다. Astrology.com의 대중적인 소개를 짧게 재서술하고 일상 적용 예시를 직접 작성했다. 참고 URL과 작성 구분을 각 해설에 기록했다. 기존의 두 성향 매핑은 실습용 연결로 유지한다.
+
+`.venv/Scripts/python -m mbti_lab.rag_seed`를 실행하면 MBTI 해설·일상 사례와 함께 총 600개 글 및 벡터를 적재한다. `astrology` 명령만으로는 기본 별자리 그래프만 준비한다.
+
+```cypher
+MATCH p = (:ZodiacSign {id:'aquarius'})-[:DESCRIBED_BY]->(c:RagChunk)
+MATCH q = (c)-[:FROM_DOCUMENT]->(:RagDocument)
+RETURN p, q;
+```
+
+기존 로컬 MBTI 웹앱의 선택 화면은 MBTI만 제공한다. 정적 React 앱에서는 MBTI·별자리와 해설 주제를 함께 선택할 수 있다. [600개 데이터 구성·출처·검증](INTERPRETATION_CORPUS.md)

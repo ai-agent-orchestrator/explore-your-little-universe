@@ -1,0 +1,265 @@
+{
+  "reviewed_on": "2026-11-22",
+  "cards": 600,
+  "model_sha256": "2d079ee2f6f066b1f368e8d7c819f55214eaef1d0513b312321901f30ab286fb",
+  "criterion": "At least one topical/subject match within top 3; exploratory smoke check, not accuracy measurement",
+  "passed": 10,
+  "checks": [
+    {
+      "query": "읽었는데 답을 안 해줘서 신경 쓰여",
+      "passed": true,
+      "expected_subject": "",
+      "expected_topics": [
+        "답장",
+        "메시지",
+        "연락",
+        "읽음"
+      ],
+      "top3": [
+        {
+          "id": "daily-01-01",
+          "title": "읽음 표시만 남은 오후",
+          "cosine": 0.79016
+        },
+        {
+          "id": "daily-10-04",
+          "title": "외워지지 않는 개념",
+          "cosine": 0.77481
+        },
+        {
+          "id": "scenario-07",
+          "title": "늦어지는 답장",
+          "cosine": 0.77427
+        }
+      ]
+    },
+    {
+      "query": "계속 계획만 하고 프로젝트를 시작하지 못해",
+      "passed": true,
+      "expected_subject": "",
+      "expected_topics": [
+        "프로젝트",
+        "시작",
+        "초안"
+      ],
+      "top3": [
+        {
+          "id": "scenario-51",
+          "title": "계획만 있는 개인 프로젝트",
+          "cosine": 0.81199
+        },
+        {
+          "id": "scenario-13",
+          "title": "시작이 막막한 과제",
+          "cosine": 0.79073
+        },
+        {
+          "id": "daily-13-03",
+          "title": "혼자 정한 긴 일정",
+          "cosine": 0.78447
+        }
+      ]
+    },
+    {
+      "query": "갑자기 여행을 가자는데 일정이 없어 부담스러워",
+      "passed": true,
+      "expected_subject": "",
+      "expected_topics": [
+        "여행"
+      ],
+      "top3": [
+        {
+          "id": "scenario-25",
+          "title": "즉흥 여행 제안",
+          "cosine": 0.8161
+        },
+        {
+          "id": "scenario-28",
+          "title": "계획이 틀어진 여행",
+          "cosine": 0.79408
+        },
+        {
+          "id": "scenario-26",
+          "title": "여행 계획을 혼자 맡음",
+          "cosine": 0.78163
+        }
+      ]
+    },
+    {
+      "query": "조용히 혼자 쉬고 싶은 주말이야",
+      "passed": true,
+      "expected_subject": "",
+      "expected_topics": [
+        "휴식",
+        "조용",
+        "혼자",
+        "주말",
+        "쉼"
+      ],
+      "top3": [
+        {
+          "id": "scenario-19",
+          "title": "아무것도 안 하는 주말",
+          "cosine": 0.84088
+        },
+        {
+          "id": "daily-03-02",
+          "title": "혼자 하는 주말 취미",
+          "cosine": 0.79393
+        },
+        {
+          "id": "daily-05-05",
+          "title": "함께 보는 주말 계획",
+          "cosine": 0.78354
+        }
+      ]
+    },
+    {
+      "query": "부탁을 거절 못 해서 내 일이 자꾸 밀려",
+      "passed": true,
+      "expected_subject": "",
+      "expected_topics": [
+        "부탁",
+        "거절",
+        "역할",
+        "경계"
+      ],
+      "top3": [
+        {
+          "id": "daily-20-08",
+          "title": "선의로 준 물건의 부담",
+          "cosine": 0.79551
+        },
+        {
+          "id": "daily-20-01",
+          "title": "바로 수락한 뒤의 후회",
+          "cosine": 0.78793
+        },
+        {
+          "id": "daily-05-03",
+          "title": "도움이 먼저 오는 부모님",
+          "cosine": 0.78644
+        }
+      ]
+    },
+    {
+      "query": "발표를 완벽하게 준비하려다 시작이 늦어져",
+      "passed": true,
+      "expected_subject": "",
+      "expected_topics": [
+        "발표",
+        "초안",
+        "준비"
+      ],
+      "top3": [
+        {
+          "id": "scenario-17",
+          "title": "완벽하게 준비하다 늦어짐",
+          "cosine": 0.81797
+        },
+        {
+          "id": "daily-24-08",
+          "title": "완벽한 설명을 기다리는 지시",
+          "cosine": 0.79527
+        },
+        {
+          "id": "scenario-13",
+          "title": "시작이 막막한 과제",
+          "cosine": 0.79178
+        }
+      ]
+    },
+    {
+      "query": "INTJ는 어떤 성향이야?",
+      "passed": true,
+      "expected_subject": "INTJ",
+      "expected_topics": [],
+      "top3": [
+        {
+          "id": "mbti-intj-01",
+          "title": "INTJ · 기본 성향",
+          "cosine": 0.82536
+        },
+        {
+          "id": "mbti-intj-03",
+          "title": "INTJ · 주의할 점",
+          "cosine": 0.81694
+        },
+        {
+          "id": "mbti-intj-04",
+          "title": "INTJ · 대화",
+          "cosine": 0.81693
+        }
+      ]
+    },
+    {
+      "query": "ENFP는 어떤 성향이야?",
+      "passed": true,
+      "expected_subject": "ENFP",
+      "expected_topics": [],
+      "top3": [
+        {
+          "id": "mbti-enfp-04",
+          "title": "ENFP · 대화",
+          "cosine": 0.82475
+        },
+        {
+          "id": "mbti-enfp-01",
+          "title": "ENFP · 기본 성향",
+          "cosine": 0.82453
+        },
+        {
+          "id": "mbti-enfp-03",
+          "title": "ENFP · 주의할 점",
+          "cosine": 0.81985
+        }
+      ]
+    },
+    {
+      "query": "황소자리의 성향은 어때?",
+      "passed": true,
+      "expected_subject": "taurus",
+      "expected_topics": [],
+      "top3": [
+        {
+          "id": "zodiac-taurus-01",
+          "title": "황소자리 · 기본 성향",
+          "cosine": 0.8157
+        },
+        {
+          "id": "zodiac-taurus-09",
+          "title": "황소자리 · 선택",
+          "cosine": 0.80833
+        },
+        {
+          "id": "zodiac-taurus-10",
+          "title": "황소자리 · 작은 성장",
+          "cosine": 0.80608
+        }
+      ]
+    },
+    {
+      "query": "물병자리의 성향은 어때?",
+      "passed": true,
+      "expected_subject": "aquarius",
+      "expected_topics": [],
+      "top3": [
+        {
+          "id": "zodiac-aquarius-01",
+          "title": "물병자리 · 기본 성향",
+          "cosine": 0.82328
+        },
+        {
+          "id": "zodiac-aquarius-10",
+          "title": "물병자리 · 작은 성장",
+          "cosine": 0.80546
+        },
+        {
+          "id": "zodiac-aquarius-08",
+          "title": "물병자리 · 휴식",
+          "cosine": 0.79884
+        }
+      ]
+    }
+  ]
+}

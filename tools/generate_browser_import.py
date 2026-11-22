@@ -1,5 +1,6 @@
 """Generate a self-contained, model-free graph import for other Neo4j users."""
 import json
+import re
 from pathlib import Path
 from urllib.parse import urlencode, quote
 
@@ -25,11 +26,16 @@ def main():
         ('signs', data['signs'], '''MERGE (z:ZodiacSign {id:row.id}) SET z.name=row.name, z.is_demo=true
     WITH row, z UNWIND row.traits AS key
     MATCH (t:SharedTrait {key:key}) MERGE (z)-[:HAS_TRAIT]->(t)'''),
-        ('chunks', [{key: card[key] for key in ['id','title','text','category','document_id','document_title','source','traits','tips']}
+        ('chunks', [{key: card.get(key, '') for key in ['id','title','text','category','document_id','document_title','source','traits','tips',
+                                                       'kind','subject_kind','subject','facet','source_url','reviewed_on','editorial_note']}
                     for card in data['chunks']], '''MERGE (d:RagDocument {id:row.document_id})
-    SET d.title=row.document_title, d.name=row.document_title, d.source=row.source, d.is_demo=true
+    SET d.title=row.document_title, d.name=row.document_title, d.source=row.source, d.is_demo=true,
+        d.source_url=row.source_url, d.reviewed_on=row.reviewed_on
     MERGE (c:RagChunk {id:row.id})
-    SET c.title=row.title, c.name=row.title, c.text=row.text, c.category=row.category
+    SET c.title=row.title, c.name=row.title, c.text=row.text, c.category=row.category,
+        c.kind=row.kind, c.subject_kind=row.subject_kind, c.subject=row.subject,
+        c.facet=row.facet, c.source_url=row.source_url, c.reviewed_on=row.reviewed_on,
+        c.editorial_note=row.editorial_note
     MERGE (c)-[:FROM_DOCUMENT]->(d)
     WITH row, c UNWIND row.traits AS key
     MATCH (t:SharedTrait {key:key}) MERGE (t)-[:FROM_CHUNK]->(c)'''),
@@ -38,8 +44,15 @@ def main():
         ('evidence', [{'id':c['id'],'tips':c['tips']} for c in data['chunks']], '''MATCH (c:RagChunk {id:row.id})
     WITH row, c UNWIND row.tips AS key
     MATCH (i:RagTip {id:key}) MERGE (i)-[:FROM_CHUNK]->(c)'''),
+        ('mbti_profiles', [{'id':c['id'],'subject':c['subject']} for c in data['chunks'] if c.get('subject_kind') == 'mbti'],
+         '''MATCH (m:MbtiType {code:row.subject}), (c:RagChunk {id:row.id})
+    MERGE (m)-[:DESCRIBED_BY]->(c)'''),
+        ('zodiac_profiles', [{'id':c['id'],'subject':c['subject']} for c in data['chunks'] if c.get('subject_kind') == 'zodiac'],
+         '''MATCH (z:ZodiacSign {id:row.subject}), (c:RagChunk {id:row.id})
+    MERGE (z)-[:DESCRIBED_BY]->(c)'''),
     ]
-    parts = ['// Fictional Lumi graph only. No password, model, embedding vectors, APOC or Python required.',
+    parts = ['// Lumi editorial learning graph. Source-informed paraphrases and original fictional applications.',
+             '// No password, model, embedding vectors, APOC or Python required.',
              '// Select your own learning database in Neo4j Browser, paste this ENTIRE file, then Run.',
              '// Does not delete data. Sequential re-runs reuse stable IDs; use a dedicated lab database.']
     for name, rows, query in groups:
@@ -54,7 +67,9 @@ def main():
     for relative in ['README.md','README.en.md','docs/OPEN_IN_NEO4J.md']:
         path = ROOT / relative
         if path.is_file():
-            path.write_text(path.read_text(encoding='utf-8').replace('NEO4J_BROWSER_GRAPH_LINK',link),encoding='utf-8')
+            content = path.read_text(encoding='utf-8').replace('NEO4J_BROWSER_GRAPH_LINK',link)
+            content = re.sub(r'http://localhost:7474/browser/\?[^)\s]+', lambda _: link, content)
+            path.write_text(content,encoding='utf-8')
     print('Generated graph-only import and password-free Browser query link')
 
 

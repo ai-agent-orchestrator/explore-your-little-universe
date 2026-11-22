@@ -12,13 +12,13 @@ Neo4j Desktop의 로컬 인스턴스(Neo4j 5.23 이상)를 시작한다. Browser
 
 [실습 데이터 Cypher 파일](../cypher/lumi_graph_only_seed.cypher)을 열고 **Raw**를 눌러 전체 내용을 복사한다. Neo4j Browser 편집기에 전체를 붙여넣고 **Run**을 누른다. 파일 전체가 하나의 쿼리이므로 부분 선택 없이 실행한다.
 
-MBTI 16개, 별자리 12개, 공통 성향 8개, 상황 글 60개, 원문 묶음 10개, 행동 제안 24개를 만든다. 안정된 ID로 `MERGE`하므로 순차 재실행은 같은 노드를 재사용한다. 삭제 쿼리는 없다.
+MBTI 16개, 별자리 12개, 공통 성향 8개, 해설·사례 600개, 문서 묶음 64개, 행동 제안 24개를 만든다. 안정된 ID로 `MERGE`하므로 순차 재실행은 같은 노드를 재사용한다. 삭제 쿼리는 없다.
 
-이 파일에는 임베딩 벡터가 없고, 그래프 보기만 재현한다. Python·Ollama·LiteRT·API 키·APOC 설치가 필요 없다. 벡터 검색까지 재구축하려면 [React 브랜치의 전체 구축 안내](https://github.com/ai-agent-orchestrator/explore-your-little-universe/blob/feat/serverless-react-litert-rag/docs/STATIC_REACT_RAG.md)를 따른다.
+이 파일에는 임베딩 벡터가 없고, 그래프 보기만 재현한다. Python·Ollama·LiteRT·API 키·APOC 설치가 필요 없다. 벡터 검색까지 재구축하려면 [React 브랜치의 전체 구축 안내](STATIC_REACT_RAG.md)를 따른다.
 
 ## 3. 링크를 눌러 전체 그래프 쿼리 열기
 
-### [내 Neo4j Browser에서 전체 그래프 쿼리 열기](http://localhost:7474/browser/?cmd=edit&arg=MATCH%20p%20%3D%20%28a%29-%5Br%5D-%3E%28b%29%0AWHERE%20type%28r%29%20IN%20%5B%27HAS_TRAIT%27%2C%27FROM_CHUNK%27%2C%27FROM_DOCUMENT%27%2C%27SUGGESTS%27%5D%0A%20%20AND%20any%28label%20IN%20labels%28a%29%20WHERE%20label%20IN%20%5B%27MbtiType%27%2C%27ZodiacSign%27%2C%27SharedTrait%27%2C%27RagChunk%27%2C%27RagTip%27%5D%29%0A%20%20AND%20any%28label%20IN%20labels%28b%29%20WHERE%20label%20IN%20%5B%27SharedTrait%27%2C%27RagChunk%27%2C%27RagTip%27%2C%27RagDocument%27%5D%29%0ARETURN%20p%0ALIMIT%20500%3B)
+### [내 Neo4j Browser에서 전체 그래프 쿼리 열기](http://localhost:7474/browser/?cmd=edit&arg=MATCH%20p%20%3D%20%28a%29-%5Br%5D-%3E%28b%29%0AWHERE%20type%28r%29%20IN%20%5B%27HAS_TRAIT%27%2C%27FROM_CHUNK%27%2C%27FROM_DOCUMENT%27%2C%27SUGGESTS%27%2C%27DESCRIBED_BY%27%5D%0A%20%20AND%20any%28label%20IN%20labels%28a%29%20WHERE%20label%20IN%20%5B%27MbtiType%27%2C%27ZodiacSign%27%2C%27SharedTrait%27%2C%27RagChunk%27%2C%27RagTip%27%5D%29%0A%20%20AND%20any%28label%20IN%20labels%28b%29%20WHERE%20label%20IN%20%5B%27SharedTrait%27%2C%27RagChunk%27%2C%27RagTip%27%2C%27RagDocument%27%5D%29%0ARETURN%20p%0ALIMIT%20500%3B)
 
 링크는 **누른 사람 본인의 `localhost:7474`**를 연다. 쿼리를 편집기에 미리 넣을 뿐 자동 실행하거나 데이터를 전송하지 않는다. 학습용 DB를 선택했는지 확인하고 **Run → Graph**를 누른다.
 
@@ -26,7 +26,7 @@ HTTP 포트가 7474가 아니라면 주소의 포트를 본인 것으로 바꾼�
 
 ```cypher
 MATCH p = (a)-[r]->(b)
-WHERE type(r) IN ['HAS_TRAIT','FROM_CHUNK','FROM_DOCUMENT','SUGGESTS']
+WHERE type(r) IN ['HAS_TRAIT','FROM_CHUNK','FROM_DOCUMENT','SUGGESTS','DESCRIBED_BY']
   AND any(label IN labels(a) WHERE label IN ['MbtiType','ZodiacSign','SharedTrait','RagChunk','RagTip'])
   AND any(label IN labels(b) WHERE label IN ['SharedTrait','RagChunk','RagTip','RagDocument'])
 RETURN p LIMIT 500;
@@ -47,6 +47,6 @@ RETURN p, q LIMIT 50;
 
 Start your own local Neo4j instance, sign in with your credentials, and choose a learning database. Copy the entire [graph-only seed file](../cypher/lumi_graph_only_seed.cypher), run it once, then use the Browser link above and choose **Run → Graph**. It opens **your own localhost**, not someone else's database. The link only pre-fills the editor; it contains no password. Change port 7474 if needed.
 
-The seed recreates the fictional graph without embeddings or external libraries. An exact-ID evidence query intentionally shows one narrow proof path; the full-graph query shows the wider network. All MBTI/astrology mappings and scenario texts are original entertainment examples, not validated personality or clinical claims.
+The seed recreates the fictional graph without embeddings or external libraries. An exact-ID evidence query intentionally shows one narrow proof path; the full-graph query shows the wider network. The corpus combines short source-informed profile paraphrases and original fictional applications. Source URLs and editorial notes are included. Cross-system mappings are authored learning examples, not validated personality or clinical claims.
 
 The deep link uses Neo4j's documented [`cmd=edit&arg=...` URL parameters](https://neo4j.com/docs/browser/operations/browser-url-parameters/).
