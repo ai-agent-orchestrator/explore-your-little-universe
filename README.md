@@ -6,7 +6,7 @@
 
 **한국어** | [English](README.en.md)
 
-**현재: 600개 해설·사례 기반 Beta** · [이전 버전 v1](https://github.com/ai-agent-orchestrator/explore-your-little-universe/tree/v1) · [Claude 개발 인계](docs/CLAUDE_TAROT_IMPLEMENTATION.md)
+**현재: 600개 해설·사례 기반 Beta** · [이전 버전 v1](https://github.com/ai-agent-orchestrator/explore-your-little-universe/tree/v1) · [Claude 개발 인계 — 구현 결과·후속 작업](docs/CLAUDE_TAROT_HANDOFF.md)
 
 ## [바로 놀아보기 · 설치 없이 열기](https://ai-agent-orchestrator.github.io/explore-your-little-universe/)
 
@@ -34,6 +34,8 @@ React 검색 버전은 `main`에 포함되어 있다. `frontend` 변경을 `main
 ## 개발 브랜치: 타로 실험 모드 구현
 
 [R0~R6 리팩터링 계획](docs/TAROT_REFACTORING_PLAN.md)에 따라 공유 `lumi_core`, 타로 78장·156개 의미, PostgreSQL 확정 뽑기, Neo4j·Chroma 검색, LangGraph 검수·재개, FastAPI·인증 SSE, 선택적 React 타로 탭을 구현했다. **[설치·실행·검증 안내](docs/TAROT_RUNBOOK.md)**에서 시작한다.
+
+Claude에게는 **[현재 개발 인계서](docs/CLAUDE_TAROT_HANDOFF.md)**를 전달한다. 구현 위치, 보존할 계약, 단계별 Draft PR, 검증 결과와 실제 LLM 연결 등 남은 작업을 정리했다.
 
 기존 600개 코퍼스·스냅샷과 루미 그림·Pages 워크플로는 유지한다. 타로 청크는 180개이며 Chroma 총량은 780개다. 실제 3개 저장소·LiteRT·체크포인트·HTTP와 화면을 검증했고, **LLM 생성·검수는 FakeLLM만 검증**했다. 실제 OpenAI 호환 LLM은 로컬 설정 후 연결한다. 설정 없는 정적 빌드에는 타로 탭과 타로 코드가 포함되지 않는다.
 

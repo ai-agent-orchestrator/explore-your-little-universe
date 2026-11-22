@@ -8,7 +8,7 @@
 
 [한국어](README.md) | **English**
 
-**Current: 600-card GraphRAG Beta** · [Previous version v1](https://github.com/ai-agent-orchestrator/explore-your-little-universe/tree/v1) · [Claude implementation handoff](docs/CLAUDE_TAROT_IMPLEMENTATION.md)
+**Current: 600-card GraphRAG Beta** · [Previous version v1](https://github.com/ai-agent-orchestrator/explore-your-little-universe/tree/v1) · [Current Claude handoff and remaining work](docs/CLAUDE_TAROT_HANDOFF.md)
 
 ## [Open the playground — no installation](https://ai-agent-orchestrator.github.io/explore-your-little-universe/)
 
@@ -28,6 +28,8 @@ Meet **Lumi**, a little star companion. Explore everyday dilemmas, discover conn
 ## Optional tarot implementation (development branch)
 
 The R0–R6 implementation adds a shared `lumi_core`, 78 cards / 156 meanings, transactional PostgreSQL draws, Neo4j/Chroma retrieval, durable LangGraph validation/resume, authenticated FastAPI/SSE, and a lazy React tarot mode. See the [runbook](docs/TAROT_RUNBOOK.md). The existing static corpus, snapshot, Lumi artwork and Pages workflow are preserved.
+
+The [current Claude handoff](docs/CLAUDE_TAROT_HANDOFF.md) records code locations, preserved contracts, stacked draft PRs, completed checks, and remaining work including real-LLM validation.
 
 Chroma contains 780 chunks: the preserved 600 plus 180 authored tarot texts. Real stores, native embeddings, checkpoints, HTTP and browser flows were tested; **generation and critique were tested with FakeLLM only**. Configure an OpenAI-compatible endpoint to use a real LLM. With no `VITE_TAROT_API_URL`, static builds contain no tarot code or tab.
 
