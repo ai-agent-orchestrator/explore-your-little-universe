@@ -1,0 +1,1329 @@
+{
+  "dataset": "tarot-v1",
+  "cases": 30,
+  "embedding_profile": "litert-lm-api-0.18.0:2d079ee2f6f066b1f368e8d7c819f55214eaef1d0513b312321901f30ab286fb:dim768:normalized:plain-v1",
+  "criterion": "Three selected card directions retrieved; metadata filtering coverage, not human relevance accuracy",
+  "llm_evaluation": "Not performed; no external LLM called",
+  "results": [
+    {
+      "id": "tarot-eval-01",
+      "question": "새 일을 시작하고 싶은데 익숙한 방식을 바꾸기가 두려워.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 4,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-upright-work",
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-general"
+        ],
+        [
+          "tarot-major-17-star-reversed-work",
+          "tarot-major-17-star-reversed-money",
+          "tarot-major-17-star-reversed-general"
+        ],
+        [
+          "tarot-major-09-hermit-upright-money",
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-general"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-work",
+          "tarot-major-16-tower-upright-general"
+        ],
+        [
+          "tarot-major-17-star-reversed-work",
+          "tarot-major-17-star-reversed-reflection",
+          "tarot-major-17-star-reversed-general"
+        ],
+        [
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-money",
+          "tarot-major-09-hermit-upright-relationships"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-02",
+      "question": "회의에서 다른 의견을 말하면 분위기를 해칠까 걱정돼.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 4,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-work",
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-reflection"
+        ],
+        [
+          "tarot-major-17-star-upright-relationships",
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-work"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-work",
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-money"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-work",
+          "tarot-major-16-tower-reversed-reflection"
+        ],
+        [
+          "tarot-major-17-star-upright-relationships",
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-work"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-work"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-03",
+      "question": "친구에게 혼자 쉬고 싶다고 어떻게 이야기할까?",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 4,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-upright-relationships",
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-general"
+        ],
+        [
+          "tarot-major-17-star-reversed-relationships",
+          "tarot-major-17-star-reversed-reflection",
+          "tarot-major-17-star-reversed-general"
+        ],
+        [
+          "tarot-major-09-hermit-upright-relationships",
+          "tarot-major-09-hermit-upright-general",
+          "tarot-major-09-hermit-upright-work"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-relationships",
+          "tarot-major-16-tower-upright-general"
+        ],
+        [
+          "tarot-major-17-star-reversed-relationships",
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-upright-relationships",
+          "tarot-major-09-hermit-upright-general",
+          "tarot-major-09-hermit-upright-reflection"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-04",
+      "question": "내가 준비한 계획이 갑자기 바뀌어서 당황스러워.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 2,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-reflection",
+          "tarot-major-16-tower-reversed-work"
+        ],
+        [
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-work",
+          "tarot-major-17-star-upright-relationships"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-relationships"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-reflection",
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-work"
+        ],
+        [
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-reflection",
+          "tarot-major-17-star-upright-work"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-relationships"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-05",
+      "question": "열심히 해도 진전이 없는 것 같아 기대하기가 어려워.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 6,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-upright-work",
+          "tarot-major-16-tower-upright-general",
+          "tarot-major-16-tower-upright-reflection"
+        ],
+        [
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-work",
+          "tarot-major-17-star-reversed-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-general",
+          "tarot-major-09-hermit-upright-money"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-upright-general",
+          "tarot-major-16-tower-upright-work",
+          "tarot-major-16-tower-upright-reflection"
+        ],
+        [
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-work",
+          "tarot-major-17-star-reversed-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-money",
+          "tarot-major-09-hermit-upright-relationships"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-06",
+      "question": "가까운 사람에게 도움을 요청하는 게 어색해.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 5,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-work",
+          "tarot-major-16-tower-reversed-relationships",
+          "tarot-major-16-tower-reversed-reflection"
+        ],
+        [
+          "tarot-major-17-star-upright-relationships",
+          "tarot-major-17-star-upright-reflection",
+          "tarot-major-17-star-upright-general"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-relationships",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-money"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-reflection",
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-work"
+        ],
+        [
+          "tarot-major-17-star-upright-reflection",
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-relationships"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-relationships"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-07",
+      "question": "남이 추천한 목표가 내게도 맞는지 모르겠어.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 4,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-upright-relationships",
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-general"
+        ],
+        [
+          "tarot-major-17-star-reversed-work",
+          "tarot-major-17-star-reversed-relationships",
+          "tarot-major-17-star-reversed-money"
+        ],
+        [
+          "tarot-major-09-hermit-upright-general",
+          "tarot-major-09-hermit-upright-money",
+          "tarot-major-09-hermit-upright-reflection"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-upright-general",
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-work"
+        ],
+        [
+          "tarot-major-17-star-reversed-work",
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-relationships"
+        ],
+        [
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-money",
+          "tarot-major-09-hermit-upright-general"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-08",
+      "question": "완벽하게 준비하다가 시작할 시점을 놓치는 것 같아.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 5,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-reflection",
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-work"
+        ],
+        [
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-work",
+          "tarot-major-17-star-upright-relationships"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-relationships"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-reflection",
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-work"
+        ],
+        [
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-reflection",
+          "tarot-major-17-star-upright-work"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-relationships"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-09",
+      "question": "친구의 답장이 늦으면 자꾸 의미를 추측하게 돼.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 4,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-upright-relationships",
+          "tarot-major-16-tower-upright-general",
+          "tarot-major-16-tower-upright-money"
+        ],
+        [
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-money",
+          "tarot-major-17-star-reversed-relationships"
+        ],
+        [
+          "tarot-major-09-hermit-upright-general",
+          "tarot-major-09-hermit-upright-relationships",
+          "tarot-major-09-hermit-upright-reflection"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-upright-general",
+          "tarot-major-16-tower-upright-relationships",
+          "tarot-major-16-tower-upright-reflection"
+        ],
+        [
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-work",
+          "tarot-major-17-star-reversed-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-relationships",
+          "tarot-major-09-hermit-upright-general"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-10",
+      "question": "새 프로젝트에서 내가 맡을 범위를 정하고 싶어.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 3,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-work",
+          "tarot-major-16-tower-reversed-reflection",
+          "tarot-major-16-tower-reversed-general"
+        ],
+        [
+          "tarot-major-17-star-upright-work",
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-work",
+          "tarot-major-09-hermit-reversed-relationships"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-reflection",
+          "tarot-major-16-tower-reversed-work",
+          "tarot-major-16-tower-reversed-general"
+        ],
+        [
+          "tarot-major-17-star-upright-work",
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-work"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-11",
+      "question": "모두의 부탁을 들어주다 내 시간이 사라졌어.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 5,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-upright-general",
+          "tarot-major-16-tower-upright-work",
+          "tarot-major-16-tower-upright-reflection"
+        ],
+        [
+          "tarot-major-17-star-reversed-reflection",
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-money"
+        ],
+        [
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-money",
+          "tarot-major-09-hermit-upright-general"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-upright-general",
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-work"
+        ],
+        [
+          "tarot-major-17-star-reversed-reflection",
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-work"
+        ],
+        [
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-money",
+          "tarot-major-09-hermit-upright-relationships"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-12",
+      "question": "공부를 다시 시작하려는데 무엇부터 해야 할까?",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 2,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-reflection",
+          "tarot-major-16-tower-reversed-work",
+          "tarot-major-16-tower-reversed-money"
+        ],
+        [
+          "tarot-major-17-star-upright-reflection",
+          "tarot-major-17-star-upright-work",
+          "tarot-major-17-star-upright-general"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-work",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-relationships"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-reflection",
+          "tarot-major-16-tower-reversed-work",
+          "tarot-major-16-tower-reversed-general"
+        ],
+        [
+          "tarot-major-17-star-upright-reflection",
+          "tarot-major-17-star-upright-work",
+          "tarot-major-17-star-upright-general"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-work"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-13",
+      "question": "새로운 사람을 만나고 싶지만 큰 모임은 부담스러워.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 4,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-upright-relationships",
+          "tarot-major-16-tower-upright-work",
+          "tarot-major-16-tower-upright-reflection"
+        ],
+        [
+          "tarot-major-17-star-reversed-relationships",
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-upright-general",
+          "tarot-major-09-hermit-upright-work",
+          "tarot-major-09-hermit-upright-reflection"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-upright-general",
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-relationships"
+        ],
+        [
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-reflection",
+          "tarot-major-17-star-reversed-work"
+        ],
+        [
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-relationships",
+          "tarot-major-09-hermit-upright-general"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-14",
+      "question": "잘 끝낸 일보다 작은 실수만 계속 떠올라.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 4,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-work",
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-relationships"
+        ],
+        [
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-relationships",
+          "tarot-major-17-star-upright-work"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-work"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-work",
+          "tarot-major-16-tower-reversed-reflection"
+        ],
+        [
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-reflection",
+          "tarot-major-17-star-upright-work"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-relationships"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-15",
+      "question": "쉬는 날에도 해야 할 일을 계속 찾고 있어.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 3,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-upright-work",
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-general"
+        ],
+        [
+          "tarot-major-17-star-reversed-reflection",
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-work"
+        ],
+        [
+          "tarot-major-09-hermit-upright-money",
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-relationships"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-general",
+          "tarot-major-16-tower-upright-work"
+        ],
+        [
+          "tarot-major-17-star-reversed-reflection",
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-work"
+        ],
+        [
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-money",
+          "tarot-major-09-hermit-upright-relationships"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-16",
+      "question": "예전과 달라진 친구와 어떤 이야기를 나눌까?",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 3,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-relationships",
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-reflection"
+        ],
+        [
+          "tarot-major-17-star-upright-relationships",
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-relationships"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-reflection",
+          "tarot-major-16-tower-reversed-relationships"
+        ],
+        [
+          "tarot-major-17-star-upright-relationships",
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-relationships"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-17",
+      "question": "갑자기 여행을 가자는 제안이 끌리면서도 불편해.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 5,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-upright-general",
+          "tarot-major-16-tower-upright-work",
+          "tarot-major-16-tower-upright-relationships"
+        ],
+        [
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-reflection",
+          "tarot-major-17-star-reversed-money"
+        ],
+        [
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-general",
+          "tarot-major-09-hermit-upright-relationships"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-upright-general",
+          "tarot-major-16-tower-upright-work",
+          "tarot-major-16-tower-upright-reflection"
+        ],
+        [
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-reflection",
+          "tarot-major-17-star-reversed-work"
+        ],
+        [
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-relationships",
+          "tarot-major-09-hermit-upright-money"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-18",
+      "question": "내 생각을 정리하려면 혼자 있는 시간이 필요해.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 4,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-reflection",
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-work"
+        ],
+        [
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-relationships",
+          "tarot-major-17-star-upright-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-relationships"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-reflection",
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-work"
+        ],
+        [
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-reflection",
+          "tarot-major-17-star-upright-work"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-relationships"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-19",
+      "question": "같은 고민을 반복하는데 다른 관점을 보고 싶어.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 3,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-general",
+          "tarot-major-16-tower-upright-work"
+        ],
+        [
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-reflection",
+          "tarot-major-17-star-reversed-work"
+        ],
+        [
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-relationships",
+          "tarot-major-09-hermit-upright-general"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-general",
+          "tarot-major-16-tower-upright-work"
+        ],
+        [
+          "tarot-major-17-star-reversed-work",
+          "tarot-major-17-star-reversed-reflection",
+          "tarot-major-17-star-reversed-general"
+        ],
+        [
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-relationships",
+          "tarot-major-09-hermit-upright-money"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-20",
+      "question": "창작물을 보여주려니 나 자신이 평가받는 기분이야.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 4,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-work",
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-reflection"
+        ],
+        [
+          "tarot-major-17-star-upright-work",
+          "tarot-major-17-star-upright-relationships",
+          "tarot-major-17-star-upright-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-work",
+          "tarot-major-09-hermit-reversed-general"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-work",
+          "tarot-major-16-tower-reversed-reflection"
+        ],
+        [
+          "tarot-major-17-star-upright-reflection",
+          "tarot-major-17-star-upright-work",
+          "tarot-major-17-star-upright-general"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-relationships"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-21",
+      "question": "동료의 피드백과 내 취향을 어떻게 나누어 볼까?",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 5,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-relationships",
+          "tarot-major-16-tower-upright-work"
+        ],
+        [
+          "tarot-major-17-star-reversed-money",
+          "tarot-major-17-star-reversed-work",
+          "tarot-major-17-star-reversed-relationships"
+        ],
+        [
+          "tarot-major-09-hermit-upright-work",
+          "tarot-major-09-hermit-upright-general",
+          "tarot-major-09-hermit-upright-reflection"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-work",
+          "tarot-major-16-tower-upright-general"
+        ],
+        [
+          "tarot-major-17-star-reversed-work",
+          "tarot-major-17-star-reversed-money",
+          "tarot-major-17-star-reversed-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-upright-work",
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-general"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-22",
+      "question": "계획표가 어긋나면 하루를 포기하고 싶어져.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 5,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-work",
+          "tarot-major-16-tower-reversed-money"
+        ],
+        [
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-work",
+          "tarot-major-17-star-upright-relationships"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-work",
+          "tarot-major-09-hermit-reversed-reflection"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-reflection",
+          "tarot-major-16-tower-reversed-work"
+        ],
+        [
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-work",
+          "tarot-major-17-star-upright-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-relationships"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-23",
+      "question": "내 방식만 고집하지 않으면서 기준을 지키고 싶어.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 6,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-work",
+          "tarot-major-16-tower-upright-general"
+        ],
+        [
+          "tarot-major-17-star-reversed-work",
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-money"
+        ],
+        [
+          "tarot-major-09-hermit-upright-money",
+          "tarot-major-09-hermit-upright-work",
+          "tarot-major-09-hermit-upright-general"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-general",
+          "tarot-major-16-tower-upright-work"
+        ],
+        [
+          "tarot-major-17-star-reversed-work",
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-money",
+          "tarot-major-09-hermit-upright-general"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-24",
+      "question": "오래 붙잡은 일을 마무리할 조건을 정하고 싶어.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 3,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-work",
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-reflection"
+        ],
+        [
+          "tarot-major-17-star-upright-work",
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-relationships"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-work",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-reflection"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-reflection",
+          "tarot-major-16-tower-reversed-work"
+        ],
+        [
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-work",
+          "tarot-major-17-star-upright-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-work"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-25",
+      "question": "가족의 기대와 내가 바라는 생활이 다른 것 같아.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 3,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-general",
+          "tarot-major-16-tower-upright-work"
+        ],
+        [
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-work",
+          "tarot-major-17-star-reversed-money"
+        ],
+        [
+          "tarot-major-09-hermit-upright-money",
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-general"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-general",
+          "tarot-major-16-tower-upright-work"
+        ],
+        [
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-work",
+          "tarot-major-17-star-reversed-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-money",
+          "tarot-major-09-hermit-upright-relationships"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-26",
+      "question": "서로 다른 연락 빈도를 편하게 조율하고 싶어.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 3,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-work",
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-relationships"
+        ],
+        [
+          "tarot-major-17-star-upright-relationships",
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-relationships",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-reflection"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-reflection",
+          "tarot-major-16-tower-reversed-work"
+        ],
+        [
+          "tarot-major-17-star-upright-relationships",
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-relationships"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-27",
+      "question": "돈과 관련된 걱정을 혼자 계속 반복해서 생각해.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 3,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-upright-money",
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-work"
+        ],
+        [
+          "tarot-major-17-star-reversed-money",
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-work"
+        ],
+        [
+          "tarot-major-09-hermit-upright-money",
+          "tarot-major-09-hermit-upright-relationships",
+          "tarot-major-09-hermit-upright-general"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-upright-money",
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-general"
+        ],
+        [
+          "tarot-major-17-star-reversed-money",
+          "tarot-major-17-star-reversed-work",
+          "tarot-major-17-star-reversed-general"
+        ],
+        [
+          "tarot-major-09-hermit-upright-money",
+          "tarot-major-09-hermit-upright-relationships",
+          "tarot-major-09-hermit-upright-reflection"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-28",
+      "question": "내가 정말 원하는 경험이 무엇인지 돌아보고 싶어.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 2,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-reflection",
+          "tarot-major-16-tower-reversed-work"
+        ],
+        [
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-reflection",
+          "tarot-major-17-star-upright-work"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-work"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-reflection",
+          "tarot-major-16-tower-reversed-work"
+        ],
+        [
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-reflection",
+          "tarot-major-17-star-upright-work"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-relationships"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-29",
+      "question": "실수한 뒤 다시 참여할 용기를 찾고 싶어.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 5,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-upright-general",
+          "tarot-major-16-tower-upright-work",
+          "tarot-major-16-tower-upright-reflection"
+        ],
+        [
+          "tarot-major-17-star-reversed-work",
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-work",
+          "tarot-major-09-hermit-upright-relationships"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-upright-general",
+          "tarot-major-16-tower-upright-reflection",
+          "tarot-major-16-tower-upright-work"
+        ],
+        [
+          "tarot-major-17-star-reversed-work",
+          "tarot-major-17-star-reversed-general",
+          "tarot-major-17-star-reversed-reflection"
+        ],
+        [
+          "tarot-major-09-hermit-upright-reflection",
+          "tarot-major-09-hermit-upright-relationships",
+          "tarot-major-09-hermit-upright-money"
+        ]
+      ]
+    },
+    {
+      "id": "tarot-eval-30",
+      "question": "중요한 선택을 앞두고 사실과 추측을 구분하고 싶어.",
+      "direction_coverage": {
+        "question": 3,
+        "expanded": 3
+      },
+      "wrong_direction_or_card": 0,
+      "graph_paths": 4,
+      "question_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-money",
+          "tarot-major-16-tower-reversed-reflection"
+        ],
+        [
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-work",
+          "tarot-major-17-star-upright-relationships"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-work",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-money"
+        ]
+      ],
+      "expanded_top_ids": [
+        [
+          "tarot-major-16-tower-reversed-general",
+          "tarot-major-16-tower-reversed-reflection",
+          "tarot-major-16-tower-reversed-money"
+        ],
+        [
+          "tarot-major-17-star-upright-general",
+          "tarot-major-17-star-upright-reflection",
+          "tarot-major-17-star-upright-work"
+        ],
+        [
+          "tarot-major-09-hermit-reversed-reflection",
+          "tarot-major-09-hermit-reversed-general",
+          "tarot-major-09-hermit-reversed-work"
+        ]
+      ]
+    }
+  ]
+}

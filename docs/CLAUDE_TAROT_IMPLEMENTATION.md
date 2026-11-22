@@ -1,5 +1,7 @@
 # Claude 개발 인계: Lumi 타로 × PostgreSQL × Neo4j × Chroma × LangGraph
 
+> 이 문서는 최초 설계·인계 시점의 기록입니다. 현재 R0~R6 구현과 실제 검증 범위는 [TAROT_RUNBOOK.md](TAROT_RUNBOOK.md)를 참고하세요.
+
 2026-11-22 · 구현 요청서 · 이 파일 자체는 실행 코드가 아니다.
 
 ## 바로 전달할 작업 지시

@@ -43,7 +43,7 @@ MERGE (s:InterpretationSource {id:'tarot-authored-v1'}) SET s.title=row.source,s
 WITH row,m,s UNWIND row.traits AS trait
 MATCH (t:SharedTrait {key:trait})
 MERGE (r:InterpretationRule {id:row.card_id+':'+row.orientation+':'+trait})
-SET r.effect=CASE row.orientation WHEN 'upright' THEN 'amplifies' ELSE 'balances' END,
+SET r.effect=row.rule_effects[trait],
     r.mapping_version=$mapping,r.dataset_id=$dataset,r.source_id=s.id,r.keyword=row.keyword,
     r.editorial_note='Lumi가 직접 정한 상징적 성찰 연결; 경험적으로 검증한 인과가 아님'
 MERGE (m)-[:HAS_RULE]->(r) MERGE (r)-[:RELATES_TO]->(t) MERGE (r)-[:FROM_SOURCE]->(s)'''

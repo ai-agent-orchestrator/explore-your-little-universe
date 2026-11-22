@@ -46,9 +46,11 @@ class Runtime:
                 self.stack.callback(self.vector_repository.close)
                 self.vector_repository.ping();self.status['chroma']='ok'
             except Exception: self.status['chroma']='error'
-        if all(self.settings.llm.values()):
-            self.llm=CompatibleLLM(self.settings.llm)
-            self.stack.callback(self.llm.close); self.status['llm']='ok'
+        if all(self.settings.llm.get(key) for key in ('base_url','model','api_key')):
+            try:
+                self.llm=CompatibleLLM(self.settings.llm)
+                self.stack.callback(self.llm.close); self.status['llm']='ok'
+            except Exception: self.status['llm']='error'
         if all(value=='ok' for value in self.status.values()):
             try:
                 saver=self.stack.enter_context(postgres_checkpointer(self.settings.postgres_dsn))

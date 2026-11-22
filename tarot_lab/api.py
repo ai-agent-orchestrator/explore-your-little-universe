@@ -30,8 +30,9 @@ def create_app(runtime=None):
     @asynccontextmanager
     async def lifespan(app):
         app.state.runtime=runtime or Runtime()
-        await run_in_threadpool(app.state.runtime.open)
-        try: yield
+        try:
+            await run_in_threadpool(app.state.runtime.open)
+            yield
         finally: await run_in_threadpool(app.state.runtime.close)
 
     app=FastAPI(title='Lumi Tarot Local Experiment',lifespan=lifespan)

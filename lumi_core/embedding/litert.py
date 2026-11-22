@@ -3,6 +3,7 @@ import hashlib
 import math
 from pathlib import Path
 from threading import Lock
+from lumi_core.versions import EMBEDDING_PREPROCESSING
 
 ROOT = Path(__file__).resolve().parents[2]
 MODEL_REPO = 'litert-community/embeddinggemma-2-text-270m-litert-lm'
@@ -35,7 +36,7 @@ class LiteRTEmbeddings:
         if not self.path.is_file():
             raise ValueError('Run python -m mbti_lab.download_model first')
         self.fingerprint = sha256(self.path)
-        self.profile = f'litert-lm-api-0.18.0:{self.fingerprint}:dim768:normalized:plain-v1'
+        self.profile = f'litert-lm-api-0.18.0:{self.fingerprint}:dim768:normalized:{EMBEDDING_PREPROCESSING}'
         self.engine = litert_lm.EmbeddingEngine(model_path=str(self.path),
                                                backend=litert_lm.Backend.CPU())
         self.options = litert_lm.EmbeddingOptions(normalize=True, output_size=DIMENSIONS)
