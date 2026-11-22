@@ -7,52 +7,18 @@ from ohgi_graph import get_driver, run, database
 from .embedding import LiteRTEmbeddings, MODEL_REPO, MODEL_REVISION, MODEL_FILE, DIMENSIONS
 from .scenarios import cards, SUGGESTIONS
 from .data import TYPES, TRAITS
-from .astrology import SIGNS, SEED as ASTRO_SEED
-from .server import SEED as MBTI_SEED
+from lumi_core.catalog.zodiac import SIGNS
+from lumi_core.graph.seeds import (MBTI_SEED, ZODIAC_SEED as ASTRO_SEED, RAG_SEED as SEED,
+    RAG_TIPS as TIPS, RAG_SUPPORTS as SUPPORTS, RAG_PROFILES as PROFILES, trait_rows, sign_rows, tip_rows)
+from lumi_core.corpus.chunk import embedding_text
 
 ROOT = Path(__file__).resolve().parent.parent
 INDEX = 'mindmap_chunk_embedding'
 PROBE = '친구가 갑자기 여행을 가자고 해서 부담스러워'
-SEED = '''
-UNWIND $rows AS row
-MERGE (d:RagDocument {id: row.document_id})
-SET d.title = row.document_title, d.is_demo = true,
-    d.source = row.source, d.source_url = row.source_url, d.reviewed_on = row.reviewed_on
-MERGE (c:RagChunk {id: row.id})
-SET c.title = row.title, c.text = row.text, c.category = row.category,
-    c.embedding = row.embedding, c.embedding_profile = $profile,
-    c.kind = row.kind, c.subject_kind = row.subject_kind, c.subject = row.subject,
-    c.source_url = row.source_url, c.reviewed_on = row.reviewed_on,
-    c.editorial_note = row.editorial_note, c.facet = row.facet
-MERGE (c)-[:FROM_DOCUMENT]->(d)
-WITH row, c
-UNWIND row.traits AS key
-MATCH (t:SharedTrait {key: key})
-MERGE (t)-[:FROM_CHUNK]->(c)
-'''
-TIPS = '''
-UNWIND $tips AS row
-MERGE (i:RagTip {id: row.id}) SET i.text = row.text
-WITH row, i
-MATCH (t:SharedTrait {key: row.trait})
-MERGE (t)-[:SUGGESTS]->(i)
-'''
-SUPPORTS = '''
-UNWIND $rows AS row
-MATCH (c:RagChunk {id: row.id})
-UNWIND row.tips AS id
-MATCH (i:RagTip {id: id})
-MERGE (i)-[:FROM_CHUNK]->(c)
-'''
-PROFILES = '''
-UNWIND $rows AS row
-MATCH (c:RagChunk {id: row.id})
-OPTIONAL MATCH (m:MbtiType {code: row.subject}) WHERE row.subject_kind = 'mbti'
-FOREACH (_ IN CASE WHEN m IS NULL THEN [] ELSE [1] END | MERGE (m)-[:DESCRIBED_BY]->(c))
-WITH row, c
-OPTIONAL MATCH (z:ZodiacSign {id: row.subject}) WHERE row.subject_kind = 'zodiac'
-FOREACH (_ IN CASE WHEN z IS NULL THEN [] ELSE [1] END | MERGE (z)-[:DESCRIBED_BY]->(c))
-'''
+
+
+
+
 
 
 def snapshot(rows, embedder, probe_vector, source):
@@ -127,7 +93,7 @@ def main():
             if (previous.get('title'), previous.get('text')) == (card['title'], card['text']):
                 card['embedding'] = previous['embedding']
             else:
-                card['embedding'] = embedder.embed_query(card['title'] + '\n' + card['text'])
+                card['embedding'] = embedder.embed_query(embedding_text(card))
             if i % 25 == 0 or i == len(rows):
                 print(f'Embedding {i}/{len(rows)}', flush=True)
         probe = embedder.embed_query(PROBE)
@@ -140,12 +106,7 @@ def main():
                                       ('mindmap_doc_id', 'RagDocument', 'id'),
                                       ('mindmap_tip_id', 'RagTip', 'id')]:
                 run(driver, f'CREATE CONSTRAINT {name} IF NOT EXISTS FOR (n:{label}) REQUIRE n.{key} IS UNIQUE')
-            mbti_rows = [{'code': code, 'key': key, 'title': TRAITS[key][0],
-                          'text': TRAITS[key][1], 'tip': TRAITS[key][2]}
-                         for code in TYPES for key in code]
-            astro_rows = [{'id': sign, 'name': name, 'key': key, 'title': TRAITS[key][0],
-                           'text': TRAITS[key][1]} for sign, name, keys in SIGNS for key in keys]
-            tips = [{'id': key, 'trait': trait, 'text': text} for key, trait, text in SUGGESTIONS]
+            mbti_rows, astro_rows, tips = trait_rows(), sign_rows(), tip_rows()
             def write(tx):
                 tx.run(MBTI_SEED, rows=mbti_rows).consume()
                 tx.run(ASTRO_SEED, rows=astro_rows).consume()

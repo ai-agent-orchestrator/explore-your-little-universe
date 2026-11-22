@@ -42,6 +42,7 @@ export async function createEmbedder(data,onProgress){
         for(let i=0;i<data.chunks.length;i++){
           onProgress(`브라우저 벡터를 재구축합니다 ${i+1}/${data.chunks.length}`);
           const card=data.chunks[i];
+          // must match lumi_core.corpus.chunk.embedding_text (plain-v1)
           chunks.push({...card,embedding:await embed(card.title+'\n'+card.text)});
         }
       }
