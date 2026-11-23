@@ -5,11 +5,17 @@
     <td align="center"><img src="docs/images/tarot/star.png" alt="The Star — Lumi and golden gears" width="220"><br><b>Star</b></td>
     <td align="center"><img src="docs/images/tarot/back.png" alt="Card back — Lumi multi-agent orchestration" width="220"><br><b>Back</b></td>
   </tr>
+  <tr>
+    <td align="center"><img src="docs/images/tarot/hierophant.png" alt="V The Hierophant — 교황" width="220"><br><b>V · Hierophant</b></td>
+    <td align="center"><img src="docs/images/tarot/wheel-of-fortune.png" alt="X Wheel of Fortune — 운명의 수레바퀴" width="220"><br><b>X · Wheel of Fortune</b></td>
+    <td align="center"><img src="docs/images/tarot/devil.png" alt="XV The Devil — 악마" width="220"><br><b>XV · Devil</b></td>
+    <td align="center"><img src="docs/images/tarot/world.png" alt="XXI The World — 세계" width="220"><br><b>XXI · World</b></td>
+  </tr>
 </table>
 
 **[View all 22 Major Arcana](docs/TAROT_MAJOR_ARCANA_GALLERY.md)** · 22 fronts and a shared back completed; 56 Minor Arcana remain.
 
-**Reflection → change → renewal.** Three custom Lumi cards and a shared orchestration-themed back. Artwork preview; tarot server functionality remains planned. [Artwork prompts and handoff](docs/TAROT_ART_PROMPTS.md)
+**Reflection → change → renewal.** Seven custom Lumi cards and a shared orchestration-themed back. Artwork preview; tarot server functionality remains planned. [Artwork prompts and handoff](docs/TAROT_ART_PROMPTS.md)
 
 # Karmic Resonance
 

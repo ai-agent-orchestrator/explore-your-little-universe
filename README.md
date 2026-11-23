@@ -5,11 +5,17 @@
     <td align="center"><img src="docs/images/tarot/star.png" alt="The Star — Lumi and golden gears" width="220"><br><b>Star</b></td>
     <td align="center"><img src="docs/images/tarot/back.png" alt="Card back — Lumi multi-agent orchestration" width="220"><br><b>Back</b></td>
   </tr>
+  <tr>
+    <td align="center"><img src="docs/images/tarot/hierophant.png" alt="V The Hierophant — 교황" width="220"><br><b>V · Hierophant</b></td>
+    <td align="center"><img src="docs/images/tarot/wheel-of-fortune.png" alt="X Wheel of Fortune — 운명의 수레바퀴" width="220"><br><b>X · Wheel of Fortune</b></td>
+    <td align="center"><img src="docs/images/tarot/devil.png" alt="XV The Devil — 악마" width="220"><br><b>XV · Devil</b></td>
+    <td align="center"><img src="docs/images/tarot/world.png" alt="XXI The World — 세계" width="220"><br><b>XXI · World</b></td>
+  </tr>
 </table>
 
 **[메이저 아르카나 22장 전체 보기](docs/TAROT_MAJOR_ARCANA_GALLERY.md)** · 앞면 22장 + 공통 뒷면 완성, 마이너 56장 제작 예정.
 
-**탐색 → 변화 → 회복.** Lumi와 톱니·별자리로 연결한 대표 카드 3장과 공통 뒷면. 카드 아트 미리보기이며 타로 서버 기능은 아직 설계 단계다. [이미지 제작·개발 인계](docs/TAROT_ART_PROMPTS.md)
+**탐색 → 변화 → 회복.** Lumi와 톱니·별자리로 연결한 대표 카드 7장과 공통 뒷면. 카드 아트 미리보기이며 타로 서버 기능은 아직 설계 단계다. [이미지 제작·개발 인계](docs/TAROT_ART_PROMPTS.md)
 
 # Karmic Resonance
 
