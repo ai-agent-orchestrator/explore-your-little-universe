@@ -13,6 +13,8 @@ def migrate(dsn=None):
                 continue
             connection.execute(path.read_text(encoding='utf-8'))
             connection.execute('INSERT INTO lumi.schema_migrations(name) VALUES (%s)',(path.name,))
-    print('Lumi service schema migrations applied')
+    from tarot_lab.workflow.graph import postgres_checkpointer
+    with postgres_checkpointer(dsn or postgres(),setup=True): pass
+    print('Lumi service migrations and langgraph checkpoint schema applied')
 
 if __name__=='__main__': migrate()
