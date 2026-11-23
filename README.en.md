@@ -4,9 +4,11 @@
 
 **A database schema practice project using Neo4j + PostgreSQL + Chroma.** Model MBTI, horoscopes, and tarot readings in the database suited to each responsibility: graph relationships, relational profiles and reading sessions, and interpretation texts with vector embeddings.
 
-<img src="docs/images/lumi.svg" alt="Lumi, a little star companion" width="180">
+<img src="docs/images/lumi.svg" alt="Lumi, a little star companion" width="480">
 
-## 1. Current public Beta — Serverless · Google LiteRT-LM
+## Serverless · Google LiteRT-LM explained
+
+**1. Implementation in progress — improving browser search from the current public Beta.**
 
 The current Beta is a static React app for exploring 600 MBTI and zodiac interpretations and scenarios. It uses a public snapshot built in Neo4j and Google LiteRT-LM embedding search in the browser. Lumi is a small guide character.
 
@@ -14,7 +16,7 @@ The current Beta is a static React app for exploring 600 MBTI and zodiac interpr
 
 Use a current Chrome or Edge browser; the first real search downloads a model. The server mode below is a separate next-step design.
 
-## 2. Next step — Tarot + three databases + LangGraph (initial trial design)
+## Tarot + three databases + LangGraph (initial trial design)
 
 **This server mode is a design. Tarot draws, PostgreSQL, Chroma, LangGraph, and a generative LLM are not implemented in the current public Beta.** Extend the MBTI and horoscope model with **78 tarot cards × upright/reversed = 156 meanings**, separating relationships, interpretations, and sessions.
 
@@ -25,6 +27,18 @@ Use a current Chrome or Edge browser; the first real search downloads a model. T
 | **Chroma** | Original interpretation texts and embeddings by orientation and context. Search with the question and graph keywords while filtering by drawn card, orientation, and dataset edition. |
 | **LangGraph** | Load confirmed draws → graph lookup → semantic retrieval → draft → validation → save, with bounded rewrites and resume. |
 | **React + FastAPI** | Card shuffle/flip presentation, session APIs, and progress events. The server confirms the draw and the UI reveals those same three cards. |
+
+### How one reading connects the stores
+
+The planned server flow starts with a profile such as INTJ / Aquarius and a question about facing change. PostgreSQL answers **who asked what and which cards were drawn**; Neo4j answers **how the selected profile and card meanings connect through symbols and editorial rules**; Chroma answers **which interpretation passages best explain those connections for this question**. Shared identifiers and dataset versions connect the results.
+
+1. **React + FastAPI → PostgreSQL:** Confirm three cards, orientations, and positions on the server. Save the profile snapshot, question, and draw in one transaction. Retries and resume reuse the confirmed draw.
+2. **PostgreSQL → Neo4j:** LangGraph loads the session and queries bounded, source-backed paths for the selected MBTI, zodiac sign, and card meanings, returning evidence paths and keywords.
+3. **Neo4j → Chroma:** Search with the question and graph keywords. Filter each card's passages by `card_id`, `orientation`, and `dataset_version`; return original text, chunk IDs, and sources.
+4. **Chroma → LangGraph:** Generate a grounded draft and validate the three cards, orientations, and citations. Allow at most two rewrites; insufficient evidence ends in a needs-evidence state.
+5. **LangGraph → PostgreSQL → React:** Save the final report, evidence IDs, and validation results; deliver progress and results through FastAPI. PostgreSQL-backed checkpoints resume the same session after interruption.
+
+This practices relational keys, constraints, and transactions; graph modeling and path queries; and vector ingestion, retrieval, and metadata filters. Confirm the session first and read a fixed knowledge edition rather than using a distributed transaction across all three stores. These are planned server capabilities.
 
 ### Database schema practice
 
