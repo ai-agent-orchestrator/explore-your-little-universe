@@ -17,7 +17,7 @@
 
 22 Major Arcana fronts, a shared back, and four 14-card Minor Arcana sheets uploaded. Individual minor-card files, artwork checks, and server integration remain.
 
-**Reflection → change → renewal.** Seven custom Lumi cards and a shared orchestration-themed back. Artwork preview; tarot server functionality remains planned. [Artwork prompts and handoff](docs/TAROT_ART_PROMPTS.md)
+**Reflection → change → renewal.** Seven custom Lumi cards and a shared orchestration-themed back. A preview of the tarot card draw. **[Draw three cards and see your reading](https://ai-agent-orchestrator.github.io/karmic-resonance/tarot/?lang=en)**
 
 # Karmic Resonance
 
