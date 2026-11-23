@@ -1,0 +1,608 @@
+{
+ "deck": "Karmic Resonance",
+ "back": "tarot/back.webp",
+ "cards": [
+  {
+   "card_id": "major_00",
+   "arcana": "major",
+   "name_en": "The Fool",
+   "name_ko": "바보",
+   "image": "tarot/fool.webp"
+  },
+  {
+   "card_id": "major_01",
+   "arcana": "major",
+   "name_en": "The Magician",
+   "name_ko": "마법사",
+   "image": "tarot/magician.webp"
+  },
+  {
+   "card_id": "major_02",
+   "arcana": "major",
+   "name_en": "The High Priestess",
+   "name_ko": "여사제",
+   "image": "tarot/high-priestess.webp"
+  },
+  {
+   "card_id": "major_03",
+   "arcana": "major",
+   "name_en": "The Empress",
+   "name_ko": "여제",
+   "image": "tarot/empress.webp"
+  },
+  {
+   "card_id": "major_04",
+   "arcana": "major",
+   "name_en": "The Emperor",
+   "name_ko": "황제",
+   "image": "tarot/emperor.webp"
+  },
+  {
+   "card_id": "major_05",
+   "arcana": "major",
+   "name_en": "The Hierophant",
+   "name_ko": "교황",
+   "image": "tarot/hierophant.webp"
+  },
+  {
+   "card_id": "major_06",
+   "arcana": "major",
+   "name_en": "The Lovers",
+   "name_ko": "연인",
+   "image": "tarot/lovers.webp"
+  },
+  {
+   "card_id": "major_07",
+   "arcana": "major",
+   "name_en": "The Chariot",
+   "name_ko": "전차",
+   "image": "tarot/chariot.webp"
+  },
+  {
+   "card_id": "major_08",
+   "arcana": "major",
+   "name_en": "Strength",
+   "name_ko": "힘",
+   "image": "tarot/strength.webp"
+  },
+  {
+   "card_id": "major_09",
+   "arcana": "major",
+   "name_en": "The Hermit",
+   "name_ko": "은둔자",
+   "image": "tarot/hermit.webp"
+  },
+  {
+   "card_id": "major_10",
+   "arcana": "major",
+   "name_en": "Wheel of Fortune",
+   "name_ko": "운명의 수레바퀴",
+   "image": "tarot/wheel-of-fortune.webp"
+  },
+  {
+   "card_id": "major_11",
+   "arcana": "major",
+   "name_en": "Justice",
+   "name_ko": "정의",
+   "image": "tarot/justice.webp"
+  },
+  {
+   "card_id": "major_12",
+   "arcana": "major",
+   "name_en": "The Hanged Man",
+   "name_ko": "매달린 사람",
+   "image": "tarot/hanged-man.webp"
+  },
+  {
+   "card_id": "major_13",
+   "arcana": "major",
+   "name_en": "Death",
+   "name_ko": "죽음",
+   "image": "tarot/death.webp"
+  },
+  {
+   "card_id": "major_14",
+   "arcana": "major",
+   "name_en": "Temperance",
+   "name_ko": "절제",
+   "image": "tarot/temperance.webp"
+  },
+  {
+   "card_id": "major_15",
+   "arcana": "major",
+   "name_en": "The Devil",
+   "name_ko": "악마",
+   "image": "tarot/devil.webp"
+  },
+  {
+   "card_id": "major_16",
+   "arcana": "major",
+   "name_en": "The Tower",
+   "name_ko": "탑",
+   "image": "tarot/tower.webp"
+  },
+  {
+   "card_id": "major_17",
+   "arcana": "major",
+   "name_en": "The Star",
+   "name_ko": "별",
+   "image": "tarot/star.webp"
+  },
+  {
+   "card_id": "major_18",
+   "arcana": "major",
+   "name_en": "The Moon",
+   "name_ko": "달",
+   "image": "tarot/moon.webp"
+  },
+  {
+   "card_id": "major_19",
+   "arcana": "major",
+   "name_en": "The Sun",
+   "name_ko": "태양",
+   "image": "tarot/sun.webp"
+  },
+  {
+   "card_id": "major_20",
+   "arcana": "major",
+   "name_en": "Judgement",
+   "name_ko": "심판",
+   "image": "tarot/judgement.webp"
+  },
+  {
+   "card_id": "major_21",
+   "arcana": "major",
+   "name_en": "The World",
+   "name_ko": "세계",
+   "image": "tarot/world.webp"
+  },
+  {
+   "card_id": "wands_01",
+   "arcana": "minor",
+   "suit": "wands",
+   "name_en": "Ace of Wands",
+   "name_ko": null,
+   "image": "tarot/minor/wands_01.webp"
+  },
+  {
+   "card_id": "wands_02",
+   "arcana": "minor",
+   "suit": "wands",
+   "name_en": "Two of Wands",
+   "name_ko": null,
+   "image": "tarot/minor/wands_02.webp"
+  },
+  {
+   "card_id": "wands_03",
+   "arcana": "minor",
+   "suit": "wands",
+   "name_en": "Three of Wands",
+   "name_ko": null,
+   "image": "tarot/minor/wands_03.webp"
+  },
+  {
+   "card_id": "wands_04",
+   "arcana": "minor",
+   "suit": "wands",
+   "name_en": "Four of Wands",
+   "name_ko": null,
+   "image": "tarot/minor/wands_04.webp"
+  },
+  {
+   "card_id": "wands_05",
+   "arcana": "minor",
+   "suit": "wands",
+   "name_en": "Five of Wands",
+   "name_ko": null,
+   "image": "tarot/minor/wands_05.webp"
+  },
+  {
+   "card_id": "wands_06",
+   "arcana": "minor",
+   "suit": "wands",
+   "name_en": "Six of Wands",
+   "name_ko": null,
+   "image": "tarot/minor/wands_06.webp"
+  },
+  {
+   "card_id": "wands_07",
+   "arcana": "minor",
+   "suit": "wands",
+   "name_en": "Seven of Wands",
+   "name_ko": null,
+   "image": "tarot/minor/wands_07.webp"
+  },
+  {
+   "card_id": "wands_08",
+   "arcana": "minor",
+   "suit": "wands",
+   "name_en": "Eight of Wands",
+   "name_ko": null,
+   "image": "tarot/minor/wands_08.webp"
+  },
+  {
+   "card_id": "wands_09",
+   "arcana": "minor",
+   "suit": "wands",
+   "name_en": "Nine of Wands",
+   "name_ko": null,
+   "image": "tarot/minor/wands_09.webp"
+  },
+  {
+   "card_id": "wands_10",
+   "arcana": "minor",
+   "suit": "wands",
+   "name_en": "Ten of Wands",
+   "name_ko": null,
+   "image": "tarot/minor/wands_10.webp"
+  },
+  {
+   "card_id": "wands_11",
+   "arcana": "minor",
+   "suit": "wands",
+   "name_en": "Page of Wands",
+   "name_ko": null,
+   "image": "tarot/minor/wands_11.webp"
+  },
+  {
+   "card_id": "wands_12",
+   "arcana": "minor",
+   "suit": "wands",
+   "name_en": "Knight of Wands",
+   "name_ko": null,
+   "image": "tarot/minor/wands_12.webp"
+  },
+  {
+   "card_id": "wands_13",
+   "arcana": "minor",
+   "suit": "wands",
+   "name_en": "Queen of Wands",
+   "name_ko": null,
+   "image": "tarot/minor/wands_13.webp"
+  },
+  {
+   "card_id": "wands_14",
+   "arcana": "minor",
+   "suit": "wands",
+   "name_en": "King of Wands",
+   "name_ko": null,
+   "image": "tarot/minor/wands_14.webp"
+  },
+  {
+   "card_id": "cups_01",
+   "arcana": "minor",
+   "suit": "cups",
+   "name_en": "Ace of Cups",
+   "name_ko": null,
+   "image": "tarot/minor/cups_01.webp"
+  },
+  {
+   "card_id": "cups_02",
+   "arcana": "minor",
+   "suit": "cups",
+   "name_en": "Two of Cups",
+   "name_ko": null,
+   "image": "tarot/minor/cups_02.webp"
+  },
+  {
+   "card_id": "cups_03",
+   "arcana": "minor",
+   "suit": "cups",
+   "name_en": "Three of Cups",
+   "name_ko": null,
+   "image": "tarot/minor/cups_03.webp"
+  },
+  {
+   "card_id": "cups_04",
+   "arcana": "minor",
+   "suit": "cups",
+   "name_en": "Four of Cups",
+   "name_ko": null,
+   "image": "tarot/minor/cups_04.webp"
+  },
+  {
+   "card_id": "cups_05",
+   "arcana": "minor",
+   "suit": "cups",
+   "name_en": "Five of Cups",
+   "name_ko": null,
+   "image": "tarot/minor/cups_05.webp"
+  },
+  {
+   "card_id": "cups_06",
+   "arcana": "minor",
+   "suit": "cups",
+   "name_en": "Six of Cups",
+   "name_ko": null,
+   "image": "tarot/minor/cups_06.webp"
+  },
+  {
+   "card_id": "cups_07",
+   "arcana": "minor",
+   "suit": "cups",
+   "name_en": "Seven of Cups",
+   "name_ko": null,
+   "image": "tarot/minor/cups_07.webp"
+  },
+  {
+   "card_id": "cups_08",
+   "arcana": "minor",
+   "suit": "cups",
+   "name_en": "Eight of Cups",
+   "name_ko": null,
+   "image": "tarot/minor/cups_08.webp"
+  },
+  {
+   "card_id": "cups_09",
+   "arcana": "minor",
+   "suit": "cups",
+   "name_en": "Nine of Cups",
+   "name_ko": null,
+   "image": "tarot/minor/cups_09.webp"
+  },
+  {
+   "card_id": "cups_10",
+   "arcana": "minor",
+   "suit": "cups",
+   "name_en": "Ten of Cups",
+   "name_ko": null,
+   "image": "tarot/minor/cups_10.webp"
+  },
+  {
+   "card_id": "cups_11",
+   "arcana": "minor",
+   "suit": "cups",
+   "name_en": "Page of Cups",
+   "name_ko": null,
+   "image": "tarot/minor/cups_11.webp"
+  },
+  {
+   "card_id": "cups_12",
+   "arcana": "minor",
+   "suit": "cups",
+   "name_en": "Knight of Cups",
+   "name_ko": null,
+   "image": "tarot/minor/cups_12.webp"
+  },
+  {
+   "card_id": "cups_13",
+   "arcana": "minor",
+   "suit": "cups",
+   "name_en": "Queen of Cups",
+   "name_ko": null,
+   "image": "tarot/minor/cups_13.webp"
+  },
+  {
+   "card_id": "cups_14",
+   "arcana": "minor",
+   "suit": "cups",
+   "name_en": "King of Cups",
+   "name_ko": null,
+   "image": "tarot/minor/cups_14.webp"
+  },
+  {
+   "card_id": "swords_01",
+   "arcana": "minor",
+   "suit": "swords",
+   "name_en": "Ace of Swords",
+   "name_ko": null,
+   "image": "tarot/minor/swords_01.webp"
+  },
+  {
+   "card_id": "swords_02",
+   "arcana": "minor",
+   "suit": "swords",
+   "name_en": "Two of Swords",
+   "name_ko": null,
+   "image": "tarot/minor/swords_02.webp"
+  },
+  {
+   "card_id": "swords_03",
+   "arcana": "minor",
+   "suit": "swords",
+   "name_en": "Three of Swords",
+   "name_ko": null,
+   "image": "tarot/minor/swords_03.webp"
+  },
+  {
+   "card_id": "swords_04",
+   "arcana": "minor",
+   "suit": "swords",
+   "name_en": "Four of Swords",
+   "name_ko": null,
+   "image": "tarot/minor/swords_04.webp"
+  },
+  {
+   "card_id": "swords_05",
+   "arcana": "minor",
+   "suit": "swords",
+   "name_en": "Five of Swords",
+   "name_ko": null,
+   "image": "tarot/minor/swords_05.webp"
+  },
+  {
+   "card_id": "swords_06",
+   "arcana": "minor",
+   "suit": "swords",
+   "name_en": "Six of Swords",
+   "name_ko": null,
+   "image": "tarot/minor/swords_06.webp"
+  },
+  {
+   "card_id": "swords_07",
+   "arcana": "minor",
+   "suit": "swords",
+   "name_en": "Seven of Swords",
+   "name_ko": null,
+   "image": "tarot/minor/swords_07.webp"
+  },
+  {
+   "card_id": "swords_08",
+   "arcana": "minor",
+   "suit": "swords",
+   "name_en": "Eight of Swords",
+   "name_ko": null,
+   "image": "tarot/minor/swords_08.webp"
+  },
+  {
+   "card_id": "swords_09",
+   "arcana": "minor",
+   "suit": "swords",
+   "name_en": "Nine of Swords",
+   "name_ko": null,
+   "image": "tarot/minor/swords_09.webp"
+  },
+  {
+   "card_id": "swords_10",
+   "arcana": "minor",
+   "suit": "swords",
+   "name_en": "Ten of Swords",
+   "name_ko": null,
+   "image": "tarot/minor/swords_10.webp"
+  },
+  {
+   "card_id": "swords_11",
+   "arcana": "minor",
+   "suit": "swords",
+   "name_en": "Page of Swords",
+   "name_ko": null,
+   "image": "tarot/minor/swords_11.webp"
+  },
+  {
+   "card_id": "swords_12",
+   "arcana": "minor",
+   "suit": "swords",
+   "name_en": "Knight of Swords",
+   "name_ko": null,
+   "image": "tarot/minor/swords_12.webp"
+  },
+  {
+   "card_id": "swords_13",
+   "arcana": "minor",
+   "suit": "swords",
+   "name_en": "Queen of Swords",
+   "name_ko": null,
+   "image": "tarot/minor/swords_13.webp"
+  },
+  {
+   "card_id": "swords_14",
+   "arcana": "minor",
+   "suit": "swords",
+   "name_en": "King of Swords",
+   "name_ko": null,
+   "image": "tarot/minor/swords_14.webp"
+  },
+  {
+   "card_id": "pentacles_01",
+   "arcana": "minor",
+   "suit": "pentacles",
+   "name_en": "Ace of Pentacles",
+   "name_ko": null,
+   "image": "tarot/minor/pentacles_01.webp"
+  },
+  {
+   "card_id": "pentacles_02",
+   "arcana": "minor",
+   "suit": "pentacles",
+   "name_en": "Two of Pentacles",
+   "name_ko": null,
+   "image": "tarot/minor/pentacles_02.webp"
+  },
+  {
+   "card_id": "pentacles_03",
+   "arcana": "minor",
+   "suit": "pentacles",
+   "name_en": "Three of Pentacles",
+   "name_ko": null,
+   "image": "tarot/minor/pentacles_03.webp"
+  },
+  {
+   "card_id": "pentacles_04",
+   "arcana": "minor",
+   "suit": "pentacles",
+   "name_en": "Four of Pentacles",
+   "name_ko": null,
+   "image": "tarot/minor/pentacles_04.webp"
+  },
+  {
+   "card_id": "pentacles_05",
+   "arcana": "minor",
+   "suit": "pentacles",
+   "name_en": "Five of Pentacles",
+   "name_ko": null,
+   "image": "tarot/minor/pentacles_05.webp"
+  },
+  {
+   "card_id": "pentacles_06",
+   "arcana": "minor",
+   "suit": "pentacles",
+   "name_en": "Six of Pentacles",
+   "name_ko": null,
+   "image": "tarot/minor/pentacles_06.webp"
+  },
+  {
+   "card_id": "pentacles_07",
+   "arcana": "minor",
+   "suit": "pentacles",
+   "name_en": "Seven of Pentacles",
+   "name_ko": null,
+   "image": "tarot/minor/pentacles_07.webp"
+  },
+  {
+   "card_id": "pentacles_08",
+   "arcana": "minor",
+   "suit": "pentacles",
+   "name_en": "Eight of Pentacles",
+   "name_ko": null,
+   "image": "tarot/minor/pentacles_08.webp"
+  },
+  {
+   "card_id": "pentacles_09",
+   "arcana": "minor",
+   "suit": "pentacles",
+   "name_en": "Nine of Pentacles",
+   "name_ko": null,
+   "image": "tarot/minor/pentacles_09.webp"
+  },
+  {
+   "card_id": "pentacles_10",
+   "arcana": "minor",
+   "suit": "pentacles",
+   "name_en": "Ten of Pentacles",
+   "name_ko": null,
+   "image": "tarot/minor/pentacles_10.webp"
+  },
+  {
+   "card_id": "pentacles_11",
+   "arcana": "minor",
+   "suit": "pentacles",
+   "name_en": "Page of Pentacles",
+   "name_ko": null,
+   "image": "tarot/minor/pentacles_11.webp"
+  },
+  {
+   "card_id": "pentacles_12",
+   "arcana": "minor",
+   "suit": "pentacles",
+   "name_en": "Knight of Pentacles",
+   "name_ko": null,
+   "image": "tarot/minor/pentacles_12.webp"
+  },
+  {
+   "card_id": "pentacles_13",
+   "arcana": "minor",
+   "suit": "pentacles",
+   "name_en": "Queen of Pentacles",
+   "name_ko": null,
+   "image": "tarot/minor/pentacles_13.webp"
+  },
+  {
+   "card_id": "pentacles_14",
+   "arcana": "minor",
+   "suit": "pentacles",
+   "name_en": "King of Pentacles",
+   "name_ko": null,
+   "image": "tarot/minor/pentacles_14.webp"
+  }
+ ]
+}
