@@ -6,3 +6,8 @@ SIGNS = [
     ('sagittarius', '사수자리', 'NP'), ('capricorn', '염소자리', 'SJ'),
     ('aquarius', '물병자리', 'NT'), ('pisces', '물고기자리', 'NF'),
 ]
+
+SIGN_ELEMENTS = {sign:element for element,signs in {
+    'fire':('aries','leo','sagittarius'), 'earth':('taurus','virgo','capricorn'),
+    'air':('gemini','libra','aquarius'), 'water':('cancer','scorpio','pisces'),
+}.items() for sign in signs}
