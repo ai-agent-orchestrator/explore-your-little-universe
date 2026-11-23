@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "predev": "node scripts/prepare-runtime.mjs",
-    "prebuild": "node scripts/prepare-runtime.mjs",
+    "predev": "node scripts/prepare-runtime.mjs && node scripts/prepare-tarot.mjs",
+    "prebuild": "node scripts/prepare-runtime.mjs && node scripts/prepare-tarot.mjs",
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1",
