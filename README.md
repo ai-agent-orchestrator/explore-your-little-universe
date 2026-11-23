@@ -1,3 +1,14 @@
+<table>
+  <tr>
+    <td align="center"><img src="docs/images/tarot/hermit.png" alt="The Hermit — Lumi and golden gears" width="220"><br><b>Hermit</b></td>
+    <td align="center"><img src="docs/images/tarot/tower.png" alt="The Tower — Lumi and golden gears" width="220"><br><b>Tower</b></td>
+    <td align="center"><img src="docs/images/tarot/star.png" alt="The Star — Lumi and golden gears" width="220"><br><b>Star</b></td>
+    <td align="center"><img src="docs/images/tarot/back.png" alt="Card back — Lumi multi-agent orchestration" width="220"><br><b>Back</b></td>
+  </tr>
+</table>
+
+**탐색 → 변화 → 회복.** Lumi와 톱니·별자리로 연결한 대표 카드 3장과 공통 뒷면. 카드 아트 미리보기이며 타로 서버 기능은 아직 설계 단계다. [이미지 제작·개발 인계](docs/TAROT_ART_PROMPTS.md)
+
 # Explore Your Little Universe
 
 **한국어** | [English](README.en.md)

@@ -1,3 +1,14 @@
+<table>
+  <tr>
+    <td align="center"><img src="docs/images/tarot/hermit.png" alt="The Hermit — Lumi and golden gears" width="220"><br><b>Hermit</b></td>
+    <td align="center"><img src="docs/images/tarot/tower.png" alt="The Tower — Lumi and golden gears" width="220"><br><b>Tower</b></td>
+    <td align="center"><img src="docs/images/tarot/star.png" alt="The Star — Lumi and golden gears" width="220"><br><b>Star</b></td>
+    <td align="center"><img src="docs/images/tarot/back.png" alt="Card back — Lumi multi-agent orchestration" width="220"><br><b>Back</b></td>
+  </tr>
+</table>
+
+**Reflection → change → renewal.** Three custom Lumi cards and a shared orchestration-themed back. Artwork preview; tarot server functionality remains planned. [Artwork prompts and handoff](docs/TAROT_ART_PROMPTS.md)
+
 # Explore Your Little Universe
 
 [한국어](README.md) | **English**
