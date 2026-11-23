@@ -9,7 +9,7 @@
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1",
-    "test": "node --test src/search.test.js src/tarot/draw.test.js"
+    "test": "node --test src/search.test.js src/tarot/draw.test.js src/tarot/session.test.js"
   },
   "dependencies": {
     "@litert-lm/core": "^0.19.0",

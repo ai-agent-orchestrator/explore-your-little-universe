@@ -2,6 +2,8 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {motion, useReducedMotion, useMotionValue, useSpring} from 'motion/react';
 import {Lumi} from '../Lumi.jsx';
 import {makeProvider, POSITIONS, POSITION_LABEL, ORIENTATION_LABEL} from './draw.js';
+import {STAGES, recallSession} from './session.js';
+import {useReadingRun} from './useReadingRun.js';
 import './tarot.css';
 
 // Flow: idle → shuffling → fan → (pick 3) → gathering → revealing → done
@@ -162,6 +164,7 @@ export function TarotReading({mbti, zodiacId, question, lumiCode = 'ENFP', apiBa
   const [error, setError] = useState('');
   const abortRef = useRef(null);
   const drawPromise = useRef(null);
+  const {run, stage, open, resume, restore, reset: resetRun} = useReadingRun({apiBase, deck});
   const L = useMemo(() => layout(w, count), [w, count]);
 
   useEffect(() => {
@@ -170,6 +173,20 @@ export function TarotReading({mbti, zodiacId, question, lumiCode = 'ENFP', apiBa
       .then((d) => live && setDeck(d)).catch(() => live && setError('카드 데이터를 불러오지 못했어요.'));
     return () => { live = false; abortRef.current?.abort(); };
   }, []);
+
+  // A reload re-attaches to the same session: the cards it confirmed are the cards
+  // we show again. A new draw is never requested for an existing session.
+  useEffect(() => {
+    if (!deck || provider.mode !== 'server' || phase !== 'idle' || result) return;
+    const saved = recallSession();
+    if (!saved) return;
+    let live = true;
+    restore(saved.sessionId, saved.draws)
+      .then((s) => { if (live && s) { setResult({sessionId: saved.sessionId, draws: s.draws}); setPicks([0, 1, 2]); setFlipped([true, true, true]); setPhase('done'); } })
+      .catch(() => {});
+    return () => { live = false; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [deck, provider.mode]);
 
   const byId = useMemo(() => new Map((deck?.cards || []).map((c) => [c.card_id, c])), [deck]);
   const needsQuestion = provider.mode === 'server' && !question.trim();
@@ -204,6 +221,7 @@ export function TarotReading({mbti, zodiacId, question, lumiCode = 'ENFP', apiBa
         if (!live) return;
         setResult(r);
         setPhase('gathering');
+        if (provider.mode === 'server' && r.sessionId) open(r.sessionId, r.draws);
       } catch (e) {
         if (!live || e?.name === 'AbortError') return;
         setError(e.message || '카드를 확정하지 못했어요.');
@@ -211,7 +229,7 @@ export function TarotReading({mbti, zodiacId, question, lumiCode = 'ENFP', apiBa
       }
     }, reduce ? 100 : 650);
     return () => { live = false; clearTimeout(id); };
-  }, [phase, picks, reduce]);
+  }, [phase, picks, reduce, provider.mode, open]);
 
   useEffect(() => {
     if (phase !== 'gathering') return;
@@ -229,7 +247,7 @@ export function TarotReading({mbti, zodiacId, question, lumiCode = 'ENFP', apiBa
   const pick = (i) => setPicks((p) => (p.includes(i) ? p.filter((x) => x !== i) : p.length < 3 ? [...p, i] : p));
   const flip = (k) => setFlipped((f) => (f[k] ? f : f.map((v, j) => (j === k ? true : v))));
   const nextUnflipped = flipped.findIndex((v) => !v);
-  const reset = () => { abortRef.current?.abort(); setPhase('idle'); setPicks([]); setResult(null); setFlipped([false, false, false]); setError(''); };
+  const reset = () => { abortRef.current?.abort(); resetRun(); setPhase('idle'); setPicks([]); setResult(null); setFlipped([false, false, false]); setError(''); };
 
   const back = import.meta.env.BASE_URL + (deck?.back || 'tarot/back.webp');
   const draws = result?.draws;
@@ -300,6 +318,47 @@ export function TarotReading({mbti, zodiacId, question, lumiCode = 'ENFP', apiBa
             );
           })}
         </ol>
+      )}
+
+      {provider.mode === 'server' && run.status !== 'idle' && (
+        <section className="tarot-run">
+          <ol className="tarot-steps" aria-label="해설 생성 진행">
+            {STAGES.map((st, i) => {
+              const done = i <= stage;
+              const current = !done && i === stage + 1 && run.status === 'running';
+              return (
+                <li key={st.key} className={done ? 'done' : current ? 'current' : ''} aria-current={current ? 'step' : undefined}>
+                  <span className="tarot-dot" aria-hidden="true" />{st.label}
+                  <span className="tarot-sr">{done ? ' 완료' : current ? ' 진행 중' : ' 대기'}</span>
+                </li>
+              );
+            })}
+          </ol>
+          <p className="tarot-run-status" role="status" aria-live="polite">
+            {run.reconnecting ? '연결이 끊겨 다시 연결하는 중이에요. 카드는 그대로예요.'
+              : run.status === 'running' ? '루미가 근거를 모아 해설을 쓰고 있어요…'
+                : run.error || (run.report ? '해설이 완성됐어요.' : '')}
+          </p>
+          {run.resumable && <button className="tarot-ghost" onClick={resume}>같은 카드로 다시 이어가기</button>}
+        </section>
+      )}
+
+      {run.report && (
+        <article className="tarot-report">
+          <h3>루미의 해설</h3>
+          {run.report.text.split(/\n{2,}/).map((para, i) => <p key={i}>{para}</p>)}
+          {run.report.evidence.length > 0 && (
+            <details>
+              <summary>근거 {run.report.evidence.length}개 · 출처 보기</summary>
+              <ul>
+                {run.report.evidence.map((e) => (
+                  <li key={e.id}>{e.url ? <a href={e.url} target="_blank" rel="noreferrer">{e.title}</a> : e.title}</li>
+                ))}
+              </ul>
+            </details>
+          )}
+          {run.report.modelId && <p className="fine">생성 모델 {run.report.modelId}{run.report.promptVersion ? ` · 프롬프트 ${run.report.promptVersion}` : ''}</p>}
+        </article>
       )}
 
       <p className="fine tarot-note">

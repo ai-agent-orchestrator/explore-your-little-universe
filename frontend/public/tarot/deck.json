@@ -1,10 +1,13 @@
 {
  "deck": "Karmic Resonance",
+ "artwork_version": "2026-11-23",
+ "mapping_version": "suit-element-practice-1",
  "back": "tarot/back.webp",
  "cards": [
   {
    "card_id": "major_00",
    "arcana": "major",
+   "number": 0,
    "name_en": "The Fool",
    "name_ko": "바보",
    "image": "tarot/fool.webp"
@@ -12,6 +15,7 @@
   {
    "card_id": "major_01",
    "arcana": "major",
+   "number": 1,
    "name_en": "The Magician",
    "name_ko": "마법사",
    "image": "tarot/magician.webp"
@@ -19,6 +23,7 @@
   {
    "card_id": "major_02",
    "arcana": "major",
+   "number": 2,
    "name_en": "The High Priestess",
    "name_ko": "여사제",
    "image": "tarot/high-priestess.webp"
@@ -26,6 +31,7 @@
   {
    "card_id": "major_03",
    "arcana": "major",
+   "number": 3,
    "name_en": "The Empress",
    "name_ko": "여제",
    "image": "tarot/empress.webp"
@@ -33,6 +39,7 @@
   {
    "card_id": "major_04",
    "arcana": "major",
+   "number": 4,
    "name_en": "The Emperor",
    "name_ko": "황제",
    "image": "tarot/emperor.webp"
@@ -40,6 +47,7 @@
   {
    "card_id": "major_05",
    "arcana": "major",
+   "number": 5,
    "name_en": "The Hierophant",
    "name_ko": "교황",
    "image": "tarot/hierophant.webp"
@@ -47,6 +55,7 @@
   {
    "card_id": "major_06",
    "arcana": "major",
+   "number": 6,
    "name_en": "The Lovers",
    "name_ko": "연인",
    "image": "tarot/lovers.webp"
@@ -54,6 +63,7 @@
   {
    "card_id": "major_07",
    "arcana": "major",
+   "number": 7,
    "name_en": "The Chariot",
    "name_ko": "전차",
    "image": "tarot/chariot.webp"
@@ -61,6 +71,7 @@
   {
    "card_id": "major_08",
    "arcana": "major",
+   "number": 8,
    "name_en": "Strength",
    "name_ko": "힘",
    "image": "tarot/strength.webp"
@@ -68,6 +79,7 @@
   {
    "card_id": "major_09",
    "arcana": "major",
+   "number": 9,
    "name_en": "The Hermit",
    "name_ko": "은둔자",
    "image": "tarot/hermit.webp"
@@ -75,6 +87,7 @@
   {
    "card_id": "major_10",
    "arcana": "major",
+   "number": 10,
    "name_en": "Wheel of Fortune",
    "name_ko": "운명의 수레바퀴",
    "image": "tarot/wheel-of-fortune.webp"
@@ -82,6 +95,7 @@
   {
    "card_id": "major_11",
    "arcana": "major",
+   "number": 11,
    "name_en": "Justice",
    "name_ko": "정의",
    "image": "tarot/justice.webp"
@@ -89,6 +103,7 @@
   {
    "card_id": "major_12",
    "arcana": "major",
+   "number": 12,
    "name_en": "The Hanged Man",
    "name_ko": "매달린 사람",
    "image": "tarot/hanged-man.webp"
@@ -96,6 +111,7 @@
   {
    "card_id": "major_13",
    "arcana": "major",
+   "number": 13,
    "name_en": "Death",
    "name_ko": "죽음",
    "image": "tarot/death.webp"
@@ -103,6 +119,7 @@
   {
    "card_id": "major_14",
    "arcana": "major",
+   "number": 14,
    "name_en": "Temperance",
    "name_ko": "절제",
    "image": "tarot/temperance.webp"
@@ -110,6 +127,7 @@
   {
    "card_id": "major_15",
    "arcana": "major",
+   "number": 15,
    "name_en": "The Devil",
    "name_ko": "악마",
    "image": "tarot/devil.webp"
@@ -117,6 +135,7 @@
   {
    "card_id": "major_16",
    "arcana": "major",
+   "number": 16,
    "name_en": "The Tower",
    "name_ko": "탑",
    "image": "tarot/tower.webp"
@@ -124,6 +143,7 @@
   {
    "card_id": "major_17",
    "arcana": "major",
+   "number": 17,
    "name_en": "The Star",
    "name_ko": "별",
    "image": "tarot/star.webp"
@@ -131,6 +151,7 @@
   {
    "card_id": "major_18",
    "arcana": "major",
+   "number": 18,
    "name_en": "The Moon",
    "name_ko": "달",
    "image": "tarot/moon.webp"
@@ -138,6 +159,7 @@
   {
    "card_id": "major_19",
    "arcana": "major",
+   "number": 19,
    "name_en": "The Sun",
    "name_ko": "태양",
    "image": "tarot/sun.webp"
@@ -145,6 +167,7 @@
   {
    "card_id": "major_20",
    "arcana": "major",
+   "number": 20,
    "name_en": "Judgement",
    "name_ko": "심판",
    "image": "tarot/judgement.webp"
@@ -152,6 +175,7 @@
   {
    "card_id": "major_21",
    "arcana": "major",
+   "number": 21,
    "name_en": "The World",
    "name_ko": "세계",
    "image": "tarot/world.webp"
@@ -160,6 +184,8 @@
    "card_id": "wands_01",
    "arcana": "minor",
    "suit": "wands",
+   "rank": "ace",
+   "element": "fire",
    "name_en": "Ace of Wands",
    "name_ko": null,
    "image": "tarot/minor/wands_01.webp"
@@ -168,6 +194,8 @@
    "card_id": "wands_02",
    "arcana": "minor",
    "suit": "wands",
+   "rank": "two",
+   "element": "fire",
    "name_en": "Two of Wands",
    "name_ko": null,
    "image": "tarot/minor/wands_02.webp"
@@ -176,6 +204,8 @@
    "card_id": "wands_03",
    "arcana": "minor",
    "suit": "wands",
+   "rank": "three",
+   "element": "fire",
    "name_en": "Three of Wands",
    "name_ko": null,
    "image": "tarot/minor/wands_03.webp"
@@ -184,6 +214,8 @@
    "card_id": "wands_04",
    "arcana": "minor",
    "suit": "wands",
+   "rank": "four",
+   "element": "fire",
    "name_en": "Four of Wands",
    "name_ko": null,
    "image": "tarot/minor/wands_04.webp"
@@ -192,6 +224,8 @@
    "card_id": "wands_05",
    "arcana": "minor",
    "suit": "wands",
+   "rank": "five",
+   "element": "fire",
    "name_en": "Five of Wands",
    "name_ko": null,
    "image": "tarot/minor/wands_05.webp"
@@ -200,6 +234,8 @@
    "card_id": "wands_06",
    "arcana": "minor",
    "suit": "wands",
+   "rank": "six",
+   "element": "fire",
    "name_en": "Six of Wands",
    "name_ko": null,
    "image": "tarot/minor/wands_06.webp"
@@ -208,6 +244,8 @@
    "card_id": "wands_07",
    "arcana": "minor",
    "suit": "wands",
+   "rank": "seven",
+   "element": "fire",
    "name_en": "Seven of Wands",
    "name_ko": null,
    "image": "tarot/minor/wands_07.webp"
@@ -216,6 +254,8 @@
    "card_id": "wands_08",
    "arcana": "minor",
    "suit": "wands",
+   "rank": "eight",
+   "element": "fire",
    "name_en": "Eight of Wands",
    "name_ko": null,
    "image": "tarot/minor/wands_08.webp"
@@ -224,6 +264,8 @@
    "card_id": "wands_09",
    "arcana": "minor",
    "suit": "wands",
+   "rank": "nine",
+   "element": "fire",
    "name_en": "Nine of Wands",
    "name_ko": null,
    "image": "tarot/minor/wands_09.webp"
@@ -232,6 +274,8 @@
    "card_id": "wands_10",
    "arcana": "minor",
    "suit": "wands",
+   "rank": "ten",
+   "element": "fire",
    "name_en": "Ten of Wands",
    "name_ko": null,
    "image": "tarot/minor/wands_10.webp"
@@ -240,6 +284,8 @@
    "card_id": "wands_11",
    "arcana": "minor",
    "suit": "wands",
+   "rank": "page",
+   "element": "fire",
    "name_en": "Page of Wands",
    "name_ko": null,
    "image": "tarot/minor/wands_11.webp"
@@ -248,6 +294,8 @@
    "card_id": "wands_12",
    "arcana": "minor",
    "suit": "wands",
+   "rank": "knight",
+   "element": "fire",
    "name_en": "Knight of Wands",
    "name_ko": null,
    "image": "tarot/minor/wands_12.webp"
@@ -256,6 +304,8 @@
    "card_id": "wands_13",
    "arcana": "minor",
    "suit": "wands",
+   "rank": "queen",
+   "element": "fire",
    "name_en": "Queen of Wands",
    "name_ko": null,
    "image": "tarot/minor/wands_13.webp"
@@ -264,6 +314,8 @@
    "card_id": "wands_14",
    "arcana": "minor",
    "suit": "wands",
+   "rank": "king",
+   "element": "fire",
    "name_en": "King of Wands",
    "name_ko": null,
    "image": "tarot/minor/wands_14.webp"
@@ -272,6 +324,8 @@
    "card_id": "cups_01",
    "arcana": "minor",
    "suit": "cups",
+   "rank": "ace",
+   "element": "water",
    "name_en": "Ace of Cups",
    "name_ko": null,
    "image": "tarot/minor/cups_01.webp"
@@ -280,6 +334,8 @@
    "card_id": "cups_02",
    "arcana": "minor",
    "suit": "cups",
+   "rank": "two",
+   "element": "water",
    "name_en": "Two of Cups",
    "name_ko": null,
    "image": "tarot/minor/cups_02.webp"
@@ -288,6 +344,8 @@
    "card_id": "cups_03",
    "arcana": "minor",
    "suit": "cups",
+   "rank": "three",
+   "element": "water",
    "name_en": "Three of Cups",
    "name_ko": null,
    "image": "tarot/minor/cups_03.webp"
@@ -296,6 +354,8 @@
    "card_id": "cups_04",
    "arcana": "minor",
    "suit": "cups",
+   "rank": "four",
+   "element": "water",
    "name_en": "Four of Cups",
    "name_ko": null,
    "image": "tarot/minor/cups_04.webp"
@@ -304,6 +364,8 @@
    "card_id": "cups_05",
    "arcana": "minor",
    "suit": "cups",
+   "rank": "five",
+   "element": "water",
    "name_en": "Five of Cups",
    "name_ko": null,
    "image": "tarot/minor/cups_05.webp"
@@ -312,6 +374,8 @@
    "card_id": "cups_06",
    "arcana": "minor",
    "suit": "cups",
+   "rank": "six",
+   "element": "water",
    "name_en": "Six of Cups",
    "name_ko": null,
    "image": "tarot/minor/cups_06.webp"
@@ -320,6 +384,8 @@
    "card_id": "cups_07",
    "arcana": "minor",
    "suit": "cups",
+   "rank": "seven",
+   "element": "water",
    "name_en": "Seven of Cups",
    "name_ko": null,
    "image": "tarot/minor/cups_07.webp"
@@ -328,6 +394,8 @@
    "card_id": "cups_08",
    "arcana": "minor",
    "suit": "cups",
+   "rank": "eight",
+   "element": "water",
    "name_en": "Eight of Cups",
    "name_ko": null,
    "image": "tarot/minor/cups_08.webp"
@@ -336,6 +404,8 @@
    "card_id": "cups_09",
    "arcana": "minor",
    "suit": "cups",
+   "rank": "nine",
+   "element": "water",
    "name_en": "Nine of Cups",
    "name_ko": null,
    "image": "tarot/minor/cups_09.webp"
@@ -344,6 +414,8 @@
    "card_id": "cups_10",
    "arcana": "minor",
    "suit": "cups",
+   "rank": "ten",
+   "element": "water",
    "name_en": "Ten of Cups",
    "name_ko": null,
    "image": "tarot/minor/cups_10.webp"
@@ -352,6 +424,8 @@
    "card_id": "cups_11",
    "arcana": "minor",
    "suit": "cups",
+   "rank": "page",
+   "element": "water",
    "name_en": "Page of Cups",
    "name_ko": null,
    "image": "tarot/minor/cups_11.webp"
@@ -360,6 +434,8 @@
    "card_id": "cups_12",
    "arcana": "minor",
    "suit": "cups",
+   "rank": "knight",
+   "element": "water",
    "name_en": "Knight of Cups",
    "name_ko": null,
    "image": "tarot/minor/cups_12.webp"
@@ -368,6 +444,8 @@
    "card_id": "cups_13",
    "arcana": "minor",
    "suit": "cups",
+   "rank": "queen",
+   "element": "water",
    "name_en": "Queen of Cups",
    "name_ko": null,
    "image": "tarot/minor/cups_13.webp"
@@ -376,6 +454,8 @@
    "card_id": "cups_14",
    "arcana": "minor",
    "suit": "cups",
+   "rank": "king",
+   "element": "water",
    "name_en": "King of Cups",
    "name_ko": null,
    "image": "tarot/minor/cups_14.webp"
@@ -384,6 +464,8 @@
    "card_id": "swords_01",
    "arcana": "minor",
    "suit": "swords",
+   "rank": "ace",
+   "element": "air",
    "name_en": "Ace of Swords",
    "name_ko": null,
    "image": "tarot/minor/swords_01.webp"
@@ -392,6 +474,8 @@
    "card_id": "swords_02",
    "arcana": "minor",
    "suit": "swords",
+   "rank": "two",
+   "element": "air",
    "name_en": "Two of Swords",
    "name_ko": null,
    "image": "tarot/minor/swords_02.webp"
@@ -400,6 +484,8 @@
    "card_id": "swords_03",
    "arcana": "minor",
    "suit": "swords",
+   "rank": "three",
+   "element": "air",
    "name_en": "Three of Swords",
    "name_ko": null,
    "image": "tarot/minor/swords_03.webp"
@@ -408,6 +494,8 @@
    "card_id": "swords_04",
    "arcana": "minor",
    "suit": "swords",
+   "rank": "four",
+   "element": "air",
    "name_en": "Four of Swords",
    "name_ko": null,
    "image": "tarot/minor/swords_04.webp"
@@ -416,6 +504,8 @@
    "card_id": "swords_05",
    "arcana": "minor",
    "suit": "swords",
+   "rank": "five",
+   "element": "air",
    "name_en": "Five of Swords",
    "name_ko": null,
    "image": "tarot/minor/swords_05.webp"
@@ -424,6 +514,8 @@
    "card_id": "swords_06",
    "arcana": "minor",
    "suit": "swords",
+   "rank": "six",
+   "element": "air",
    "name_en": "Six of Swords",
    "name_ko": null,
    "image": "tarot/minor/swords_06.webp"
@@ -432,6 +524,8 @@
    "card_id": "swords_07",
    "arcana": "minor",
    "suit": "swords",
+   "rank": "seven",
+   "element": "air",
    "name_en": "Seven of Swords",
    "name_ko": null,
    "image": "tarot/minor/swords_07.webp"
@@ -440,6 +534,8 @@
    "card_id": "swords_08",
    "arcana": "minor",
    "suit": "swords",
+   "rank": "eight",
+   "element": "air",
    "name_en": "Eight of Swords",
    "name_ko": null,
    "image": "tarot/minor/swords_08.webp"
@@ -448,6 +544,8 @@
    "card_id": "swords_09",
    "arcana": "minor",
    "suit": "swords",
+   "rank": "nine",
+   "element": "air",
    "name_en": "Nine of Swords",
    "name_ko": null,
    "image": "tarot/minor/swords_09.webp"
@@ -456,6 +554,8 @@
    "card_id": "swords_10",
    "arcana": "minor",
    "suit": "swords",
+   "rank": "ten",
+   "element": "air",
    "name_en": "Ten of Swords",
    "name_ko": null,
    "image": "tarot/minor/swords_10.webp"
@@ -464,6 +564,8 @@
    "card_id": "swords_11",
    "arcana": "minor",
    "suit": "swords",
+   "rank": "page",
+   "element": "air",
    "name_en": "Page of Swords",
    "name_ko": null,
    "image": "tarot/minor/swords_11.webp"
@@ -472,6 +574,8 @@
    "card_id": "swords_12",
    "arcana": "minor",
    "suit": "swords",
+   "rank": "knight",
+   "element": "air",
    "name_en": "Knight of Swords",
    "name_ko": null,
    "image": "tarot/minor/swords_12.webp"
@@ -480,6 +584,8 @@
    "card_id": "swords_13",
    "arcana": "minor",
    "suit": "swords",
+   "rank": "queen",
+   "element": "air",
    "name_en": "Queen of Swords",
    "name_ko": null,
    "image": "tarot/minor/swords_13.webp"
@@ -488,6 +594,8 @@
    "card_id": "swords_14",
    "arcana": "minor",
    "suit": "swords",
+   "rank": "king",
+   "element": "air",
    "name_en": "King of Swords",
    "name_ko": null,
    "image": "tarot/minor/swords_14.webp"
@@ -496,6 +604,8 @@
    "card_id": "pentacles_01",
    "arcana": "minor",
    "suit": "pentacles",
+   "rank": "ace",
+   "element": "earth",
    "name_en": "Ace of Pentacles",
    "name_ko": null,
    "image": "tarot/minor/pentacles_01.webp"
@@ -504,6 +614,8 @@
    "card_id": "pentacles_02",
    "arcana": "minor",
    "suit": "pentacles",
+   "rank": "two",
+   "element": "earth",
    "name_en": "Two of Pentacles",
    "name_ko": null,
    "image": "tarot/minor/pentacles_02.webp"
@@ -512,6 +624,8 @@
    "card_id": "pentacles_03",
    "arcana": "minor",
    "suit": "pentacles",
+   "rank": "three",
+   "element": "earth",
    "name_en": "Three of Pentacles",
    "name_ko": null,
    "image": "tarot/minor/pentacles_03.webp"
@@ -520,6 +634,8 @@
    "card_id": "pentacles_04",
    "arcana": "minor",
    "suit": "pentacles",
+   "rank": "four",
+   "element": "earth",
    "name_en": "Four of Pentacles",
    "name_ko": null,
    "image": "tarot/minor/pentacles_04.webp"
@@ -528,6 +644,8 @@
    "card_id": "pentacles_05",
    "arcana": "minor",
    "suit": "pentacles",
+   "rank": "five",
+   "element": "earth",
    "name_en": "Five of Pentacles",
    "name_ko": null,
    "image": "tarot/minor/pentacles_05.webp"
@@ -536,6 +654,8 @@
    "card_id": "pentacles_06",
    "arcana": "minor",
    "suit": "pentacles",
+   "rank": "six",
+   "element": "earth",
    "name_en": "Six of Pentacles",
    "name_ko": null,
    "image": "tarot/minor/pentacles_06.webp"
@@ -544,6 +664,8 @@
    "card_id": "pentacles_07",
    "arcana": "minor",
    "suit": "pentacles",
+   "rank": "seven",
+   "element": "earth",
    "name_en": "Seven of Pentacles",
    "name_ko": null,
    "image": "tarot/minor/pentacles_07.webp"
@@ -552,6 +674,8 @@
    "card_id": "pentacles_08",
    "arcana": "minor",
    "suit": "pentacles",
+   "rank": "eight",
+   "element": "earth",
    "name_en": "Eight of Pentacles",
    "name_ko": null,
    "image": "tarot/minor/pentacles_08.webp"
@@ -560,6 +684,8 @@
    "card_id": "pentacles_09",
    "arcana": "minor",
    "suit": "pentacles",
+   "rank": "nine",
+   "element": "earth",
    "name_en": "Nine of Pentacles",
    "name_ko": null,
    "image": "tarot/minor/pentacles_09.webp"
@@ -568,6 +694,8 @@
    "card_id": "pentacles_10",
    "arcana": "minor",
    "suit": "pentacles",
+   "rank": "ten",
+   "element": "earth",
    "name_en": "Ten of Pentacles",
    "name_ko": null,
    "image": "tarot/minor/pentacles_10.webp"
@@ -576,6 +704,8 @@
    "card_id": "pentacles_11",
    "arcana": "minor",
    "suit": "pentacles",
+   "rank": "page",
+   "element": "earth",
    "name_en": "Page of Pentacles",
    "name_ko": null,
    "image": "tarot/minor/pentacles_11.webp"
@@ -584,6 +714,8 @@
    "card_id": "pentacles_12",
    "arcana": "minor",
    "suit": "pentacles",
+   "rank": "knight",
+   "element": "earth",
    "name_en": "Knight of Pentacles",
    "name_ko": null,
    "image": "tarot/minor/pentacles_12.webp"
@@ -592,6 +724,8 @@
    "card_id": "pentacles_13",
    "arcana": "minor",
    "suit": "pentacles",
+   "rank": "queen",
+   "element": "earth",
    "name_en": "Queen of Pentacles",
    "name_ko": null,
    "image": "tarot/minor/pentacles_13.webp"
@@ -600,6 +734,8 @@
    "card_id": "pentacles_14",
    "arcana": "minor",
    "suit": "pentacles",
+   "rank": "king",
+   "element": "earth",
    "name_en": "King of Pentacles",
    "name_ko": null,
    "image": "tarot/minor/pentacles_14.webp"

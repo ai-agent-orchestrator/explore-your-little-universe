@@ -21,6 +21,10 @@ OUT = ROOT / 'frontend/public/tarot'
 MAJOR_W, MAJOR_H = 480, 720
 MINOR_W, MINOR_H = 320, 480  # sheet crops are ~250x375 and not all the same aspect; normalised to 2:3
 SUITS = ['wands', 'cups', 'swords', 'pentacles']
+# Practice-rule element mapping (design doc §2). Versioned because other schools differ;
+# major-arcana elements are deliberately left unset until a source is agreed.
+SUIT_ELEMENT = {'wands': 'fire', 'cups': 'water', 'swords': 'air', 'pentacles': 'earth'}
+MAPPING_VERSION = 'suit-element-practice-1'
 ROW_SIZES = [5, 5, 4]
 
 
@@ -72,8 +76,8 @@ def main():
         im = Image.open(ROOT / c['image_path']).convert('RGB').resize((MAJOR_W, MAJOR_H), Image.LANCZOS)
         name = f"{c['slug']}.webp"
         im.save(OUT / name, 'WEBP', quality=86, method=6)
-        deck.append({'card_id': c['card_id'], 'arcana': 'major', 'name_en': c['name_en'],
-                     'name_ko': c['name_ko'], 'image': f'tarot/{name}'})
+        deck.append({'card_id': c['card_id'], 'arcana': 'major', 'number': c['number'],
+                     'name_en': c['name_en'], 'name_ko': c['name_ko'], 'image': f'tarot/{name}'})
     Image.open(SRC / 'back.png').convert('RGB').resize((MAJOR_W, MAJOR_H), Image.LANCZOS) \
         .save(OUT / 'back.webp', 'WEBP', quality=86, method=6)
 
@@ -92,13 +96,19 @@ def main():
             name = f'minor/{cid}.webp'
             crop.save(OUT / name, 'WEBP', quality=88, method=6)
             meta['individual_image_path'] = f'frontend/public/tarot/{name}'
-            deck.append({'card_id': cid, 'arcana': 'minor', 'suit': suit, 'name_en': meta['name_en'],
+            deck.append({'card_id': cid, 'arcana': 'minor', 'suit': suit, 'rank': meta['rank'],
+                         'element': SUIT_ELEMENT[suit], 'name_en': meta['name_en'],
                          'name_ko': meta.get('name_ko'), 'image': f'tarot/{name}'})
 
     minors['status'] = 'individual_images_extracted'
     (SRC / 'minor/minor-arcana.json').write_text(json.dumps(minors, ensure_ascii=False, indent=2) + '\n')
-    (OUT / 'deck.json').write_text(json.dumps({'deck': 'Karmic Resonance', 'back': 'tarot/back.webp', 'cards': deck},
-                                             ensure_ascii=False, indent=1) + '\n')
+    payload = {'deck': 'Karmic Resonance', 'artwork_version': majors.get('artwork_version'),
+               'mapping_version': MAPPING_VERSION, 'back': 'tarot/back.webp', 'cards': deck}
+    (OUT / 'deck.json').write_text(json.dumps(payload, ensure_ascii=False, indent=1) + '\n')
+    assert len(deck) == 78 and len({c['card_id'] for c in deck}) == 78
+    assert sum(1 for c in deck if c['arcana'] == 'major') == 22
+    for suit in SUITS:
+        assert sum(1 for c in deck if c.get('suit') == suit) == 14, suit
     print(len(deck), 'cards written to', OUT)
 
 

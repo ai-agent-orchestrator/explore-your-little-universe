@@ -34,3 +34,20 @@
 @keyframes tarot-twinkle{from{opacity:.55}to{opacity:1}}
 @media(max-width:640px){.tarot-slot{font-size:.68rem;line-height:1.35}.tarot-slot b{font-size:.64rem}.tarot-section{padding:20px 14px}.tarot-summary{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.tarot-stars{animation:none}}
+.tarot-run{margin-top:16px;padding:18px 20px;background:#f8f5fc;border:1px solid #e6dcf0;border-radius:16px}
+.tarot-steps{list-style:none;display:flex;flex-wrap:wrap;gap:8px 18px;margin:0;padding:0}
+.tarot-steps li{display:flex;align-items:center;gap:7px;font-size:.78rem;color:#a99bb5}
+.tarot-steps li.done{color:#6f5590}
+.tarot-steps li.current{color:#8663a8;font-weight:600}
+.tarot-dot{width:9px;height:9px;border-radius:50%;background:#ddd2e9;flex:0 0 9px}
+.tarot-steps li.done .tarot-dot{background:#9070bd}
+.tarot-steps li.current .tarot-dot{background:#f0c75a;animation:tarot-pulse 1.1s ease-in-out infinite}
+.tarot-run-status{font-size:.84rem;margin:12px 0 0;color:#6e5a86}
+.tarot-run .tarot-ghost{margin-top:12px}
+.tarot-report{margin-top:16px;padding:24px 26px;background:#fff;border:1px solid #e4dced;border-radius:18px}
+.tarot-report h3{margin:0 0 10px}
+.tarot-report p{font-size:.9rem;line-height:1.95;margin:0 0 12px}
+.tarot-report ul{margin:8px 0 0;padding-left:18px;font-size:.78rem;line-height:1.9;color:#8a7a97}
+@keyframes tarot-pulse{0%,100%{opacity:.45}50%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.tarot-steps li.current .tarot-dot{animation:none}}
+.tarot-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
