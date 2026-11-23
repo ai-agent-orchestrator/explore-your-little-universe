@@ -7,9 +7,11 @@
   </tr>
 </table>
 
+**[View all 22 Major Arcana](docs/TAROT_MAJOR_ARCANA_GALLERY.md)** · 22 fronts and a shared back completed; 56 Minor Arcana remain.
+
 **Reflection → change → renewal.** Three custom Lumi cards and a shared orchestration-themed back. Artwork preview; tarot server functionality remains planned. [Artwork prompts and handoff](docs/TAROT_ART_PROMPTS.md)
 
-# Explore Your Little Universe
+# Karmic Resonance
 
 [한국어](README.md) | **English**
 
@@ -23,7 +25,7 @@
 
 The current Beta is a static React app for exploring 600 MBTI and zodiac interpretations and scenarios. It uses a public snapshot built in Neo4j and Google LiteRT-LM embedding search in the browser. Lumi is a small guide character.
 
-**[Open the Beta](https://ai-agent-orchestrator.github.io/explore-your-little-universe/)** · [Run and build instructions](docs/STATIC_REACT_RAG.md) · [Corpus and sources](docs/INTERPRETATION_CORPUS.md) · [Previous version v1](https://github.com/ai-agent-orchestrator/explore-your-little-universe/tree/v1)
+**[Open the Beta](https://ai-agent-orchestrator.github.io/explore-your-little-universe/)** · [Run and build instructions](docs/STATIC_REACT_RAG.md) · [Corpus and sources](docs/INTERPRETATION_CORPUS.md) · [Previous version v1](https://github.com/ai-agent-orchestrator/karmic-resonance/tree/v1)
 
 Use a current Chrome or Edge browser; the first real search downloads a model. The server mode below is a separate next-step design.
 

@@ -1,0 +1,250 @@
+{
+  "deck": "Karmic Resonance",
+  "artwork_version": "2026-11-23",
+  "status": "artwork_only_server_not_implemented",
+  "cards": [
+    {
+      "card_id": "major_00",
+      "number": 0,
+      "slug": "fool",
+      "name_en": "The Fool",
+      "name_ko": "바보",
+      "image_path": "docs/images/tarot/fool.png",
+      "source_filename": "황금 새벽의 바보 타로 카드.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "ed3879509b7a637e13c7cbfc61e16c68f5f16b7726d7ea900da3ea16ee5984db"
+    },
+    {
+      "card_id": "major_01",
+      "number": 1,
+      "slug": "magician",
+      "name_en": "The Magician",
+      "name_ko": "마법사",
+      "image_path": "docs/images/tarot/magician.png",
+      "source_filename": "별의 마법사 타로 카드.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "64a260b3bcc2f4149d00382dd2b45fea508a90f75ef592b8f1b2f488e8fe45fe"
+    },
+    {
+      "card_id": "major_02",
+      "number": 2,
+      "slug": "high-priestess",
+      "name_en": "The High Priestess",
+      "name_ko": "여사제",
+      "image_path": "docs/images/tarot/high-priestess.png",
+      "source_filename": "신비로운 달의 여사제 타로 카드.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "a4a0d7c7f9263994bb90a9aa017073fbfaa4a41cac0f8aaaf05316cc7dfc95da"
+    },
+    {
+      "card_id": "major_03",
+      "number": 3,
+      "slug": "empress",
+      "name_en": "The Empress",
+      "name_ko": "여제",
+      "image_path": "docs/images/tarot/empress.png",
+      "source_filename": "카르믹 레조넌스_ 풍요의 여제.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "ac03ad92d5d300d4b24795bfcc7bb8f468954de603a8732ae0c670309fecd08b"
+    },
+    {
+      "card_id": "major_04",
+      "number": 4,
+      "slug": "emperor",
+      "name_en": "The Emperor",
+      "name_ko": "황제",
+      "image_path": "docs/images/tarot/emperor.png",
+      "source_filename": "황금 왕좌의 우주 황제.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "5393d075629f6bac49563332120078cd4f325ad4b1a13353335c05a19ec5706a"
+    },
+    {
+      "card_id": "major_05",
+      "number": 5,
+      "slug": "hierophant",
+      "name_en": "The Hierophant",
+      "name_ko": "교황",
+      "image_path": "docs/images/tarot/hierophant.png",
+      "source_filename": "자비로운 성직자와 평화로운 어린양.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "900eaeb7af3d1f3c482dfab533674e578e78734695f503d2b2a7c92f0b4e1c1c"
+    },
+    {
+      "card_id": "major_06",
+      "number": 6,
+      "slug": "lovers",
+      "name_en": "The Lovers",
+      "name_ko": "연인",
+      "image_path": "docs/images/tarot/lovers.png",
+      "source_filename": "황금빛 연인의 타로 카드.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "3db2076f0d6061b851de2207a4dcaa595713977ccc020424edd2840db1826f1e"
+    },
+    {
+      "card_id": "major_07",
+      "number": 7,
+      "slug": "chariot",
+      "name_en": "The Chariot",
+      "name_ko": "전차",
+      "image_path": "docs/images/tarot/chariot.png",
+      "source_filename": "별빛 황금 전차의 귀환.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "197a98659805ade8c724de24e79962f4ac8d24c0fe7f93552fbe4b055d3526e5"
+    },
+    {
+      "card_id": "major_08",
+      "number": 8,
+      "slug": "strength",
+      "name_en": "Strength",
+      "name_ko": "힘",
+      "image_path": "docs/images/tarot/strength.png",
+      "source_filename": "황금 사자와 별빛의 힘 카드-3.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "5bff9d0752fcb8c6c4dede211d639e4c9c66cb12293aa93af1401222d3ae1085"
+    },
+    {
+      "card_id": "major_09",
+      "number": 9,
+      "slug": "hermit",
+      "name_en": "The Hermit",
+      "name_ko": "은둔자",
+      "image_path": "docs/images/tarot/hermit.png",
+      "source_filename": "별빛을 밝히는 은둔자의 여정-1.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "91d4bb89609ebae089f46ac0528308067466b27cb551c3e2720a1ec9fa6fc1fd"
+    },
+    {
+      "card_id": "major_10",
+      "number": 10,
+      "slug": "wheel-of-fortune",
+      "name_en": "Wheel of Fortune",
+      "name_ko": "운명의 수레바퀴",
+      "image_path": "docs/images/tarot/wheel-of-fortune.png",
+      "source_filename": "황금 운명의 수레바퀴와 우주적 공명-6.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "8937dbdf02813fd7d4133ee03894531bb88b55ddd6539ac6d57c024c314d4608"
+    },
+    {
+      "card_id": "major_11",
+      "number": 11,
+      "slug": "justice",
+      "name_en": "Justice",
+      "name_ko": "정의",
+      "image_path": "docs/images/tarot/justice.png",
+      "source_filename": "정의 XI_ 카르마의 공명-9.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "9e44e13b202c0480b5d7207c16980cce035d26bd779e3c4ade231e3f34c9bfc5"
+    },
+    {
+      "card_id": "major_12",
+      "number": 12,
+      "slug": "hanged-man",
+      "name_en": "The Hanged Man",
+      "name_ko": "매달린 사람",
+      "image_path": "docs/images/tarot/hanged-man.png",
+      "source_filename": "매달린 사람_ 카르마의 울림-12.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "de8c128339a52d549dba526efb0e9c116d421ae9bcd43795cb923db66ac10f0d"
+    },
+    {
+      "card_id": "major_13",
+      "number": 13,
+      "slug": "death",
+      "name_en": "Death",
+      "name_ko": "죽음",
+      "image_path": "docs/images/tarot/death.png",
+      "source_filename": "죽음과 재생의 카르믹 공명-15.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "0b941b0cf5ad68012997b0d20bed205f199a1f2729bf7b5afee7a696405836d0"
+    },
+    {
+      "card_id": "major_14",
+      "number": 14,
+      "slug": "temperance",
+      "name_en": "Temperance",
+      "name_ko": "절제",
+      "image_path": "docs/images/tarot/temperance.png",
+      "source_filename": "황금빛 천사와 절제의 샘물-18.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "e9c45ac2b9b761a4184ba5b9de5e70d1e1fd3bf816eda6a3f28434b7891f7f6d"
+    },
+    {
+      "card_id": "major_15",
+      "number": 15,
+      "slug": "devil",
+      "name_en": "The Devil",
+      "name_ko": "악마",
+      "image_path": "docs/images/tarot/devil.png",
+      "source_filename": "카르마의 공명과 해방.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "65ec00af4441cfbeb385d555b0ec9c1d1788f5a83be0817b95764e4b5001d74c"
+    },
+    {
+      "card_id": "major_16",
+      "number": 16,
+      "slug": "tower",
+      "name_en": "The Tower",
+      "name_ko": "탑",
+      "image_path": "docs/images/tarot/tower.png",
+      "source_filename": "업보의 붕괴_ 빛나는 탑 타워.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "086aaff91f1eb68be98c44ff54a1edefb85ad6943dd030d578ccc3f8f7accdd8"
+    },
+    {
+      "card_id": "major_17",
+      "number": 17,
+      "slug": "star",
+      "name_en": "The Star",
+      "name_ko": "별",
+      "image_path": "docs/images/tarot/star.png",
+      "source_filename": "카르마의 공명과 별빛 물결.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "38110beeb7b6e6c66475469c0395d53905138606f1f3546d0858fbd27a679334"
+    },
+    {
+      "card_id": "major_18",
+      "number": 18,
+      "slug": "moon",
+      "name_en": "The Moon",
+      "name_ko": "달",
+      "image_path": "docs/images/tarot/moon.png",
+      "source_filename": "루미의 달빛 카르마 공명-1.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "cf36253f5f66e69d54105aa88759f8137b218aac6ad1cc39a9f22d11b8bba184"
+    },
+    {
+      "card_id": "major_19",
+      "number": 19,
+      "slug": "sun",
+      "name_en": "The Sun",
+      "name_ko": "태양",
+      "image_path": "docs/images/tarot/sun.png",
+      "source_filename": "황금빛 태양과 백마의 환희-2.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "c6c8c7d3ce264e4536ade287ccadb69a64c764b84aa3c855ac4221018269d9ca"
+    },
+    {
+      "card_id": "major_20",
+      "number": 20,
+      "slug": "judgement",
+      "name_en": "Judgement",
+      "name_ko": "심판",
+      "image_path": "docs/images/tarot/judgement.png",
+      "source_filename": "황금 심판의 천상 부활-3.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "b0d9cfa96b01f810af467880d480f494e9ddfd55518e376a9e47577b307b23e6"
+    },
+    {
+      "card_id": "major_21",
+      "number": 21,
+      "slug": "world",
+      "name_en": "The World",
+      "name_ko": "세계",
+      "image_path": "docs/images/tarot/world.png",
+      "source_filename": "우주와 기어로 빛나는 황금 여신 카드-4.png",
+      "provenance": "User-created with ChatGPT; selected for Karmic Resonance",
+      "sha256": "09684a816ee11789cc6544a1f4ae9b990c263fa4fb94b7908c6ea7a905f8a726"
+    }
+  ],
+  "back_image_path": "docs/images/tarot/back.png"
+}

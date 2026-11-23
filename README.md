@@ -7,9 +7,11 @@
   </tr>
 </table>
 
+**[메이저 아르카나 22장 전체 보기](docs/TAROT_MAJOR_ARCANA_GALLERY.md)** · 앞면 22장 + 공통 뒷면 완성, 마이너 56장 제작 예정.
+
 **탐색 → 변화 → 회복.** Lumi와 톱니·별자리로 연결한 대표 카드 3장과 공통 뒷면. 카드 아트 미리보기이며 타로 서버 기능은 아직 설계 단계다. [이미지 제작·개발 인계](docs/TAROT_ART_PROMPTS.md)
 
-# Explore Your Little Universe
+# Karmic Resonance
 
 **한국어** | [English](README.en.md)
 
@@ -27,7 +29,7 @@
 
 현재 공개 Beta는 MBTI·별자리 해설·사례 600개를 탐색하는 정적 React 앱이다. Neo4j에서 구축한 공개 스냅샷과 브라우저의 Google LiteRT-LM 임베딩 검색을 사용한다. Lumi는 작은 안내 캐릭터다.
 
-**[설치 없이 Beta 열기](https://ai-agent-orchestrator.github.io/explore-your-little-universe/)** · [실행·빌드 안내](docs/STATIC_REACT_RAG.md) · [데이터 구성·출처](docs/INTERPRETATION_CORPUS.md) · [이전 버전 v1](https://github.com/ai-agent-orchestrator/explore-your-little-universe/tree/v1)
+**[설치 없이 Beta 열기](https://ai-agent-orchestrator.github.io/explore-your-little-universe/)** · [실행·빌드 안내](docs/STATIC_REACT_RAG.md) · [데이터 구성·출처](docs/INTERPRETATION_CORPUS.md) · [이전 버전 v1](https://github.com/ai-agent-orchestrator/karmic-resonance/tree/v1)
 
 최신 Chrome·Edge에서 사용하며 첫 실제 검색에는 모델 다운로드가 필요하다. 아래 3DB 서버 모드는 이 정적 Beta와 구분되는 다음 단계 설계다.
 

@@ -157,7 +157,7 @@ SSE 이벤트에는 세션 내 증가하는 ID와 명확한 타입을 붙인다.
 
 ## 카드 아트 확정 사항
 
-[이미지·GPT 프롬프트·파일 매핑](TAROT_ART_PROMPTS.md)을 따른다. 대표 앞면 Hermit·Tower·Star와 공통 뒷면은 `docs/images/tarot/`의 사용자 선택본을 사용한다. 나머지 75장은 파일별 이용 조건을 확인한 RWS 원본 도상으로 추가한다. 커스텀 3장을 RWS 이미지로 대체하지 않는다.
+[이미지·GPT 프롬프트·파일 매핑](TAROT_ART_PROMPTS.md)을 따른다. 메이저 22장과 공통 뒷면은 `docs/images/tarot/`의 사용자 선택본을 사용한다. `major-arcana.json`의 카드 ID·파일 매핑과 [전체 갤러리](TAROT_MAJOR_ARCANA_GALLERY.md)를 확인한다. 남은 마이너 56장은 파일별 이용 조건을 확인한 RWS 원본 도상으로 추가한다. 완성된 커스텀 메이저 22장을 RWS 이미지로 대체하지 않는다.
 
 ## 5단계: React 카드 화면
 
