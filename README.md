@@ -13,7 +13,9 @@
   </tr>
 </table>
 
-**[메이저 아르카나 22장 전체 보기](docs/TAROT_MAJOR_ARCANA_GALLERY.md)** · 앞면 22장 + 공통 뒷면 완성, 마이너 56장 제작 예정.
+**카드 갤러리:** [메이저 아르카나 22장](docs/TAROT_MAJOR_ARCANA_GALLERY.md) · [Wands · 완드 14장](docs/TAROT_WANDS_GALLERY.md) · [Cups · 컵 14장](docs/TAROT_CUPS_GALLERY.md) · [Swords · 소드 14장](docs/TAROT_SWORDS_GALLERY.md) · [Pentacles · 펜타클 14장](docs/TAROT_PENTACLES_GALLERY.md)
+
+메이저 앞면 22장 + 공통 뒷면, 마이너 4수트의 14장 합본 이미지 업로드 완료. 마이너 개별 파일 분리·도상 검수와 서버 연결은 다음 단계다.
 
 **탐색 → 변화 → 회복.** Lumi와 톱니·별자리로 연결한 대표 카드 7장과 공통 뒷면. 카드 아트 미리보기이며 타로 서버 기능은 아직 설계 단계다. [이미지 제작·개발 인계](docs/TAROT_ART_PROMPTS.md)
 

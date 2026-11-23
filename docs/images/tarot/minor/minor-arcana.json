@@ -1,0 +1,700 @@
+{
+  "deck": "Karmic Resonance",
+  "status": "four_sheets_individual_images_pending",
+  "cards": [
+    {
+      "card_id": "wands_01",
+      "suit": "wands",
+      "rank": "ace",
+      "name_en": "Ace of Wands",
+      "sheet_path": "docs/images/tarot/minor/wands-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 0
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "wands_02",
+      "suit": "wands",
+      "rank": "two",
+      "name_en": "Two of Wands",
+      "sheet_path": "docs/images/tarot/minor/wands-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 1
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "wands_03",
+      "suit": "wands",
+      "rank": "three",
+      "name_en": "Three of Wands",
+      "sheet_path": "docs/images/tarot/minor/wands-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 2
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "wands_04",
+      "suit": "wands",
+      "rank": "four",
+      "name_en": "Four of Wands",
+      "sheet_path": "docs/images/tarot/minor/wands-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 3
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "wands_05",
+      "suit": "wands",
+      "rank": "five",
+      "name_en": "Five of Wands",
+      "sheet_path": "docs/images/tarot/minor/wands-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 4
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "wands_06",
+      "suit": "wands",
+      "rank": "six",
+      "name_en": "Six of Wands",
+      "sheet_path": "docs/images/tarot/minor/wands-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 0
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "wands_07",
+      "suit": "wands",
+      "rank": "seven",
+      "name_en": "Seven of Wands",
+      "sheet_path": "docs/images/tarot/minor/wands-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 1
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "wands_08",
+      "suit": "wands",
+      "rank": "eight",
+      "name_en": "Eight of Wands",
+      "sheet_path": "docs/images/tarot/minor/wands-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 2
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "wands_09",
+      "suit": "wands",
+      "rank": "nine",
+      "name_en": "Nine of Wands",
+      "sheet_path": "docs/images/tarot/minor/wands-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 3
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "wands_10",
+      "suit": "wands",
+      "rank": "ten",
+      "name_en": "Ten of Wands",
+      "sheet_path": "docs/images/tarot/minor/wands-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 4
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "wands_11",
+      "suit": "wands",
+      "rank": "page",
+      "name_en": "Page of Wands",
+      "sheet_path": "docs/images/tarot/minor/wands-sheet.png",
+      "sheet_position": {
+        "row": 2,
+        "column": 0
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "wands_12",
+      "suit": "wands",
+      "rank": "knight",
+      "name_en": "Knight of Wands",
+      "sheet_path": "docs/images/tarot/minor/wands-sheet.png",
+      "sheet_position": {
+        "row": 2,
+        "column": 1
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "wands_13",
+      "suit": "wands",
+      "rank": "queen",
+      "name_en": "Queen of Wands",
+      "sheet_path": "docs/images/tarot/minor/wands-sheet.png",
+      "sheet_position": {
+        "row": 2,
+        "column": 2
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "wands_14",
+      "suit": "wands",
+      "rank": "king",
+      "name_en": "King of Wands",
+      "sheet_path": "docs/images/tarot/minor/wands-sheet.png",
+      "sheet_position": {
+        "row": 2,
+        "column": 3
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "cups_01",
+      "suit": "cups",
+      "rank": "ace",
+      "name_en": "Ace of Cups",
+      "sheet_path": "docs/images/tarot/minor/cups-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 0
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "cups_02",
+      "suit": "cups",
+      "rank": "two",
+      "name_en": "Two of Cups",
+      "sheet_path": "docs/images/tarot/minor/cups-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 1
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "cups_03",
+      "suit": "cups",
+      "rank": "three",
+      "name_en": "Three of Cups",
+      "sheet_path": "docs/images/tarot/minor/cups-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 2
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "cups_04",
+      "suit": "cups",
+      "rank": "four",
+      "name_en": "Four of Cups",
+      "sheet_path": "docs/images/tarot/minor/cups-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 3
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "cups_05",
+      "suit": "cups",
+      "rank": "five",
+      "name_en": "Five of Cups",
+      "sheet_path": "docs/images/tarot/minor/cups-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 4
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "cups_06",
+      "suit": "cups",
+      "rank": "six",
+      "name_en": "Six of Cups",
+      "sheet_path": "docs/images/tarot/minor/cups-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 0
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "cups_07",
+      "suit": "cups",
+      "rank": "seven",
+      "name_en": "Seven of Cups",
+      "sheet_path": "docs/images/tarot/minor/cups-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 1
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "cups_08",
+      "suit": "cups",
+      "rank": "eight",
+      "name_en": "Eight of Cups",
+      "sheet_path": "docs/images/tarot/minor/cups-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 2
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "cups_09",
+      "suit": "cups",
+      "rank": "nine",
+      "name_en": "Nine of Cups",
+      "sheet_path": "docs/images/tarot/minor/cups-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 3
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "cups_10",
+      "suit": "cups",
+      "rank": "ten",
+      "name_en": "Ten of Cups",
+      "sheet_path": "docs/images/tarot/minor/cups-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 4
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "cups_11",
+      "suit": "cups",
+      "rank": "page",
+      "name_en": "Page of Cups",
+      "sheet_path": "docs/images/tarot/minor/cups-sheet.png",
+      "sheet_position": {
+        "row": 2,
+        "column": 0
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "cups_12",
+      "suit": "cups",
+      "rank": "knight",
+      "name_en": "Knight of Cups",
+      "sheet_path": "docs/images/tarot/minor/cups-sheet.png",
+      "sheet_position": {
+        "row": 2,
+        "column": 1
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "cups_13",
+      "suit": "cups",
+      "rank": "queen",
+      "name_en": "Queen of Cups",
+      "sheet_path": "docs/images/tarot/minor/cups-sheet.png",
+      "sheet_position": {
+        "row": 2,
+        "column": 2
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "cups_14",
+      "suit": "cups",
+      "rank": "king",
+      "name_en": "King of Cups",
+      "sheet_path": "docs/images/tarot/minor/cups-sheet.png",
+      "sheet_position": {
+        "row": 2,
+        "column": 3
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "swords_01",
+      "suit": "swords",
+      "rank": "ace",
+      "name_en": "Ace of Swords",
+      "sheet_path": "docs/images/tarot/minor/swords-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 0
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "swords_02",
+      "suit": "swords",
+      "rank": "two",
+      "name_en": "Two of Swords",
+      "sheet_path": "docs/images/tarot/minor/swords-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 1
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "swords_03",
+      "suit": "swords",
+      "rank": "three",
+      "name_en": "Three of Swords",
+      "sheet_path": "docs/images/tarot/minor/swords-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 2
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "swords_04",
+      "suit": "swords",
+      "rank": "four",
+      "name_en": "Four of Swords",
+      "sheet_path": "docs/images/tarot/minor/swords-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 3
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "swords_05",
+      "suit": "swords",
+      "rank": "five",
+      "name_en": "Five of Swords",
+      "sheet_path": "docs/images/tarot/minor/swords-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 4
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "swords_06",
+      "suit": "swords",
+      "rank": "six",
+      "name_en": "Six of Swords",
+      "sheet_path": "docs/images/tarot/minor/swords-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 0
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "swords_07",
+      "suit": "swords",
+      "rank": "seven",
+      "name_en": "Seven of Swords",
+      "sheet_path": "docs/images/tarot/minor/swords-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 1
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "swords_08",
+      "suit": "swords",
+      "rank": "eight",
+      "name_en": "Eight of Swords",
+      "sheet_path": "docs/images/tarot/minor/swords-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 2
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "swords_09",
+      "suit": "swords",
+      "rank": "nine",
+      "name_en": "Nine of Swords",
+      "sheet_path": "docs/images/tarot/minor/swords-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 3
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "swords_10",
+      "suit": "swords",
+      "rank": "ten",
+      "name_en": "Ten of Swords",
+      "sheet_path": "docs/images/tarot/minor/swords-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 4
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "swords_11",
+      "suit": "swords",
+      "rank": "page",
+      "name_en": "Page of Swords",
+      "sheet_path": "docs/images/tarot/minor/swords-sheet.png",
+      "sheet_position": {
+        "row": 2,
+        "column": 0
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "swords_12",
+      "suit": "swords",
+      "rank": "knight",
+      "name_en": "Knight of Swords",
+      "sheet_path": "docs/images/tarot/minor/swords-sheet.png",
+      "sheet_position": {
+        "row": 2,
+        "column": 1
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "swords_13",
+      "suit": "swords",
+      "rank": "queen",
+      "name_en": "Queen of Swords",
+      "sheet_path": "docs/images/tarot/minor/swords-sheet.png",
+      "sheet_position": {
+        "row": 2,
+        "column": 2
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "swords_14",
+      "suit": "swords",
+      "rank": "king",
+      "name_en": "King of Swords",
+      "sheet_path": "docs/images/tarot/minor/swords-sheet.png",
+      "sheet_position": {
+        "row": 2,
+        "column": 3
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "pentacles_01",
+      "suit": "pentacles",
+      "rank": "ace",
+      "name_en": "Ace of Pentacles",
+      "sheet_path": "docs/images/tarot/minor/pentacles-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 0
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "pentacles_02",
+      "suit": "pentacles",
+      "rank": "two",
+      "name_en": "Two of Pentacles",
+      "sheet_path": "docs/images/tarot/minor/pentacles-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 1
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "pentacles_03",
+      "suit": "pentacles",
+      "rank": "three",
+      "name_en": "Three of Pentacles",
+      "sheet_path": "docs/images/tarot/minor/pentacles-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 2
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "pentacles_04",
+      "suit": "pentacles",
+      "rank": "four",
+      "name_en": "Four of Pentacles",
+      "sheet_path": "docs/images/tarot/minor/pentacles-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 3
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "pentacles_05",
+      "suit": "pentacles",
+      "rank": "five",
+      "name_en": "Five of Pentacles",
+      "sheet_path": "docs/images/tarot/minor/pentacles-sheet.png",
+      "sheet_position": {
+        "row": 0,
+        "column": 4
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "pentacles_06",
+      "suit": "pentacles",
+      "rank": "six",
+      "name_en": "Six of Pentacles",
+      "sheet_path": "docs/images/tarot/minor/pentacles-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 0
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "pentacles_07",
+      "suit": "pentacles",
+      "rank": "seven",
+      "name_en": "Seven of Pentacles",
+      "sheet_path": "docs/images/tarot/minor/pentacles-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 1
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "pentacles_08",
+      "suit": "pentacles",
+      "rank": "eight",
+      "name_en": "Eight of Pentacles",
+      "sheet_path": "docs/images/tarot/minor/pentacles-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 2
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "pentacles_09",
+      "suit": "pentacles",
+      "rank": "nine",
+      "name_en": "Nine of Pentacles",
+      "sheet_path": "docs/images/tarot/minor/pentacles-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 3
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "pentacles_10",
+      "suit": "pentacles",
+      "rank": "ten",
+      "name_en": "Ten of Pentacles",
+      "sheet_path": "docs/images/tarot/minor/pentacles-sheet.png",
+      "sheet_position": {
+        "row": 1,
+        "column": 4
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "pentacles_11",
+      "suit": "pentacles",
+      "rank": "page",
+      "name_en": "Page of Pentacles",
+      "sheet_path": "docs/images/tarot/minor/pentacles-sheet.png",
+      "sheet_position": {
+        "row": 2,
+        "column": 0
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "pentacles_12",
+      "suit": "pentacles",
+      "rank": "knight",
+      "name_en": "Knight of Pentacles",
+      "sheet_path": "docs/images/tarot/minor/pentacles-sheet.png",
+      "sheet_position": {
+        "row": 2,
+        "column": 1
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "pentacles_13",
+      "suit": "pentacles",
+      "rank": "queen",
+      "name_en": "Queen of Pentacles",
+      "sheet_path": "docs/images/tarot/minor/pentacles-sheet.png",
+      "sheet_position": {
+        "row": 2,
+        "column": 2
+      },
+      "individual_image_path": null
+    },
+    {
+      "card_id": "pentacles_14",
+      "suit": "pentacles",
+      "rank": "king",
+      "name_en": "King of Pentacles",
+      "sheet_path": "docs/images/tarot/minor/pentacles-sheet.png",
+      "sheet_position": {
+        "row": 2,
+        "column": 3
+      },
+      "individual_image_path": null
+    }
+  ],
+  "sources": [
+    {
+      "suit": "wands",
+      "source_filename": "카르믹 레조넌스 완드 타로 시트-1.png",
+      "sha256": "2628aa6192b885ac8008fe58c2ac4c38c1e6ac2fdf4ac6139518ff9b136d0588"
+    },
+    {
+      "suit": "cups",
+      "source_filename": "환상적인 컵 타로 카드 시트-2.png",
+      "sha256": "710bf3718ff79714d6ba18c3d8097be7e2b69ebc20643bf914eab7a2b404936f"
+    },
+    {
+      "suit": "swords",
+      "source_filename": "소드 타로 카드 14장 세트.png",
+      "sha256": "6909c4080f79721e83112c6d1857005b40a7aff924569e0c348e1daaabf504ca"
+    },
+    {
+      "suit": "pentacles",
+      "source_filename": "루미의 황금 펜타클 타로 콜라주.png",
+      "sha256": "2444b0f9b334df194371c858c6463d881a370ebf652f2b0792b528057ca56a2b"
+    }
+  ]
+}

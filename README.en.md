@@ -13,7 +13,9 @@
   </tr>
 </table>
 
-**[View all 22 Major Arcana](docs/TAROT_MAJOR_ARCANA_GALLERY.md)** · 22 fronts and a shared back completed; 56 Minor Arcana remain.
+**Card galleries:** [Major Arcana · 22](docs/TAROT_MAJOR_ARCANA_GALLERY.md) · [Wands · 14](docs/TAROT_WANDS_GALLERY.md) · [Cups · 14](docs/TAROT_CUPS_GALLERY.md) · [Swords · 14](docs/TAROT_SWORDS_GALLERY.md) · [Pentacles · 14](docs/TAROT_PENTACLES_GALLERY.md)
+
+22 Major Arcana fronts, a shared back, and four 14-card Minor Arcana sheets uploaded. Individual minor-card files, artwork checks, and server integration remain.
 
 **Reflection → change → renewal.** Seven custom Lumi cards and a shared orchestration-themed back. Artwork preview; tarot server functionality remains planned. [Artwork prompts and handoff](docs/TAROT_ART_PROMPTS.md)
 

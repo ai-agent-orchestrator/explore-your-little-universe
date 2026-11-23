@@ -157,7 +157,7 @@ SSE 이벤트에는 세션 내 증가하는 ID와 명확한 타입을 붙인다.
 
 ## 카드 아트 확정 사항
 
-[이미지·GPT 프롬프트·파일 매핑](TAROT_ART_PROMPTS.md)을 따른다. 메이저 22장과 공통 뒷면은 `docs/images/tarot/`의 사용자 선택본을 사용한다. `major-arcana.json`의 카드 ID·파일 매핑과 [전체 갤러리](TAROT_MAJOR_ARCANA_GALLERY.md)를 확인한다. 남은 마이너 56장은 파일별 이용 조건을 확인한 RWS 원본 도상으로 추가한다. 완성된 커스텀 메이저 22장을 RWS 이미지로 대체하지 않는다.
+[이미지·GPT 프롬프트·파일 매핑](TAROT_ART_PROMPTS.md)을 따른다. 메이저 22장과 공통 뒷면은 `docs/images/tarot/`의 사용자 선택본을 사용한다. `major-arcana.json`의 카드 ID·파일 매핑과 [전체 갤러리](TAROT_MAJOR_ARCANA_GALLERY.md)를 확인한다. 마이너 56장은 `docs/images/tarot/minor/`에 사용자 생성 합본 4개로 추가됐다. `minor-arcana.json`의 ID·카드 이름·합본 위치를 기준으로 개별 파일을 분리하고 도상·수트 개수를 검수한다. 개별 파일 경로는 아직 null이며, 합본을 카드 한 장의 이미지로 연결하지 않는다. 완성된 커스텀 메이저 22장을 RWS 이미지로 대체하지 않는다.
 
 ## 5단계: React 카드 화면
 
