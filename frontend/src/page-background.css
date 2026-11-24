@@ -5,6 +5,8 @@ body{min-height:100vh;background:radial-gradient(ellipse at top,#303151,transpar
 .header-label,.hero p,.hero-tags,footer,footer p{color:#c4c6d6}
 .hero .overline{color:#d6b5f5}
 .hero h1 em{color:#d6b5f5}
+.mascot .lumi-caption{color:#d6b5f5}
+.mascot .lumi-caption small{color:#c4c6d6}
 .github{border-color:#ffffff40;color:#e3c689}
 .ask-panel,.evidence,.discovery,.graph-section,.gemini-panel,.universe-section,.mission,.study-panel,.interpretation-library,.speech{color:#40364e}
 .results-title h2,.column-title h2{color:#f4eee3}
