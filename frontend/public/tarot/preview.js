@@ -35,7 +35,7 @@ language.textContent=en?'한국어':'English';language.href=en?'?lang=ko':'?lang
 if(en){
  document.querySelector('#project').textContent='View project';
  document.querySelector('h1').textContent='A little perspective, in three cards.';
- document.querySelector('.intro').textContent='Hold a question in mind. Draw three different cards from Lumi’s 22 Major Arcana and place them in the past, present, and future positions. Each card may appear upright or reversed.';
+ document.querySelector('.intro').textContent='Hold a question in mind. Choose three face-down cards from the spread of 22 Major Arcana. Your selection order determines past, present, and future. Reveal the results once all three are selected.';
  cards.setAttribute('aria-label','Your drawn cards');
  button.textContent='Preparing cards';status.textContent='Loading the deck.';
  document.querySelector('footer').textContent='A tarot draw preview that runs in your browser. The short reflections are prewritten examples for self-reflection, not predictions or AI-generated reports. Questions and draws are not saved to a server. Drawing again replaces the previous result.';
@@ -45,28 +45,57 @@ function randomInt(max){
  do{crypto.getRandomValues(sample);}while(sample[0]>=limit);
  return sample[0]%max;
 }
-function render(deck){
- const pool=[...deck],positions=en?['PAST · Reflect','PRESENT · Notice','FUTURE · Explore possibilities']:['과거 · 돌아보기','현재 · 살펴보기','미래 · 생각해 볼 방향'];
+function render(selected){
+ const positions=en?['PAST · Reflect','PRESENT · Notice','FUTURE · Explore possibilities']:['과거 · 돌아보기','현재 · 살펴보기','미래 · 생각해 볼 방향'];
  cards.replaceChildren();
  for(let i=0;i<3;i++){
-  const card=pool.splice(randomInt(pool.length),1)[0],reversed=randomInt(2)===1;
+  const {card,reversed}=selected[i];
   const article=document.createElement('article');
   const position=document.createElement('p');position.className='position';position.textContent=positions[i];
   const frame=document.createElement('div');frame.className='frame';
   const direction=reversed?t('역방향','Reversed'):t('정방향','Upright');
-  const image=document.createElement('img');image.src=`./assets/${card.slug}.png`;image.alt=`${en?card.name_en:card.name_ko} · ${direction}`;
+  const image=document.createElement('img');image.src=`./assets/designed/${card.slug}.svg`;image.alt=`${en?card.name_en:card.name_ko} · ${direction}`;
   if(reversed)image.className='reversed';frame.append(image);
-  const title=document.createElement('h2');title.textContent=en?card.name_en:card.name_ko;
   const orientation=document.createElement('span');orientation.className='orientation';orientation.textContent=en?direction:`${card.name_en} · ${direction}`;
   const meaning=document.createElement('p');meaning.className='meaning';meaning.textContent=(en?englishMeanings:meanings)[card.slug][Number(reversed)];
-  article.append(position,frame,title,orientation,meaning);cards.append(article);
+  article.append(position,frame,orientation,meaning);cards.append(article);
  }
- status.textContent=t('서로 다른 카드 3장을 뽑았어요.','You drew three different cards.');button.textContent=t('다시 뽑기','Draw again');
+ status.textContent=t('직접 고른 세 장의 결과입니다.','Here are your three selected cards.');button.textContent=t('다시 고르기','Choose again');
+}
+const spread=document.querySelector('#spread');
+let selection=[],revealed=false;
+function prepare(deck){
+ selection=[];revealed=false;cards.replaceChildren();spread.replaceChildren();spread.hidden=false;
+ const pool=[...deck],shuffled=[];
+ while(pool.length)shuffled.push(pool.splice(randomInt(pool.length),1)[0]);
+ shuffled.forEach((card,index)=>{
+  const pick=document.createElement('button');pick.className='pick';pick.type='button';
+  pick.setAttribute('aria-label',t('뒷면 카드 '+(index+1)+' 선택','Select face-down card '+(index+1)));
+  pick.setAttribute('aria-pressed','false');
+  const image=document.createElement('img');image.src='./assets/back.png';image.alt='';image.draggable=false;
+  const badge=document.createElement('span');badge.className='pick-order';pick.append(image,badge);
+  pick.addEventListener('click',()=>{
+   if(revealed)return;
+   const existing=selection.findIndex(item=>item.card===card);
+   if(existing>=0)selection.splice(existing,1);
+   else if(selection.length<3)selection.push({card,reversed:randomInt(2)===1,pick});
+   for(const element of spread.children){
+    const order=selection.findIndex(item=>item.pick===element);
+    element.setAttribute('aria-pressed',String(order>=0));
+    element.querySelector('span').textContent=order>=0?String(order+1):'';
+    element.disabled=selection.length===3&&order<0;
+   }
+   button.disabled=selection.length!==3;
+   status.textContent=t(selection.length+' / 3장 선택 · 다시 누르면 선택 취소',selection.length+' / 3 selected · Tap again to undo');
+  });spread.append(pick);
+ });
+ button.disabled=true;button.textContent=t('선택한 3장 결과 보기','Reveal my three cards');
+ status.textContent=t('펼쳐진 카드에서 세 장을 골라주세요.','Choose three cards from the spread.');
 }
 try{
  const response=await fetch('./assets/major-arcana.json');if(!response.ok)throw new Error('deck');
  const {cards:deck}=await response.json();
  if(deck.length!==22||deck.some(card=>!meanings[card.slug]||!englishMeanings[card.slug]))throw new Error('deck');
- button.disabled=false;button.textContent=t('카드 3장 뽑기','Draw three cards');status.textContent=t('준비되면 카드를 뽑아보세요.','Draw your cards when you are ready.');
- button.addEventListener('click',()=>render(deck));
+ prepare(deck);
+ button.addEventListener('click',()=>{if(revealed){prepare(deck);return;}if(selection.length!==3)return;revealed=true;spread.hidden=true;render(selection);});
 }catch{status.textContent=t('카드를 불러오지 못했어요. 잠시 후 새로고침해 주세요.','Could not load the cards. Please refresh and try again.');button.textContent=t('불러오기 실패','Loading failed');}

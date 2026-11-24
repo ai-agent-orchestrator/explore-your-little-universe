@@ -1,23 +1,23 @@
+**[카드 3장 뽑고 결과 보기](https://ai-agent-orchestrator.github.io/karmic-resonance/tarot/)**
+
 <table>
   <tr>
-    <td align="center"><img src="docs/images/tarot/hermit.png" alt="The Hermit — Lumi and golden gears" width="220"><br><b>Hermit</b></td>
-    <td align="center"><img src="docs/images/tarot/tower.png" alt="The Tower — Lumi and golden gears" width="220"><br><b>Tower</b></td>
-    <td align="center"><img src="docs/images/tarot/star.png" alt="The Star — Lumi and golden gears" width="220"><br><b>Star</b></td>
-    <td align="center"><img src="docs/images/tarot/back.png" alt="Card back — Lumi multi-agent orchestration" width="220"><br><b>Back</b></td>
+    <td align="center"><img src="docs/images/tarot/designed/hermit.svg" alt="The Hermit — Lumi and golden gears" width="220" height="330"></td>
+    <td align="center"><img src="docs/images/tarot/designed/tower.svg" alt="The Tower — Lumi and golden gears" width="220" height="330"></td>
+    <td align="center"><img src="docs/images/tarot/designed/star.svg" alt="The Star — Lumi and golden gears" width="220" height="330"></td>
+    <td align="center"><img src="docs/images/tarot/back.png" alt="Card back — Lumi multi-agent orchestration" width="220" height="330"></td>
   </tr>
   <tr>
-    <td align="center"><img src="docs/images/tarot/hierophant.png" alt="V The Hierophant — 교황" width="220"><br><b>V · Hierophant</b></td>
-    <td align="center"><img src="docs/images/tarot/wheel-of-fortune.png" alt="X Wheel of Fortune — 운명의 수레바퀴" width="220"><br><b>X · Wheel of Fortune</b></td>
-    <td align="center"><img src="docs/images/tarot/devil.png" alt="XV The Devil — 악마" width="220"><br><b>XV · Devil</b></td>
-    <td align="center"><img src="docs/images/tarot/world.png" alt="XXI The World — 세계" width="220"><br><b>XXI · World</b></td>
+    <td align="center"><img src="docs/images/tarot/designed/hierophant.svg" alt="V The Hierophant — 교황" width="220" height="330"></td>
+    <td align="center"><img src="docs/images/tarot/designed/wheel-of-fortune.svg" alt="X Wheel of Fortune — 운명의 수레바퀴" width="220" height="330"></td>
+    <td align="center"><img src="docs/images/tarot/designed/devil.svg" alt="XV The Devil — 악마" width="220" height="330"></td>
+    <td align="center"><img src="docs/images/tarot/designed/world.svg" alt="XXI The World — 세계" width="220" height="330"></td>
   </tr>
 </table>
 
 **카드 갤러리:** [메이저 아르카나 22장](docs/TAROT_MAJOR_ARCANA_GALLERY.md) · [Wands · 완드 14장](docs/TAROT_WANDS_GALLERY.md) · [Cups · 컵 14장](docs/TAROT_CUPS_GALLERY.md) · [Swords · 소드 14장](docs/TAROT_SWORDS_GALLERY.md) · [Pentacles · 펜타클 14장](docs/TAROT_PENTACLES_GALLERY.md)
 
-메이저 앞면 22장 + 공통 뒷면, 마이너 4수트의 14장 합본 이미지 업로드 완료. 마이너 개별 파일 분리·도상 검수와 서버 연결은 다음 단계다.
 
-**탐색 → 변화 → 회복.** Lumi와 톱니·별자리로 연결한 대표 카드 7장과 공통 뒷면. 카드 뽑기 미리보기이다. **[카드 3장 뽑고 결과 보기](https://ai-agent-orchestrator.github.io/karmic-resonance/tarot/)**
 
 # Karmic Resonance
 

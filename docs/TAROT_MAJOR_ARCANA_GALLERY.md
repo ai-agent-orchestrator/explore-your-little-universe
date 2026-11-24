@@ -10,38 +10,38 @@
 
 <table>
   <tr>
-    <td align="center" width="25%"><a href="images/tarot/fool.png"><img src="images/tarot/fool.png" alt="00 The Fool · 바보" width="220"></a><br><b>00 · The Fool</b><br>바보</td>
-    <td align="center" width="25%"><a href="images/tarot/magician.png"><img src="images/tarot/magician.png" alt="01 The Magician · 마법사" width="220"></a><br><b>01 · The Magician</b><br>마법사</td>
-    <td align="center" width="25%"><a href="images/tarot/high-priestess.png"><img src="images/tarot/high-priestess.png" alt="02 The High Priestess · 여사제" width="220"></a><br><b>02 · The High Priestess</b><br>여사제</td>
-    <td align="center" width="25%"><a href="images/tarot/empress.png"><img src="images/tarot/empress.png" alt="03 The Empress · 여제" width="220"></a><br><b>03 · The Empress</b><br>여제</td>
+    <td align="center" width="25%"><a href="images/tarot/designed/fool.svg"><img src="images/tarot/designed/fool.svg" alt="00 The Fool · 바보" width="220" height="330"></a></td>
+    <td align="center" width="25%"><a href="images/tarot/designed/magician.svg"><img src="images/tarot/designed/magician.svg" alt="01 The Magician · 마법사" width="220" height="330"></a></td>
+    <td align="center" width="25%"><a href="images/tarot/designed/high-priestess.svg"><img src="images/tarot/designed/high-priestess.svg" alt="02 The High Priestess · 여사제" width="220" height="330"></a></td>
+    <td align="center" width="25%"><a href="images/tarot/designed/empress.svg"><img src="images/tarot/designed/empress.svg" alt="03 The Empress · 여제" width="220" height="330"></a></td>
   </tr>
   <tr>
-    <td align="center" width="25%"><a href="images/tarot/emperor.png"><img src="images/tarot/emperor.png" alt="04 The Emperor · 황제" width="220"></a><br><b>04 · The Emperor</b><br>황제</td>
-    <td align="center" width="25%"><a href="images/tarot/hierophant.png"><img src="images/tarot/hierophant.png" alt="05 The Hierophant · 교황" width="220"></a><br><b>05 · The Hierophant</b><br>교황</td>
-    <td align="center" width="25%"><a href="images/tarot/lovers.png"><img src="images/tarot/lovers.png" alt="06 The Lovers · 연인" width="220"></a><br><b>06 · The Lovers</b><br>연인</td>
-    <td align="center" width="25%"><a href="images/tarot/chariot.png"><img src="images/tarot/chariot.png" alt="07 The Chariot · 전차" width="220"></a><br><b>07 · The Chariot</b><br>전차</td>
+    <td align="center" width="25%"><a href="images/tarot/designed/emperor.svg"><img src="images/tarot/designed/emperor.svg" alt="04 The Emperor · 황제" width="220" height="330"></a></td>
+    <td align="center" width="25%"><a href="images/tarot/designed/hierophant.svg"><img src="images/tarot/designed/hierophant.svg" alt="05 The Hierophant · 교황" width="220" height="330"></a></td>
+    <td align="center" width="25%"><a href="images/tarot/designed/lovers.svg"><img src="images/tarot/designed/lovers.svg" alt="06 The Lovers · 연인" width="220" height="330"></a></td>
+    <td align="center" width="25%"><a href="images/tarot/designed/chariot.svg"><img src="images/tarot/designed/chariot.svg" alt="07 The Chariot · 전차" width="220" height="330"></a></td>
   </tr>
   <tr>
-    <td align="center" width="25%"><a href="images/tarot/strength.png"><img src="images/tarot/strength.png" alt="08 Strength · 힘" width="220"></a><br><b>08 · Strength</b><br>힘</td>
-    <td align="center" width="25%"><a href="images/tarot/hermit.png"><img src="images/tarot/hermit.png" alt="09 The Hermit · 은둔자" width="220"></a><br><b>09 · The Hermit</b><br>은둔자</td>
-    <td align="center" width="25%"><a href="images/tarot/wheel-of-fortune.png"><img src="images/tarot/wheel-of-fortune.png" alt="10 Wheel of Fortune · 운명의 수레바퀴" width="220"></a><br><b>10 · Wheel of Fortune</b><br>운명의 수레바퀴</td>
-    <td align="center" width="25%"><a href="images/tarot/justice.png"><img src="images/tarot/justice.png" alt="11 Justice · 정의" width="220"></a><br><b>11 · Justice</b><br>정의</td>
+    <td align="center" width="25%"><a href="images/tarot/designed/strength.svg"><img src="images/tarot/designed/strength.svg" alt="08 Strength · 힘" width="220" height="330"></a></td>
+    <td align="center" width="25%"><a href="images/tarot/designed/hermit.svg"><img src="images/tarot/designed/hermit.svg" alt="09 The Hermit · 은둔자" width="220" height="330"></a></td>
+    <td align="center" width="25%"><a href="images/tarot/designed/wheel-of-fortune.svg"><img src="images/tarot/designed/wheel-of-fortune.svg" alt="10 Wheel of Fortune · 운명의 수레바퀴" width="220" height="330"></a></td>
+    <td align="center" width="25%"><a href="images/tarot/designed/justice.svg"><img src="images/tarot/designed/justice.svg" alt="11 Justice · 정의" width="220" height="330"></a></td>
   </tr>
   <tr>
-    <td align="center" width="25%"><a href="images/tarot/hanged-man.png"><img src="images/tarot/hanged-man.png" alt="12 The Hanged Man · 매달린 사람" width="220"></a><br><b>12 · The Hanged Man</b><br>매달린 사람</td>
-    <td align="center" width="25%"><a href="images/tarot/death.png"><img src="images/tarot/death.png" alt="13 Death · 죽음" width="220"></a><br><b>13 · Death</b><br>죽음</td>
-    <td align="center" width="25%"><a href="images/tarot/temperance.png"><img src="images/tarot/temperance.png" alt="14 Temperance · 절제" width="220"></a><br><b>14 · Temperance</b><br>절제</td>
-    <td align="center" width="25%"><a href="images/tarot/devil.png"><img src="images/tarot/devil.png" alt="15 The Devil · 악마" width="220"></a><br><b>15 · The Devil</b><br>악마</td>
+    <td align="center" width="25%"><a href="images/tarot/designed/hanged-man.svg"><img src="images/tarot/designed/hanged-man.svg" alt="12 The Hanged Man · 매달린 사람" width="220" height="330"></a></td>
+    <td align="center" width="25%"><a href="images/tarot/designed/death.svg"><img src="images/tarot/designed/death.svg" alt="13 Death · 죽음" width="220" height="330"></a></td>
+    <td align="center" width="25%"><a href="images/tarot/designed/temperance.svg"><img src="images/tarot/designed/temperance.svg" alt="14 Temperance · 절제" width="220" height="330"></a></td>
+    <td align="center" width="25%"><a href="images/tarot/designed/devil.svg"><img src="images/tarot/designed/devil.svg" alt="15 The Devil · 악마" width="220" height="330"></a></td>
   </tr>
   <tr>
-    <td align="center" width="25%"><a href="images/tarot/tower.png"><img src="images/tarot/tower.png" alt="16 The Tower · 탑" width="220"></a><br><b>16 · The Tower</b><br>탑</td>
-    <td align="center" width="25%"><a href="images/tarot/star.png"><img src="images/tarot/star.png" alt="17 The Star · 별" width="220"></a><br><b>17 · The Star</b><br>별</td>
-    <td align="center" width="25%"><a href="images/tarot/moon.png"><img src="images/tarot/moon.png" alt="18 The Moon · 달" width="220"></a><br><b>18 · The Moon</b><br>달</td>
-    <td align="center" width="25%"><a href="images/tarot/sun.png"><img src="images/tarot/sun.png" alt="19 The Sun · 태양" width="220"></a><br><b>19 · The Sun</b><br>태양</td>
+    <td align="center" width="25%"><a href="images/tarot/designed/tower.svg"><img src="images/tarot/designed/tower.svg" alt="16 The Tower · 탑" width="220" height="330"></a></td>
+    <td align="center" width="25%"><a href="images/tarot/designed/star.svg"><img src="images/tarot/designed/star.svg" alt="17 The Star · 별" width="220" height="330"></a></td>
+    <td align="center" width="25%"><a href="images/tarot/designed/moon.svg"><img src="images/tarot/designed/moon.svg" alt="18 The Moon · 달" width="220" height="330"></a></td>
+    <td align="center" width="25%"><a href="images/tarot/designed/sun.svg"><img src="images/tarot/designed/sun.svg" alt="19 The Sun · 태양" width="220" height="330"></a></td>
   </tr>
   <tr>
-    <td align="center" width="25%"><a href="images/tarot/judgement.png"><img src="images/tarot/judgement.png" alt="20 Judgement · 심판" width="220"></a><br><b>20 · Judgement</b><br>심판</td>
-    <td align="center" width="25%"><a href="images/tarot/world.png"><img src="images/tarot/world.png" alt="21 The World · 세계" width="220"></a><br><b>21 · The World</b><br>세계</td>
+    <td align="center" width="25%"><a href="images/tarot/designed/judgement.svg"><img src="images/tarot/designed/judgement.svg" alt="20 Judgement · 심판" width="220" height="330"></a></td>
+    <td align="center" width="25%"><a href="images/tarot/designed/world.svg"><img src="images/tarot/designed/world.svg" alt="21 The World · 세계" width="220" height="330"></a></td>
   </tr>
 </table>
 
@@ -49,4 +49,4 @@
 
 <img src="images/tarot/back.png" alt="Karmic Resonance · Lumi orchestration card back" width="280">
 
-원본 PNG는 수정 없이 보관한다. 정역방향은 같은 앞면을 회전해 표시하며, 앱에서 이름·방향·위치를 별도로 제공한다. 뒷면 문구로 방향이 보이므로 뒷면 표시 방향은 고정하고 공개 시점에 앞면 방향을 적용한다.
+원본 PNG는 수정 없이 보관한다. 정역방향은 같은 앞면을 회전해 표시하며, 전시용 SVG는 2:3 프레임 안에 금빛 이탤릭 제목을 표시한다. `node frontend/scripts/design-tarot.mjs`로 재생성한다. 앱에서 방향·위치를 제공한다. 뒷면 문구로 방향이 보이므로 뒷면 표시 방향은 고정하고 공개 시점에 앞면 방향을 적용한다.

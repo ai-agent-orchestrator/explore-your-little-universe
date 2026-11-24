@@ -1,15 +1,15 @@
 <table>
   <tr>
-    <td align="center"><img src="docs/images/tarot/hermit.png" alt="The Hermit — Lumi and golden gears" width="220"><br><b>Hermit</b></td>
-    <td align="center"><img src="docs/images/tarot/tower.png" alt="The Tower — Lumi and golden gears" width="220"><br><b>Tower</b></td>
-    <td align="center"><img src="docs/images/tarot/star.png" alt="The Star — Lumi and golden gears" width="220"><br><b>Star</b></td>
-    <td align="center"><img src="docs/images/tarot/back.png" alt="Card back — Lumi multi-agent orchestration" width="220"><br><b>Back</b></td>
+    <td align="center"><img src="docs/images/tarot/designed/hermit.svg" alt="The Hermit — Lumi and golden gears" width="220" height="330"></td>
+    <td align="center"><img src="docs/images/tarot/designed/tower.svg" alt="The Tower — Lumi and golden gears" width="220" height="330"></td>
+    <td align="center"><img src="docs/images/tarot/designed/star.svg" alt="The Star — Lumi and golden gears" width="220" height="330"></td>
+    <td align="center"><img src="docs/images/tarot/back.png" alt="Card back — Lumi multi-agent orchestration" width="220" height="330"></td>
   </tr>
   <tr>
-    <td align="center"><img src="docs/images/tarot/hierophant.png" alt="V The Hierophant — 교황" width="220"><br><b>V · Hierophant</b></td>
-    <td align="center"><img src="docs/images/tarot/wheel-of-fortune.png" alt="X Wheel of Fortune — 운명의 수레바퀴" width="220"><br><b>X · Wheel of Fortune</b></td>
-    <td align="center"><img src="docs/images/tarot/devil.png" alt="XV The Devil — 악마" width="220"><br><b>XV · Devil</b></td>
-    <td align="center"><img src="docs/images/tarot/world.png" alt="XXI The World — 세계" width="220"><br><b>XXI · World</b></td>
+    <td align="center"><img src="docs/images/tarot/designed/hierophant.svg" alt="V The Hierophant — 교황" width="220" height="330"></td>
+    <td align="center"><img src="docs/images/tarot/designed/wheel-of-fortune.svg" alt="X Wheel of Fortune — 운명의 수레바퀴" width="220" height="330"></td>
+    <td align="center"><img src="docs/images/tarot/designed/devil.svg" alt="XV The Devil — 악마" width="220" height="330"></td>
+    <td align="center"><img src="docs/images/tarot/designed/world.svg" alt="XXI The World — 세계" width="220" height="330"></td>
   </tr>
 </table>
 
