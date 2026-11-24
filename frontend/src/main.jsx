@@ -4,6 +4,7 @@ import {createEmbedder} from './embedding.js';
 import {vectorSearch,expandGraph,makePrompt} from './search.js';
 import './style.css';
 import './extras.css';
+import './page-background.css';
 import {UniverseGraph,DailyMission} from './ZodiacLumi.jsx';
 import {Study} from './Study.jsx';
 import {Lumi as Star,OUTFITS} from './Lumi.jsx';
