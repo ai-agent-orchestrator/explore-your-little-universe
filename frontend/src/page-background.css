@@ -8,7 +8,7 @@ body{min-height:100vh;background:radial-gradient(ellipse at top,#303151,transpar
 .mascot .lumi-caption{color:#d6b5f5}
 .mascot .lumi-caption small{color:#c4c6d6}
 .github{border-color:#ffffff40;color:#e3c689}
-.ask-panel,.evidence,.discovery,.graph-section,.gemini-panel,.universe-section,.mission,.study-panel,.interpretation-library,.speech{color:#40364e}
+.ask-panel,.evidence,.discovery,.graph-section,.gemini-panel,.universe-section,.mission,.study-panel,.interpretation-library,.speech{color:#f4eee3}
 .results-title h2,.column-title h2{color:#f4eee3}
 .results-title p,.column-title p{color:#c4c6d6}
 #root{position:relative;isolation:isolate}
@@ -24,3 +24,29 @@ body{min-height:100vh;background:radial-gradient(ellipse at top,#303151,transpar
 @keyframes lumi-twinkle{0%,100%{opacity:.3;transform:scale(.94)}50%{opacity:.75;transform:scale(1.06)}}
 @media(max-width:760px){.lumi-sky{height:210px}.sky-lumi-0{top:72px;left:1%;width:24px}.sky-lumi-1{left:46%;top:8px;width:20px}.sky-lumi-2{right:2%;top:105px;width:28px}.sky-lumi-3,.sky-lumi-4{display:none}}
 @media(prefers-reduced-motion:reduce){.sky-lumi{animation:none;opacity:.5}}
+
+/* Warm starlight on navy, including every reading and input surface. */
+:root{color-scheme:dark;font-family:ui-rounded,'Malgun Gothic','Apple SD Gothic Neo',system-ui,sans-serif;--warm:#ffe7a0;--reading:#171b30;--soft:#d5d3dc;--warm-line:#ffe7a066}
+p,.fine,details,.runtime-status,.card-meta,.discovery .card-meta,.path-detail span,.study-panel>span{color:var(--soft)}
+h1,h2,h3,.discovery h3,.mission .mission-tip{color:#fff5d8}
+.hero h1 em,.hero .overline,.overline,.brand,.brand b,.header-label,.hero-tags,.lumi-caption,.lumi-caption small,.zodiac-lumi>b,.zodiac-symbol,.zodiac-lumi>span{color:var(--warm)}
+.ask-panel,.evidence,.discovery,.graph-section,.gemini-panel,.universe-section,.mission,.study-panel,.interpretation-library{background:var(--reading);border:1px solid var(--warm-line);box-shadow:0 0 0 1px #ffe7a008,0 0 22px #ffe7a009}
+.universe-mascot{background:#1c2037}
+.speech{background:#20243b;border-color:var(--warm-line);color:#fff5d8}
+.mascot{background:radial-gradient(ellipse,#ffe7a018,transparent 65%)}
+.mission p,.universe-mascot p{color:var(--soft)}
+textarea,select,.interpretation-library select,.gemini-panel textarea,.study-panel pre{background:#101322;color:#fff8e7;border-color:var(--warm-line)}
+textarea::placeholder{color:#bab8c7}
+.selectors label,.question-label,.selectors p,.path-detail,.path-detail span,.column-title p,.card-meta,.discovery .card-meta{color:var(--soft)}
+.pill,.serverless-badge,.example-note,.notice,.path-detail{background:#24283e;color:#fff0b8;border:1px solid #ffe7a033}
+.primary{background:#ffe7a0;color:#252135;font-weight:650;box-shadow:0 0 20px #ffe7a022}
+.primary:hover{background:#fff0bf}
+.examples button,.path-tabs button,.mission-actions button,.gemini-actions button,.gemini-actions a,.study-panel button{background:#252940;color:var(--warm);border:1px solid var(--warm-line)}
+.examples button:hover,.mission-actions button:hover,.gemini-actions button:hover,.gemini-actions a:hover{background:#34364b}
+.path-tabs button.active{background:#ffe7a0;color:#252135}
+.step,.step.mint{border-color:var(--warm-line);color:var(--warm)}
+button:focus-visible,a:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,svg g:focus-visible{outline-color:var(--warm)}
+.graph-scroll svg text{fill:#fff5d8}
+.graph-scroll svg rect,.graph-scroll svg circle{fill:#292c45;stroke:#ffe7a066}
+.graph-scroll svg path[stroke]{stroke:#d9c99b}
+.graph-scroll svg g[role=button]:focus rect,.graph-scroll svg g[role=button]:hover rect{fill:#44415a;stroke:#ffe7a0}
