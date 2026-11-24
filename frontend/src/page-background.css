@@ -62,3 +62,6 @@ button:focus-visible,a:focus-visible,select:focus-visible,textarea:focus-visible
 .universe-mascot{background:linear-gradient(160deg,#1c2037,#15192d)}
 .zodiac-lumi>b{margin-top:8px;letter-spacing:.025em}
 .zodiac-lumi>span{color:#d5d3dc}
+.universe-section{grid-template-columns:270px minmax(0,1fr)}
+.universe-mascot,.universe-graph{min-width:0}
+@media(max-width:850px){.universe-section{grid-template-columns:minmax(0,1fr)}.universe-mascot>.overline{text-align:center;overflow-wrap:anywhere}.universe-mascot .zodiac-lumi{max-width:100%}}
