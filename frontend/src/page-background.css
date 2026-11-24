@@ -9,3 +9,16 @@ body{min-height:100vh;background:radial-gradient(ellipse at top,#303151,transpar
 .ask-panel,.evidence,.discovery,.graph-section,.gemini-panel,.universe-section,.mission,.study-panel,.interpretation-library,.speech{color:#40364e}
 .results-title h2,.column-title h2{color:#f4eee3}
 .results-title p,.column-title p{color:#c4c6d6}
+#root{position:relative;isolation:isolate}
+.lumi-sky{position:absolute;inset:0 0 auto;height:440px;overflow:hidden;pointer-events:none;z-index:-1}
+.sky-lumi{position:absolute;display:block;width:44px;opacity:.5;animation:lumi-twinkle 5s ease-in-out infinite}
+.sky-lumi .star{width:100%;animation:none;transform:rotate(-10deg);filter:drop-shadow(0 0 8px #ffe49a66)}
+.sky-lumi .lumi-wrap{width:100%}
+.sky-lumi-0{left:2%;top:88px;width:36px;animation-delay:-1s}
+.sky-lumi-1{left:39%;top:18px;width:28px;animation-delay:-3s}
+.sky-lumi-2{right:3%;top:110px;width:46px;animation-delay:-2s}
+.sky-lumi-3{left:4%;top:345px;width:25px;animation-delay:-4s}
+.sky-lumi-4{right:34%;top:45px;width:22px}
+@keyframes lumi-twinkle{0%,100%{opacity:.3;transform:scale(.94)}50%{opacity:.75;transform:scale(1.06)}}
+@media(max-width:760px){.lumi-sky{height:210px}.sky-lumi-0{top:72px;left:1%;width:24px}.sky-lumi-1{left:46%;top:8px;width:20px}.sky-lumi-2{right:2%;top:105px;width:28px}.sky-lumi-3,.sky-lumi-4{display:none}}
+@media(prefers-reduced-motion:reduce){.sky-lumi{animation:none;opacity:.5}}
