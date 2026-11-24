@@ -50,3 +50,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,textarea:focus-visible
 .graph-scroll svg rect,.graph-scroll svg circle{fill:#292c45;stroke:#ffe7a066}
 .graph-scroll svg path[stroke]{stroke:#d9c99b}
 .graph-scroll svg g[role=button]:focus rect,.graph-scroll svg g[role=button]:hover rect{fill:#44415a;stroke:#ffe7a0}
+.zodiac-emblem{font-family:Georgia,serif;font-size:6rem;line-height:1;color:#ffe7a0;text-shadow:0 0 28px #ffe7a044}
+.zodiac-halo>.zodiac-symbol{display:none}
+.compact .zodiac-emblem{font-size:3.5rem}
+@media(max-width:850px){.universe-mascot .zodiac-emblem{font-size:4.5rem}}
