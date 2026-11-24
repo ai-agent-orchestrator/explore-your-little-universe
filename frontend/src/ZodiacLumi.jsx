@@ -1,5 +1,4 @@
 import React,{useEffect,useState} from 'react';
-import {Lumi} from './Lumi.jsx';
 
 export const ZODIAC={
  aries:['♈','#edb59d','용기 한 스푼'],taurus:['♉','#b7d3ac','느긋한 한 걸음'],
@@ -9,9 +8,15 @@ export const ZODIAC={
  sagittarius:['♐','#b8c3ed','새로운 관점 여행'],capricorn:['♑','#adc9cb','든든한 작은 발걸음'],
  aquarius:['♒','#b7cfe9','나만의 반짝임'],pisces:['♓','#c9bde8','다정한 상상'],
 };
+const ZODIAC_ORDER=Object.keys(ZODIAC);
+const ART_X=[7,423,840],ART_Y=[7,320,627,937];
+export function ZodiacArtwork({id,name}){
+ const index=ZODIAC_ORDER.indexOf(id),column=index%3,row=Math.floor(index/3);
+ return <span className="zodiac-art" role="img" aria-label={`${name} · 금빛 별자리 일러스트`} style={{backgroundPosition:`${ART_X[column]/846*100}% ${ART_Y[row]/970*100}%`}}/>;
+}
 export function ZodiacLumi({sign,code,small=false}){
  const [symbol,color,note]=ZODIAC[sign.id];
- return <div className={'zodiac-lumi '+(small?'compact':'')} style={{'--zodiac':color}}><div className="zodiac-halo"><span className="zodiac-symbol" aria-label={sign.name}>{symbol}</span><span className="zodiac-emblem" aria-hidden="true">{symbol}</span><span className="orbit-dot first"/><span className="orbit-dot second"/></div><b>{sign.name}</b><span>{note}</span></div>;
+ return <div className={'zodiac-lumi '+(small?'compact':'')} style={{'--zodiac':color}}><div className="zodiac-halo"><ZodiacArtwork id={sign.id} name={sign.name}/></div><b>{symbol} {sign.name}</b><span>{note}</span></div>;
 }
 
 export function UniverseGraph({data,code,signId}){

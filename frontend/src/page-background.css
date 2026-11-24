@@ -54,3 +54,11 @@ button:focus-visible,a:focus-visible,select:focus-visible,textarea:focus-visible
 .zodiac-halo>.zodiac-symbol{display:none}
 .compact .zodiac-emblem{font-size:3.5rem}
 @media(max-width:850px){.universe-mascot .zodiac-emblem{font-size:4.5rem}}
+
+/* Show the supplied 12-panel artwork without the white collage gutters. */
+.zodiac-halo,.universe-mascot .zodiac-halo{width:240px;max-width:100%;height:auto;aspect-ratio:408/284;border:0;border-radius:16px;background:none;overflow:hidden}
+.zodiac-art{display:block;width:100%;height:100%;background-image:url('/zodiac/zodiac-atlas.png');background-size:307.352941% 441.549296%;background-repeat:no-repeat;mask-image:radial-gradient(ellipse at center,#000 60%,transparent 100%)}
+.compact .zodiac-halo{width:125px;height:auto;aspect-ratio:408/284}
+.universe-mascot{background:linear-gradient(160deg,#1c2037,#15192d)}
+.zodiac-lumi>b{margin-top:8px;letter-spacing:.025em}
+.zodiac-lumi>span{color:#d5d3dc}

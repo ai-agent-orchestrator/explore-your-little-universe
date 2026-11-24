@@ -1,0 +1,9 @@
+{
+  "source_filename": "황금빛 별자리 수채화 콜라주.png",
+  "provenance": "User-supplied ChatGPT artwork, downloaded and selected for Karmic Resonance",
+  "image": "zodiac-atlas.png",
+  "dimensions": [1254, 1254],
+  "order": ["aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces"],
+  "layout": {"columns": 3, "rows": 4},
+  "display": "CSS crops omit white gutters; original downloaded image is preserved intact."
+}
