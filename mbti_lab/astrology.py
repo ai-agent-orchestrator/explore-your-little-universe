@@ -1,52 +1,20 @@
 """Seed a fictional 12-sign/MBTI crossover for graph learning; no predictions."""
 import os
 from pathlib import Path
-from .database import project_database
+from lumi_core.catalog.zodiac import SIGNS
+from lumi_core.graph.seeds import ZODIAC_SEED as SEED, MBTI_SEED, trait_rows, sign_rows
+from lumi_core.graph.client import get_driver, database as configured_database
 
 # Deliberately authored toy mappings, not empirical personality claims.
-SIGNS = [
-    ('aries', '양자리', 'EP'), ('taurus', '황소자리', 'SJ'),
-    ('gemini', '쌍둥이자리', 'EN'), ('cancer', '게자리', 'IF'),
-    ('leo', '사자자리', 'EF'), ('virgo', '처녀자리', 'TJ'),
-    ('libra', '천칭자리', 'FP'), ('scorpio', '전갈자리', 'IT'),
-    ('sagittarius', '사수자리', 'NP'), ('capricorn', '염소자리', 'SJ'),
-    ('aquarius', '물병자리', 'NT'), ('pisces', '물고기자리', 'NF'),
-]
 
-SEED = '''
-UNWIND $rows AS row
-MERGE (z:ZodiacSign {id: row.id})
-SET z.name = row.name, z.is_demo = true
-MERGE (t:MbtiTrait {key: row.key})
-SET t.title = row.title, t.text = row.text
-SET t:SharedTrait
-MERGE (z)-[:HAS_TRAIT]->(t)
-MERGE (s:AstrologySource {id: 'astrology-toy-v1'})
-SET s.title = '12별자리 연결 실습용 직접 작성한 가상 매핑', s.is_demo = true
-MERGE (z)-[:FROM_SOURCE]->(s)
-RETURN count(*) AS processed
-'''
+
+
 
 
 def main():
-    from dotenv import load_dotenv
-    from neo4j import GraphDatabase
-    from .data import TRAITS, TYPES
-    from .server import SEED as MBTI_SEED
-
-    load_dotenv(Path(__file__).resolve().parent.parent / '.env.mbti')
-    required = ['NEO4J_URI', 'NEO4J_PASSWORD', 'NEO4J_DATABASE']
-    if any(not os.getenv(key) for key in required):
-        raise SystemExit('Complete .env.mbti first.')
-    database = project_database(os.environ['NEO4J_DATABASE'])
-    mbti_rows = [{'code': code, 'key': key, 'title': TRAITS[key][0],
-                  'text': TRAITS[key][1], 'tip': TRAITS[key][2]}
-                 for code in TYPES for key in code]
-    rows = [{'id': sign, 'name': name, 'key': key,
-             'title': TRAITS[key][0], 'text': TRAITS[key][1]}
-            for sign, name, keys in SIGNS for key in keys]
-    with GraphDatabase.driver(os.environ['NEO4J_URI'], auth=(
-        os.getenv('NEO4J_USERNAME', 'neo4j'), os.environ['NEO4J_PASSWORD'])) as driver:
+    database = configured_database()
+    mbti_rows, rows = trait_rows(), sign_rows()
+    with get_driver() as driver:
         def seed(tx):
             tx.run(MBTI_SEED, rows=mbti_rows).consume()
             tx.run(SEED, rows=rows).consume()

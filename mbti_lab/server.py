@@ -7,27 +7,12 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from .data import TYPES, TRAITS, result
-from .database import project_database
+from lumi_core.graph.client import get_driver, database as configured_database
+from lumi_core.graph.seeds import MBTI_SEED as SEED, MBTI_QUERY as QUERY, trait_rows
 
 ROOT = Path(__file__).resolve().parent
-SEED = '''
-UNWIND $rows AS row
-MERGE (m:MbtiType {code: row.code})
-MERGE (t:MbtiTrait {key: row.key})
-SET t.title = row.title, t.text = row.text
-MERGE (i:MbtiInsight {key: row.key}) SET i.text = row.tip
-MERGE (s:MbtiSource {id: 'mbti-lab-original-v1'})
-SET s.title = 'MBTI Graph Lab 직접 작성한 재미용 예시', s.is_demo = true
-MERGE (m)-[:HAS_TRAIT]->(t)
-MERGE (t)-[:SUGGESTS]->(i)
-MERGE (i)-[:FROM_SOURCE]->(s)
-RETURN count(*) AS processed
-'''
-QUERY = '''
-MATCH (m:MbtiType {code: $code})-[:HAS_TRAIT]->(t:MbtiTrait)
-MATCH (t)-[:SUGGESTS]->(i:MbtiInsight)-[:FROM_SOURCE]->(s:MbtiSource {id: 'mbti-lab-original-v1'})
-RETURN t.key AS id, t.title AS title, t.text AS text, i.text AS tip, s.title AS source
-'''
+
+
 
 
 def main():
@@ -41,20 +26,10 @@ def main():
     if args.demo and args.seed:
         parser.error('--seed requires Neo4j mode')
     if not args.demo:
-        from dotenv import load_dotenv
-        from neo4j import GraphDatabase
-        load_dotenv(ROOT.parent / '.env.mbti')
-        required = ['NEO4J_URI', 'NEO4J_PASSWORD', 'NEO4J_DATABASE']
-        if any(not os.getenv(key) for key in required):
-            parser.error('Complete .env.mbti first, or use --demo for a UI preview.')
-        database = project_database(os.environ['NEO4J_DATABASE'])
-        driver = GraphDatabase.driver(os.environ['NEO4J_URI'], auth=(
-            os.getenv('NEO4J_USERNAME', 'neo4j'), os.environ['NEO4J_PASSWORD']))
-        driver.verify_connectivity()
+        database = configured_database()
+        driver = get_driver()
         if args.seed:
-            rows = [{'code': code, 'key': key, 'title': TRAITS[key][0],
-                     'text': TRAITS[key][1], 'tip': TRAITS[key][2]}
-                    for code in TYPES for key in code]
+            rows = trait_rows()
             driver.execute_query(SEED, rows=rows, database_=database)
             print(f'Seeded 16 types into {database}', flush=True)
 
